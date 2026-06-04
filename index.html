@@ -7,129 +7,132 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="machine-container">
+    <div class="machine-wrapper">
         <div class="machine">
-            <!-- Top section -->
+            <!-- Top section with branding -->
             <div class="machine-top">
-                <div class="machine-header">
-                    <div class="header-trim"></div>
-                </div>
+                <div class="brand-header">SIDEWALK SAINTS</div>
+                <div class="machine-line"></div>
             </div>
 
-            <!-- Main display area -->
+            <!-- Glass display with 12 label slots -->
             <div class="machine-display">
-                <div class="glass-panel">
-                    <div class="label-grid">
-                        <!-- Labels will be dynamically inserted -->
+                <div class="glass-case">
+                    <div class="label-grid" id="labelGrid">
+                        <!-- 12 slots will be generated here -->
                     </div>
-                    <div class="reflection"></div>
+                    <div class="glass-reflection"></div>
                 </div>
-            </div>
-
-            <!-- Collection tray -->
-            <div class="machine-tray">
-                <div class="tray-inner">
-                    <div class="tray-contents">
-                        <div class="selected-labels">
-                            <!-- Selected labels appear here -->
-                        </div>
-                    </div>
-                </div>
-                <div class="tray-label">YOUR LABELS</div>
             </div>
 
             <!-- Control panel -->
-            <div class="machine-controls">
-                <div class="coin-slot-area">
-                    <div class="odometer">
+            <div class="machine-control-panel">
+                <!-- Coin slot area with odometer -->
+                <div class="coin-area">
+                    <div class="odometer-section">
                         <div class="odometer-label">DISPENSED TO DATE:</div>
                         <div class="odometer-display">
-                            <span class="odometer-digit">0</span>
-                            <span class="odometer-digit">0</span>
-                            <span class="odometer-digit">0</span>
-                            <span class="odometer-digit">0</span>
-                            <span class="odometer-digit">0</span>
-                            <span class="odometer-digit">0</span>
+                            <span id="odometerValue">000000</span>
                         </div>
                     </div>
                     <div class="coin-slot">
-                        <div class="coin-slot-inner"></div>
+                        <div class="slot-inner"></div>
                     </div>
                 </div>
 
-                <div class="button-panel">
-                    <button class="machine-button button-insert" id="insertQuarter">
-                        <div class="button-label">INSERT</div>
-                        <div class="button-label">QUARTER</div>
+                <!-- Main action buttons -->
+                <div class="button-row">
+                    <button class="machine-button button-insert" id="insertQuarterBtn">
+                        INSERT<br>QUARTER
                     </button>
-                    <button class="machine-button button-shake" id="shakeMachine">
-                        <div class="button-label">SHAKE</div>
-                        <div class="button-label">THE MACHINE</div>
-                    </button>
-                    <button class="machine-button button-take" id="takeThem">
-                        <div class="button-label">TAKE</div>
-                        <div class="button-label">'EM</div>
+                    <button class="machine-button button-shake" id="shakeBtn">
+                        SHAKE<br>THE MACHINE
                     </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Donation modal -->
+    <!-- Selection Modal -->
+    <div class="modal" id="selectionModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-panel">
+            <div class="modal-header">SELECT LABEL</div>
+            
+            <div class="modal-content">
+                <!-- Strain selector -->
+                <div class="strain-selector" id="strainSelector">
+                    <label class="strain-label">Strain:</label>
+                    <select id="strainDropdown" class="strain-dropdown">
+                        <option value="">-- Choose Strain --</option>
+                    </select>
+                </div>
+
+                <!-- Label options grid (shown after strain selected) -->
+                <div class="label-options" id="labelOptions" style="display: none;">
+                    <div class="options-header">Available Labels:</div>
+                    <div class="options-grid" id="optionsGrid">
+                        <!-- Label thumbnails will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <button class="modal-close" id="modalCloseBtn">CANCEL</button>
+        </div>
+    </div>
+
+    <!-- Donation Modal -->
     <div class="modal" id="donationModal">
-        <div class="modal-content donation-panel">
-            <div class="donation-header">INSERT DONATION</div>
-            <div class="donation-options">
+        <div class="modal-overlay"></div>
+        <div class="modal-panel donation-panel">
+            <div class="modal-header">INSERT DONATION</div>
+            
+            <div class="modal-content donation-content">
                 <button class="donation-button" data-amount="1.00">
-                    <div class="coin-icon">$</div>
-                    <div class="amount">1.00</div>
+                    <div class="donation-amount">$1.00</div>
                 </button>
-                <button class="donation-button" id="customAmount">
-                    <div class="coin-icon">?</div>
-                    <div class="amount">CUSTOM</div>
+                <button class="donation-button" id="customDonationBtn">
+                    <div class="donation-amount">CUSTOM</div>
                 </button>
             </div>
-            <button class="cancel-button">CANCEL</button>
+
+            <button class="modal-close" id="donationCloseBtn">CANCEL</button>
         </div>
     </div>
 
-    <!-- Custom amount modal -->
-    <div class="modal" id="customModal">
-        <div class="modal-content custom-input-panel">
-            <div class="custom-header">ENTER AMOUNT</div>
-            <div class="custom-input-wrapper">
-                <div class="currency-symbol">$</div>
-                <input type="number" id="customInput" placeholder="0.00" step="0.01" min="0" max="999">
+    <!-- Custom Donation Modal -->
+    <div class="modal" id="customDonationModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-panel custom-panel">
+            <div class="modal-header">CUSTOM AMOUNT</div>
+            
+            <div class="modal-content custom-content">
+                <div class="currency-input">
+                    <span class="currency-symbol">$</span>
+                    <input type="number" id="customAmountInput" placeholder="0.00" step="0.01" min="0" max="999">
+                </div>
             </div>
-            <div class="custom-buttons">
-                <button class="confirm-button" id="confirmCustom">OK</button>
-                <button class="cancel-button">CANCEL</button>
-            </div>
-        </div>
-    </div>
 
-    <!-- Success modal -->
-    <div class="modal" id="successModal">
-        <div class="modal-content success-panel">
-            <div class="success-message">
-                <div class="success-icon">✓</div>
-                <div class="success-text">THANK YOU!</div>
-                <div class="success-subtitle">Your labels are ready.</div>
-            </div>
-            <button class="ok-button">DONE</button>
-        </div>
-    </div>
-
-    <!-- Download state -->
-    <div class="modal" id="downloadModal">
-        <div class="modal-content download-panel">
-            <div class="download-message">
-                <div class="spinner"></div>
-                <div class="download-text">DISPENSING...</div>
+            <div class="modal-buttons">
+                <button class="modal-button confirm-button" id="confirmCustomBtn">OK</button>
+                <button class="modal-button cancel-button" id="cancelCustomBtn">CANCEL</button>
             </div>
         </div>
     </div>
 
+    <!-- Dispense animation modal -->
+    <div class="modal" id="dispenseModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-panel dispense-panel">
+            <div class="dispense-animation">
+                <div class="rattle"></div>
+                <div class="dispense-text">DISPENSING...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="labelCatalog.js"></script>
+    <script src="pdfGenerator.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
