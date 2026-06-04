@@ -1,0 +1,658 @@
+/* ============================================================
+   SIDEWALK SAINTS VENDING MACHINE - Styles
+   1950s cigarette vending machine aesthetic
+   ============================================================ */
+
+:root {
+    /* Machine body colors */
+    --machine-blue: #9db3c8;
+    --machine-blue-dark: #6a7d94;
+    --machine-blue-light: #b8c8d8;
+    
+    /* Accents */
+    --accent-red: #b84040;
+    --accent-red-dark: #8a3030;
+    
+    /* Trim and chrome */
+    --trim-cream: #e8dcc8;
+    --trim-cream-dark: #d4c4a8;
+    --chrome: #b8b8b8;
+    --chrome-dark: #7a7a7a;
+    
+    /* Text and UI */
+    --text-dark: #1a1a1a;
+    --text-light: #e8dcc8;
+    
+    /* Shadows */
+    --shadow-dark: rgba(0, 0, 0, 0.4);
+    --shadow-light: rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--text-dark);
+}
+
+.machine-wrapper {
+    width: 100%;
+    max-width: 520px;
+}
+
+/* ============================================================
+   MACHINE BODY
+   ============================================================ */
+
+.machine {
+    background: linear-gradient(135deg, var(--machine-blue) 0%, var(--machine-blue-dark) 100%);
+    border-radius: 28px;
+    box-shadow:
+        0 30px 80px var(--shadow-dark),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        inset 0 -3px 8px var(--shadow-dark);
+    border: 3px solid var(--machine-blue-dark);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Weathering texture overlay */
+.machine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(139, 90, 43, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(139, 90, 43, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ============================================================
+   MACHINE TOP (Header)
+   ============================================================ */
+
+.machine-top {
+    background: linear-gradient(to bottom, var(--trim-cream), var(--trim-cream-dark));
+    padding: 16px 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.brand-header {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--accent-red);
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.machine-line {
+    height: 3px;
+    background: linear-gradient(to right, var(--accent-red), var(--accent-red-dark));
+    margin-top: 8px;
+    box-shadow: 0 1px 2px var(--shadow-dark);
+}
+
+/* ============================================================
+   DISPLAY AREA (Glass case with 12 slots)
+   ============================================================ */
+
+.machine-display {
+    padding: 20px;
+    background: var(--machine-blue);
+    position: relative;
+    z-index: 2;
+}
+
+.glass-case {
+    background: linear-gradient(135deg, #e8e8e8 0%, #c8c8c8 100%);
+    border: 4px solid var(--chrome-dark);
+    border-radius: 6px;
+    padding: 12px;
+    position: relative;
+    box-shadow:
+        inset 0 2px 8px rgba(0, 0, 0, 0.25),
+        inset 0 -2px 8px rgba(255, 255, 255, 0.3),
+        0 6px 16px var(--shadow-dark);
+    min-height: 320px;
+}
+
+.glass-reflection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 35%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, transparent 100%);
+    pointer-events: none;
+    border-radius: 2px;
+}
+
+.label-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.label-slot {
+    aspect-ratio: 1;
+    background: white;
+    border: 2px solid var(--chrome-dark);
+    border-radius: 3px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    box-shadow:
+        0 2px 4px var(--shadow-light),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transition: all 0.15s ease;
+}
+
+.label-slot:hover {
+    border-color: var(--accent-red);
+    box-shadow:
+        0 3px 6px var(--shadow-dark),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transform: scale(1.03);
+}
+
+.label-slot:active {
+    transform: scale(0.98);
+}
+
+.label-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ============================================================
+   CONTROL PANEL
+   ============================================================ */
+
+.machine-control-panel {
+    background: linear-gradient(to bottom, var(--machine-blue), var(--machine-blue-dark));
+    padding: 18px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Coin slot area */
+.coin-area {
+    background: linear-gradient(to bottom, var(--trim-cream), var(--trim-cream-dark));
+    border: 2px solid var(--accent-red);
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 16px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        0 3px 6px var(--shadow-dark);
+}
+
+.odometer-section {
+    margin-bottom: 10px;
+}
+
+.odometer-label {
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--text-dark);
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+.odometer-display {
+    background: #0a0a0a;
+    border: 2px solid #333;
+    border-radius: 3px;
+    padding: 4px 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: #d4af37;
+    letter-spacing: 3px;
+    text-align: center;
+    text-shadow: 0 0 6px rgba(212, 175, 55, 0.5);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.odometer-display span {
+    display: inline-block;
+    min-width: 12px;
+}
+
+.coin-slot {
+    background: linear-gradient(to right, var(--chrome), var(--chrome), var(--chrome-dark));
+    border: 2px solid #333;
+    border-radius: 3px;
+    height: 18px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.slot-inner {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Button row */
+.button-row {
+    display: flex;
+    gap: 12px;
+}
+
+.machine-button {
+    flex: 1;
+    background: linear-gradient(to bottom, #c8a464, #8a6f38);
+    border: 3px solid #5a4a28;
+    border-radius: 8px;
+    padding: 14px 12px;
+    color: var(--text-light);
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    cursor: pointer;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    transition: all 0.1s ease;
+    box-shadow:
+        0 4px 8px var(--shadow-dark),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -2px 4px var(--shadow-dark);
+    text-transform: uppercase;
+}
+
+.machine-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow:
+        0 6px 12px var(--shadow-dark),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -2px 4px var(--shadow-dark);
+}
+
+.machine-button:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow:
+        0 2px 4px var(--shadow-dark),
+        inset 0 -1px 2px var(--shadow-dark);
+}
+
+.machine-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button-insert {
+    background: linear-gradient(to bottom, #5a9fd4, #2d5c8a);
+    border-color: #1a3a5c;
+}
+
+.button-shake {
+    background: linear-gradient(to bottom, #d45a5a, #8a2e2e);
+    border-color: #5c1a1a;
+}
+
+/* ============================================================
+   MODALS
+   ============================================================ */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.modal-panel {
+    background: linear-gradient(to bottom, var(--machine-blue), var(--machine-blue-dark));
+    border: 3px solid var(--accent-red);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 20px 60px var(--shadow-dark);
+    position: relative;
+    z-index: 1;
+    max-width: 320px;
+    width: 100%;
+}
+
+.modal-header {
+    background: linear-gradient(to bottom, var(--trim-cream), var(--trim-cream-dark));
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px var(--shadow-light);
+    text-transform: uppercase;
+}
+
+.modal-content {
+    margin-bottom: 16px;
+}
+
+/* Strain Selector */
+.strain-selector {
+    margin-bottom: 0;
+}
+
+.strain-label {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.strain-dropdown {
+    width: 100%;
+    padding: 8px;
+    background: linear-gradient(to bottom, var(--trim-cream), var(--trim-cream-dark));
+    border: 2px solid var(--chrome-dark);
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: var(--text-dark);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.strain-dropdown:focus {
+    outline: none;
+    border-color: var(--accent-red);
+    box-shadow: 0 0 4px rgba(184, 64, 64, 0.5);
+}
+
+/* Label Options Grid */
+.label-options {
+    margin-top: 12px;
+}
+
+.options-header {
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.option-thumbnail {
+    aspect-ratio: 1;
+    background: white;
+    border: 2px solid var(--chrome-dark);
+    border-radius: 3px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.15s ease;
+    box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+.option-thumbnail:hover {
+    border-color: var(--accent-red);
+    transform: scale(1.05);
+    box-shadow: 0 3px 6px var(--shadow-dark);
+}
+
+.option-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Donation Panel */
+.donation-panel {
+    max-width: 280px;
+}
+
+.donation-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.donation-button {
+    background: linear-gradient(to bottom, #ffd700, #ffed4e);
+    border: 2px solid #ffb300;
+    border-radius: 6px;
+    padding: 16px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: var(--text-dark);
+    transition: all 0.15s ease;
+    box-shadow: 0 3px 6px var(--shadow-light);
+}
+
+.donation-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+.donation-button:active {
+    transform: translateY(0);
+}
+
+.donation-amount {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Custom Amount Panel */
+.custom-panel {
+    max-width: 280px;
+}
+
+.custom-content {
+    margin-bottom: 14px;
+}
+
+.currency-input {
+    background: linear-gradient(to bottom, var(--trim-cream), var(--trim-cream-dark));
+    border: 2px solid var(--chrome-dark);
+    border-radius: 4px;
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: inset 0 1px 2px var(--shadow-light);
+}
+
+.currency-symbol {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--text-dark);
+}
+
+#customAmountInput {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    color: var(--text-dark);
+}
+
+#customAmountInput:focus {
+    outline: none;
+}
+
+#customAmountInput::placeholder {
+    color: #999;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.modal-button {
+    flex: 1;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 11px;
+    border-radius: 4px;
+    border: 2px solid;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.confirm-button {
+    background: linear-gradient(to bottom, #4db84d, #2d6b2d);
+    border-color: #1a4d1a;
+    color: var(--text-light);
+}
+
+.confirm-button:hover {
+    transform: translateY(-2px);
+}
+
+.cancel-button {
+    background: linear-gradient(to bottom, #999, #666);
+    border-color: #333;
+    color: var(--text-light);
+}
+
+.cancel-button:hover {
+    transform: translateY(-2px);
+}
+
+.modal-close {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to bottom, #999, #666);
+    border: 2px solid #333;
+    border-radius: 4px;
+    color: var(--text-light);
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.modal-close:hover {
+    transform: translateY(-2px);
+}
+
+/* Dispense Panel */
+.dispense-panel {
+    max-width: 280px;
+    text-align: center;
+    border: 3px solid var(--accent-red-dark);
+}
+
+.dispense-animation {
+    padding: 30px 20px;
+}
+
+.rattle {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    border: 3px solid var(--trim-cream);
+    border-radius: 4px;
+    animation: rattle 0.4s ease-in-out infinite;
+}
+
+@keyframes rattle {
+    0%, 100% { transform: translateX(0) rotate(0deg); }
+    25% { transform: translateX(-4px) rotate(-1deg); }
+    75% { transform: translateX(4px) rotate(1deg); }
+}
+
+.dispense-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 600px) {
+    .machine {
+        border-radius: 20px;
+    }
+
+    .machine-button {
+        font-size: 10px;
+        padding: 12px 10px;
+    }
+
+    .label-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .brand-header {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+}
