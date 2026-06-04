@@ -43,7 +43,17 @@ html, body {
 
 body {
     font-family: 'Courier New', Courier, monospace;
-    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    background:
+        radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.035) 0%, transparent 18%),
+        radial-gradient(circle at 82% 68%, rgba(255, 255, 255, 0.025) 0%, transparent 20%),
+        repeating-linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.018) 0,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px,
+            transparent 8px
+        ),
+        linear-gradient(135deg, #242424 0%, #171717 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,8 +63,8 @@ body {
 }
 
 .machine-wrapper {
-    width: 100%;
-    max-width: 460px;
+    width: min(clamp(320px, 36vh, 390px), calc(100vw - 24px));
+    height: 94vh;
 }
 
 /* ============================================================
@@ -73,6 +83,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 /* Weathering texture overlay */
@@ -143,6 +154,7 @@ body {
     z-index: 2;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
     flex: 1;
+    min-height: 0;
 }
 
 .glass-case {
@@ -154,6 +166,9 @@ body {
     border-radius: 8px;
     padding: 12px;
     position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
     box-shadow:
         /* Outer shadow for depth */
         0 8px 20px var(--shadow-dark),
@@ -164,7 +179,8 @@ body {
         inset 2px 2px 0 rgba(255, 255, 255, 0.6),
         /* Chrome beveled edge - dark */
         inset -2px -2px 0 rgba(0, 0, 0, 0.3);
-    min-height: 300px;
+    height: 100%;
+    min-height: 0;
 }
 
 .glass-reflection {
@@ -204,13 +220,15 @@ body {
 .label-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, minmax(0, 1fr));
     gap: 8px;
     position: relative;
     z-index: 3;
+    width: 100%;
+    height: 100%;
 }
 
 .label-slot {
-    aspect-ratio: 1;
     background: linear-gradient(135deg, #fafafa 0%, #e8e8e8 100%);
     /* Beveled chrome frame - thick border with light/dark sides */
     border: 5px solid;
@@ -832,6 +850,7 @@ body {
 
     .label-grid {
         grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, minmax(0, 1fr));
     }
 
     .brand-header {
