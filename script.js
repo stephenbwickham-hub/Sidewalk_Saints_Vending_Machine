@@ -270,17 +270,21 @@ function dispensePDF() {
     // Show dispense animation
     document.getElementById('dispenseModal').classList.add('active');
     
-    setTimeout(() => {
-        // Generate PDF with current selection
-        generatePDF(currentSelection.labels);
-        
-        // Increment counter
-        machineState.dispensedCount++;
-        saveOdometerCount();
-        updateOdometerDisplay();
-        
-        // Close dispense modal
-        document.getElementById('dispenseModal').classList.remove('active');
+    setTimeout(async () => {
+        try {
+            // Generate PDF with current selection
+            await generatePDF(currentSelection.labels);
+
+            // Increment counter
+            machineState.dispensedCount++;
+            saveOdometerCount();
+            updateOdometerDisplay();
+        } catch (error) {
+            console.error('PDF generation failed:', error);
+        } finally {
+            // Close dispense modal
+            document.getElementById('dispenseModal').classList.remove('active');
+        }
     }, 1500);
 }
 

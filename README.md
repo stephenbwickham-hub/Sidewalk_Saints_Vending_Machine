@@ -36,8 +36,8 @@ This is not ecommerce. It's a machine experience.
 ✅ **PDF Dispense**
 - Generates printable sheet with 12 selected labels
 - Includes strain name and label ID
-- TODO: Real PDF generation (currently placeholder text file)
-- TODO: Add printing instruction page
+- Creates an 8.5" × 11" PDF download
+- Adds a second page with basic printing instructions
 
 ✅ **Odometer**
 - Displays anonymous dispense count
@@ -52,7 +52,7 @@ SidewalkSaintsVendingMachine/
 ├── styles.css              # 1950s machine aesthetic
 ├── script.js               # Machine behavior & interactions
 ├── labelCatalog.js         # Label data structure (12 strains × 2-4 series)
-├── pdfGenerator.js         # PDF generation (placeholder)
+├── pdfGenerator.js         # Printable PDF generation
 ├── public/
 │   └── labels/             # Real label image folders and placement docs
 │       ├── README.md       # Exact expected label image paths
@@ -107,12 +107,11 @@ See `public/labels/README.md` for the exact list of expected label files. If a f
   - Add the expected PNG files listed in `public/labels/README.md`
   - Store each file at `public/labels/[strain-slug]/[series-slug].png`
   
-- [ ] **Real PDF generation**
-  - Install jsPDF + html2canvas
-  - Implement label sheet layout (3×4 grid)
-  - Add Sidewalk Saints branding/logo
-  - Create printing instruction page
-  - Generate actual PDF (not text file)
+- [x] **Real PDF generation**
+  - Create 8.5" × 11" printable PDF label sheet
+  - Add 12 selected labels in a 3×4 grid
+  - Include strain name and label ID under each label
+  - Add a second page with basic printing instructions
 
 - [ ] **Payment integration**
   - Connect to Stripe or PayPal
