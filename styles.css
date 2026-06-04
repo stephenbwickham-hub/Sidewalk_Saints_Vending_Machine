@@ -71,6 +71,8 @@ body {
     border: 3px solid var(--machine-blue-dark);
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Weathering texture overlay */
@@ -140,6 +142,7 @@ body {
     position: relative;
     z-index: 2;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    flex: 1;
 }
 
 .glass-case {
@@ -322,80 +325,10 @@ body {
 }
 
 /* Coin slot area */
-.coin-area {
-    background: linear-gradient(to bottom, var(--trim-cream), var(--trim-cream-dark));
-    border: 3px solid;
-    border-color: var(--accent-red) var(--chrome-dark) var(--chrome-dark) var(--accent-red);
-    border-radius: 6px;
-    padding: 12px;
+.coin-slot-area {
     margin-bottom: 16px;
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.3),
-        0 4px 8px var(--shadow-dark);
-    position: relative;
-}
-
-/* Chrome corner trim on coin area */
-.coin-area::before {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    width: 18px;
-    height: 18px;
-    background: linear-gradient(135deg, var(--chrome-light) 0%, var(--chrome) 50%, var(--chrome-dark) 100%);
-    border-radius: 3px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Chrome corner trim - top right */
-.coin-area::after {
-    content: '';
-    position: absolute;
-    top: -3px;
-    right: -3px;
-    width: 18px;
-    height: 18px;
-    background: linear-gradient(-135deg, var(--chrome-light) 0%, var(--chrome) 50%, var(--chrome-dark) 100%);
-    border-radius: 3px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.odometer-section {
-    margin-bottom: 10px;
-}
-
-.odometer-label {
-    font-size: 8px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: var(--text-dark);
-    margin-bottom: 3px;
-    text-transform: uppercase;
-}
-
-.odometer-display {
-    background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
-    border: 2px solid #333;
-    border-radius: 3px;
-    padding: 4px 6px;
-    font-family: 'Courier New', monospace;
-    font-size: 16px;
-    font-weight: bold;
-    color: #d4af37;
-    letter-spacing: 3px;
-    text-align: center;
-    text-shadow: 
-        0 0 6px rgba(212, 175, 55, 0.5),
-        0 0 12px rgba(212, 175, 55, 0.3);
-    box-shadow: 
-        inset 0 2px 4px rgba(0, 0, 0, 0.8),
-        inset 0 0 2px rgba(212, 175, 55, 0.2);
-}
-
-.odometer-display span {
-    display: inline-block;
-    min-width: 12px;
+    display: flex;
+    justify-content: center;
 }
 
 .coin-slot {
@@ -403,6 +336,7 @@ body {
     border: 2px solid #333;
     border-radius: 3px;
     height: 18px;
+    width: 80%;
     position: relative;
     overflow: hidden;
     box-shadow: 
@@ -487,6 +421,64 @@ body {
 .button-shake {
     background: linear-gradient(to bottom, #d45a5a, #8a2e2e);
     border-color: #5c1a1a #3a0f0f #3a0f0f #b84a4a;
+}
+
+/* ============================================================
+   MACHINE BOTTOM (Maintenance Odometer)
+   ============================================================ */
+
+.machine-bottom {
+    background: linear-gradient(to bottom, var(--machine-blue), var(--machine-blue-dark));
+    padding: 8px 18px 12px 18px;
+    position: relative;
+    z-index: 2;
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+}
+
+.maintenance-odometer {
+    /* Small aged metal housing */
+    background: linear-gradient(135deg, #4a4a4a 0%, #2a2a2a 100%);
+    border: 2px solid #1a1a1a;
+    border-radius: 3px;
+    padding: 4px 6px;
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.6),
+        inset 0 -1px 1px rgba(0, 0, 0, 0.5);
+    /* Rust/age texture */
+    background-image:
+        linear-gradient(135deg, #4a4a4a 0%, #2a2a2a 100%),
+        radial-gradient(circle at 20% 30%, rgba(139, 69, 19, 0.08) 0%, transparent 40%);
+    background-blend-mode: multiply;
+}
+
+.odometer-display {
+    /* Black number wheels */
+    background: #0a0a0a;
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding: 2px 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 7px;
+    font-weight: bold;
+    color: #d4af37;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 
+        0 0 3px rgba(212, 175, 55, 0.6),
+        0 0 6px rgba(212, 175, 55, 0.3);
+    box-shadow: 
+        inset 0 1px 2px rgba(0, 0, 0, 0.9),
+        inset 0 0 1px rgba(212, 175, 55, 0.15);
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.odometer-display span {
+    display: inline-block;
+    min-width: 6px;
 }
 
 /* ============================================================
