@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidewalk Saints Vending Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="machine-container">
+        <div class="machine">
+            <!-- Top section -->
+            <div class="machine-top">
+                <div class="machine-header">
+                    <div class="header-trim"></div>
+                </div>
+            </div>
+
+            <!-- Main display area -->
+            <div class="machine-display">
+                <div class="glass-panel">
+                    <div class="label-grid">
+                        <!-- Labels will be dynamically inserted -->
+                    </div>
+                    <div class="reflection"></div>
+                </div>
+            </div>
+
+            <!-- Collection tray -->
+            <div class="machine-tray">
+                <div class="tray-inner">
+                    <div class="tray-contents">
+                        <div class="selected-labels">
+                            <!-- Selected labels appear here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="tray-label">YOUR LABELS</div>
+            </div>
+
+            <!-- Control panel -->
+            <div class="machine-controls">
+                <div class="coin-slot-area">
+                    <div class="odometer">
+                        <div class="odometer-label">DISPENSED TO DATE:</div>
+                        <div class="odometer-display">
+                            <span class="odometer-digit">0</span>
+                            <span class="odometer-digit">0</span>
+                            <span class="odometer-digit">0</span>
+                            <span class="odometer-digit">0</span>
+                            <span class="odometer-digit">0</span>
+                            <span class="odometer-digit">0</span>
+                        </div>
+                    </div>
+                    <div class="coin-slot">
+                        <div class="coin-slot-inner"></div>
+                    </div>
+                </div>
+
+                <div class="button-panel">
+                    <button class="machine-button button-insert" id="insertQuarter">
+                        <div class="button-label">INSERT</div>
+                        <div class="button-label">QUARTER</div>
+                    </button>
+                    <button class="machine-button button-shake" id="shakeMachine">
+                        <div class="button-label">SHAKE</div>
+                        <div class="button-label">THE MACHINE</div>
+                    </button>
+                    <button class="machine-button button-take" id="takeThem">
+                        <div class="button-label">TAKE</div>
+                        <div class="button-label">'EM</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Donation modal -->
+    <div class="modal" id="donationModal">
+        <div class="modal-content donation-panel">
+            <div class="donation-header">INSERT DONATION</div>
+            <div class="donation-options">
+                <button class="donation-button" data-amount="1.00">
+                    <div class="coin-icon">$</div>
+                    <div class="amount">1.00</div>
+                </button>
+                <button class="donation-button" id="customAmount">
+                    <div class="coin-icon">?</div>
+                    <div class="amount">CUSTOM</div>
+                </button>
+            </div>
+            <button class="cancel-button">CANCEL</button>
+        </div>
+    </div>
+
+    <!-- Custom amount modal -->
+    <div class="modal" id="customModal">
+        <div class="modal-content custom-input-panel">
+            <div class="custom-header">ENTER AMOUNT</div>
+            <div class="custom-input-wrapper">
+                <div class="currency-symbol">$</div>
+                <input type="number" id="customInput" placeholder="0.00" step="0.01" min="0" max="999">
+            </div>
+            <div class="custom-buttons">
+                <button class="confirm-button" id="confirmCustom">OK</button>
+                <button class="cancel-button">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-panel">
+            <div class="success-message">
+                <div class="success-icon">✓</div>
+                <div class="success-text">THANK YOU!</div>
+                <div class="success-subtitle">Your labels are ready.</div>
+            </div>
+            <button class="ok-button">DONE</button>
+        </div>
+    </div>
+
+    <!-- Download state -->
+    <div class="modal" id="downloadModal">
+        <div class="modal-content download-panel">
+            <div class="download-message">
+                <div class="spinner"></div>
+                <div class="download-text">DISPENSING...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
