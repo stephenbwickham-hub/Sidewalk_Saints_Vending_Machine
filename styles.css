@@ -18,6 +18,8 @@
     --trim-cream-dark: #d4c4a8;
     --chrome: #b8b8b8;
     --chrome-dark: #7a7a7a;
+    --chrome-light: #d4d4d4;
+    --chrome-highlight: #ebebeb;
     
     /* Text and UI */
     --text-dark: #1a1a1a;
@@ -95,6 +97,8 @@ body {
     padding: 16px 12px;
     position: relative;
     z-index: 2;
+    border-bottom: 2px solid var(--chrome-dark);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .brand-header {
@@ -126,14 +130,19 @@ body {
 
 .glass-case {
     background: linear-gradient(135deg, #e8e8e8 0%, #c8c8c8 100%);
-    border: 4px solid var(--chrome-dark);
+    border: 8px solid var(--chrome-dark);
     border-radius: 6px;
-    padding: 12px;
+    padding: 16px;
     position: relative;
     box-shadow:
-        inset 0 2px 8px rgba(0, 0, 0, 0.25),
+        /* Outer shadow */
+        0 6px 16px var(--shadow-dark),
+        /* Inner recessed effect */
+        inset 0 2px 8px rgba(0, 0, 0, 0.3),
         inset 0 -2px 8px rgba(255, 255, 255, 0.3),
-        0 6px 16px var(--shadow-dark);
+        /* Chrome beveled edge */
+        inset 0 0 0 4px var(--chrome-light),
+        inset 0 0 0 5px var(--chrome-dark);
     min-height: 320px;
 }
 
@@ -143,9 +152,24 @@ body {
     left: 0;
     right: 0;
     height: 35%;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, transparent 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
     pointer-events: none;
     border-radius: 2px;
+}
+
+/* Glass shine effect overlay */
+.glass-case::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, transparent 30%),
+        linear-gradient(270deg, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
+    pointer-events: none;
+    border-radius: 3px;
 }
 
 .label-grid {
@@ -153,28 +177,61 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .label-slot {
     aspect-ratio: 1;
     background: white;
-    border: 2px solid var(--chrome-dark);
-    border-radius: 3px;
+    border: 3px solid var(--chrome-dark);
+    border-radius: 4px;
     cursor: pointer;
     overflow: hidden;
     position: relative;
     box-shadow:
-        0 2px 4px var(--shadow-light),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        /* Window depth */
+        0 4px 12px var(--shadow-dark),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.2);
     transition: all 0.15s ease;
+}
+
+/* Chrome frame detail */
+.label-slot::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid;
+    border-color: var(--chrome-highlight) var(--chrome-dark) var(--chrome-dark) var(--chrome-highlight);
+    border-radius: 3px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Glass scratches and wear texture */
+.label-slot::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        linear-gradient(90deg, transparent 48%, rgba(200, 200, 200, 0.1) 48.5%, rgba(200, 200, 200, 0.1) 51.5%, transparent 52%),
+        linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.05) 30.5%, rgba(0, 0, 0, 0.03) 70%, transparent 70.5%);
+    pointer-events: none;
+    z-index: 2;
 }
 
 .label-slot:hover {
     border-color: var(--accent-red);
     box-shadow:
-        0 3px 6px var(--shadow-dark),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        0 6px 16px var(--shadow-dark),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.2);
     transform: scale(1.03);
 }
 
@@ -187,6 +244,8 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    position: relative;
+    z-index: 1;
 }
 
 /* ============================================================
@@ -198,18 +257,32 @@ body {
     padding: 18px;
     position: relative;
     z-index: 2;
+    border-top: 2px solid var(--chrome-dark);
 }
 
 /* Coin slot area */
 .coin-area {
     background: linear-gradient(to bottom, var(--trim-cream), var(--trim-cream-dark));
-    border: 2px solid var(--accent-red);
+    border: 3px solid var(--accent-red);
     border-radius: 6px;
     padding: 12px;
     margin-bottom: 16px;
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.3),
         0 3px 6px var(--shadow-dark);
+    position: relative;
+}
+
+/* Chrome corner trim on coin area */
+.coin-area::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(135deg, var(--chrome-light) 0%, var(--chrome-dark) 100%);
+    border-radius: 2px;
 }
 
 .odometer-section {
@@ -287,6 +360,20 @@ body {
         inset 0 1px 0 rgba(255, 255, 255, 0.2),
         inset 0 -2px 4px var(--shadow-dark);
     text-transform: uppercase;
+    position: relative;
+}
+
+/* Button shine effect */
+.machine-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+    border-radius: 5px 5px 0 0;
+    pointer-events: none;
 }
 
 .machine-button:hover:not(:disabled) {
