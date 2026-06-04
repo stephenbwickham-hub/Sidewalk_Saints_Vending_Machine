@@ -51,7 +51,8 @@ SidewalkSaintsVendingMachine/
 ├── index.html              # Main machine UI
 ├── styles.css              # 1950s machine aesthetic
 ├── script.js               # Machine behavior & interactions
-├── labelCatalog.js         # Label data structure (12 strains × 2-4 series)
+├── labelCatalog.js         # Current vending machine label options
+├── strainCatalog.js        # Official Sidewalk Saints Top 100 strain catalog
 ├── pdfGenerator.js         # Printable PDF generation
 ├── public/
 │   └── labels/             # Real label image folders and placement docs
@@ -64,7 +65,21 @@ SidewalkSaintsVendingMachine/
 
 ## Label Catalog
 
-Currently includes 12 strains with 2-4 label series each:
+`strainCatalog.js` is the official Sidewalk Saints Top 100 strain catalog. It contains exactly 100 strains, numbered in official order, with:
+
+- `number`
+- `strain`
+- `strainSlug`
+- `sidewalkSinner`
+- `coreGag`
+
+Each official strain has a matching folder under:
+
+```text
+public/labels/[strain-slug]/
+```
+
+`labelCatalog.js` remains the current vending machine label option catalog used by the prototype selection workflow. It currently includes 12 strains with 2-4 label series each:
 
 - OG Kush
 - Blue Dream

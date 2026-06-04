@@ -12,6 +12,8 @@ Example:
 public/labels/og-kush/cigarette.png
 ```
 
+The strain folders mirror the official Sidewalk Saints Top 100 strain catalog in `strainCatalog.js`.
+
 The current catalog expects these files:
 
 ```text
