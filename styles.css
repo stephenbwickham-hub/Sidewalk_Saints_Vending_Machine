@@ -48,13 +48,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    padding: 12px;
     color: var(--text-dark);
 }
 
 .machine-wrapper {
     width: 100%;
-    max-width: 520px;
+    max-width: 460px;
 }
 
 /* ============================================================
@@ -103,7 +103,7 @@ body {
 
 .machine-top {
     background: linear-gradient(to bottom, var(--trim-cream), var(--trim-cream-dark));
-    padding: 16px 12px;
+    padding: 12px;
     position: relative;
     z-index: 2;
     border-bottom: 3px solid var(--chrome-dark);
@@ -113,7 +113,7 @@ body {
 }
 
 .brand-header {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     letter-spacing: 3px;
     color: var(--accent-red);
@@ -126,7 +126,7 @@ body {
 .machine-line {
     height: 3px;
     background: linear-gradient(to right, var(--accent-red), var(--accent-red-dark));
-    margin-top: 8px;
+    margin-top: 6px;
     box-shadow: 
         0 1px 2px var(--shadow-dark),
         0 -1px 0 rgba(255, 255, 255, 0.3);
@@ -137,7 +137,7 @@ body {
    ============================================================ */
 
 .machine-display {
-    padding: 20px;
+    padding: 14px;
     background: var(--machine-blue);
     position: relative;
     z-index: 2;
@@ -147,12 +147,12 @@ body {
 
 .glass-case {
     background: linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%);
-    border: 12px solid;
+    border: 10px solid;
     border-color: 
         var(--chrome-highlight) var(--chrome-dark)
         var(--chrome-dark) var(--chrome-highlight);
     border-radius: 8px;
-    padding: 16px;
+    padding: 12px;
     position: relative;
     box-shadow:
         /* Outer shadow for depth */
@@ -164,7 +164,7 @@ body {
         inset 2px 2px 0 rgba(255, 255, 255, 0.6),
         /* Chrome beveled edge - dark */
         inset -2px -2px 0 rgba(0, 0, 0, 0.3);
-    min-height: 320px;
+    min-height: 300px;
 }
 
 .glass-reflection {
@@ -204,7 +204,7 @@ body {
 .label-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 8px;
     position: relative;
     z-index: 3;
 }
@@ -213,7 +213,7 @@ body {
     aspect-ratio: 1;
     background: linear-gradient(135deg, #fafafa 0%, #e8e8e8 100%);
     /* Beveled chrome frame - thick border with light/dark sides */
-    border: 6px solid;
+    border: 5px solid;
     border-color: 
         #ffffff #606060
         #606060 #ffffff;
@@ -317,7 +317,7 @@ body {
 
 .machine-control-panel {
     background: linear-gradient(to bottom, var(--machine-blue), var(--machine-blue-dark));
-    padding: 18px;
+    padding: 14px;
     position: relative;
     z-index: 2;
     border-top: 3px solid var(--chrome-dark);
@@ -326,7 +326,7 @@ body {
 
 /* Coin slot area */
 .coin-slot-area {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: center;
 }
@@ -335,7 +335,7 @@ body {
     background: linear-gradient(to right, var(--chrome-light), var(--chrome), var(--chrome-dark));
     border: 2px solid #333;
     border-radius: 3px;
-    height: 18px;
+    height: 16px;
     width: 80%;
     position: relative;
     overflow: hidden;
@@ -363,7 +363,7 @@ body {
     border: 3px solid;
     border-color: #5a4a28 #3a2a18 #3a2a18 #7a6a48;
     border-radius: 8px;
-    padding: 14px 12px;
+    padding: 12px 10px;
     color: var(--text-light);
     font-weight: bold;
     font-family: 'Courier New', monospace;
@@ -827,7 +827,7 @@ body {
 
     .machine-button {
         font-size: 10px;
-        padding: 12px 10px;
+        padding: 10px 8px;
     }
 
     .label-grid {
