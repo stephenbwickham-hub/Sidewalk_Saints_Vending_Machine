@@ -302,13 +302,35 @@ function drawCenteredText(ctx, text, x, y, options = {}) {
     ctx.textAlign = 'start';
 }
 
-function loadLabelImage(src) {
-    return new Promise(resolve => {
-        if (!src) {
-            resolve(null);
-            return;
+async function loadLabelImage(src) {
+    if (!src) {
+        return null;
+    }
+
+    try {
+        const response = await fetch(src);
+        if (!response.ok) {
+            return null;
         }
 
+        const dataUrl = await blobToDataUrl(await response.blob());
+        return decodeImage(dataUrl);
+    } catch (error) {
+        return null;
+    }
+}
+
+function blobToDataUrl(blob) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = () => reject(reader.error);
+        reader.readAsDataURL(blob);
+    });
+}
+
+function decodeImage(src) {
+    return new Promise(resolve => {
         const image = new Image();
         image.onload = () => resolve(image);
         image.onerror = () => resolve(null);
