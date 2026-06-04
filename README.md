@@ -54,7 +54,8 @@ SidewalkSaintsVendingMachine/
 ├── labelCatalog.js         # Label data structure (12 strains × 2-4 series)
 ├── pdfGenerator.js         # PDF generation (placeholder)
 ├── public/
-│   └── labels/             # Label images (placeholder structure)
+│   └── labels/             # Real label image folders and placement docs
+│       ├── README.md       # Exact expected label image paths
 │       ├── og-kush/
 │       ├── blue-dream/
 │       └── ...
@@ -84,15 +85,27 @@ Currently includes 12 strains with 2-4 label series each:
 - Early Cartoon Series
 - Sidewalk Sinners Series
 
-Images stored as `/public/labels/[strain-slug]/[series-slug].png`
+Images are loaded from:
+
+```text
+public/labels/[strain-slug]/[series-slug].png
+```
+
+Example:
+
+```text
+public/labels/og-kush/cigarette.png
+```
+
+See `public/labels/README.md` for the exact list of expected label files. If a file is missing, the machine displays a styled placeholder card in that slot or option thumbnail.
 
 ## Development TODOs
 
 ### High Priority (Version 1)
 
 - [ ] **Replace placeholder images** with real label artwork
-  - Create 50 label images (12 strains × ~4 series average)
-  - Store in `/public/labels/[strain-slug]/[series-slug].png`
+  - Add the expected PNG files listed in `public/labels/README.md`
+  - Store each file at `public/labels/[strain-slug]/[series-slug].png`
   
 - [ ] **Real PDF generation**
   - Install jsPDF + html2canvas

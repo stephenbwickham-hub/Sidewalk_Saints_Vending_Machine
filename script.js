@@ -39,15 +39,46 @@ function renderLabelSlots() {
         const slot = document.createElement('div');
         slot.className = 'label-slot';
         slot.onclick = () => openSelectionModal(index);
-        
-        const img = document.createElement('img');
-        img.className = 'label-image';
-        img.src = label.image;
-        img.alt = `${label.strain} - ${label.series}`;
-        
-        slot.appendChild(img);
+
+        slot.appendChild(createLabelImage(label));
         grid.appendChild(slot);
     });
+}
+
+function createLabelImage(label) {
+    const img = document.createElement('img');
+    img.className = 'label-image';
+    img.src = label.image;
+    img.alt = `${label.strain} - ${label.series}`;
+    img.onerror = () => {
+        img.replaceWith(createLabelPlaceholder(label));
+    };
+
+    return img;
+}
+
+function createLabelPlaceholder(label) {
+    const placeholder = document.createElement('div');
+    placeholder.className = 'label-placeholder';
+
+    const brand = document.createElement('span');
+    brand.className = 'placeholder-brand';
+    brand.textContent = 'SIDEWALK SAINTS';
+
+    const strain = document.createElement('span');
+    strain.className = 'placeholder-strain';
+    strain.textContent = label.strain;
+
+    const series = document.createElement('span');
+    series.className = 'placeholder-series';
+    series.textContent = label.series;
+
+    const id = document.createElement('span');
+    id.className = 'placeholder-id';
+    id.textContent = label.labelId;
+
+    placeholder.append(brand, strain, series, id);
+    return placeholder;
 }
 
 // ============================================================
@@ -138,12 +169,8 @@ function onStrainSelected(e) {
         thumb.className = 'option-thumbnail';
         thumb.type = 'button';
         thumb.onclick = () => selectLabel(label);
-        
-        const img = document.createElement('img');
-        img.src = label.image;
-        img.alt = `${label.strain} - ${label.series}`;
-        
-        thumb.appendChild(img);
+
+        thumb.appendChild(createLabelImage(label));
         grid.appendChild(thumb);
     });
     
