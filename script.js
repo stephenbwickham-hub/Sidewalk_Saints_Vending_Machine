@@ -89,6 +89,7 @@ function setupEventListeners() {
     // Main buttons
     document.getElementById('insertQuarterBtn').addEventListener('click', openDonationModal);
     document.getElementById('shakeBtn').addEventListener('click', shakeTheeMachine);
+    document.getElementById('instructionPlateBtn').addEventListener('click', openInstructionsModal);
     
     // Selection modal
     document.getElementById('strainDropdown').addEventListener('change', onStrainSelected);
@@ -113,6 +114,9 @@ function setupEventListeners() {
         }
     });
     document.getElementById('cancelCustomBtn').addEventListener('click', closeAllModals);
+
+    // Instructions modal
+    document.getElementById('instructionsCloseBtn').addEventListener('click', closeAllModals);
     
     // Close modals on overlay click
     document.querySelectorAll('.modal-overlay').forEach(overlay => {
@@ -187,6 +191,10 @@ function selectLabel(label) {
     
     // Close modal
     closeAllModals();
+}
+
+function openInstructionsModal() {
+    document.getElementById('instructionsModal').classList.add('active');
 }
 
 // ============================================================

@@ -27,6 +27,11 @@
 
             <!-- Control panel -->
             <div class="machine-control-panel">
+                <!-- Machine instruction plate -->
+                <button class="instruction-plate" id="instructionPlateBtn" type="button">
+                    INSTRUCTIONS
+                </button>
+
                 <!-- Coin slot -->
                 <div class="coin-slot-area">
                     <div class="coin-slot">
@@ -120,6 +125,28 @@
                 <button class="modal-button confirm-button" id="confirmCustomBtn">OK</button>
                 <button class="modal-button cancel-button" id="cancelCustomBtn">CANCEL</button>
             </div>
+        </div>
+    </div>
+
+    <!-- Instructions Modal -->
+    <div class="modal" id="instructionsModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-panel instructions-panel">
+            <div class="modal-header">INSTRUCTIONS</div>
+
+            <div class="modal-content instructions-content">
+                <ol class="instructions-list">
+                    <li>Click any label window.</li>
+                    <li>Choose a strain.</li>
+                    <li>Pick the label style you want.</li>
+                    <li>Fill all 12 windows, or keep the random ones already loaded.</li>
+                    <li>Insert a quarter or shake the machine.</li>
+                    <li>The machine dispenses a printable PDF.</li>
+                    <li>Print at 100% scale.</li>
+                </ol>
+            </div>
+
+            <button class="modal-close" id="instructionsCloseBtn">CLOSE</button>
         </div>
     </div>
 
