@@ -36,8 +36,8 @@ This is not ecommerce. It's a machine experience.
 ✅ **PDF Dispense**
 - Generates printable sheet with 12 selected labels
 - Includes strain name and label ID
-- TODO: Real PDF generation (currently placeholder text file)
-- TODO: Add printing instruction page
+- Creates an 8.5" × 11" PDF download
+- Adds a second page with basic printing instructions
 
 ✅ **Odometer**
 - Displays anonymous dispense count
@@ -51,10 +51,12 @@ SidewalkSaintsVendingMachine/
 ├── index.html              # Main machine UI
 ├── styles.css              # 1950s machine aesthetic
 ├── script.js               # Machine behavior & interactions
-├── labelCatalog.js         # Label data structure (12 strains × 2-4 series)
-├── pdfGenerator.js         # PDF generation (placeholder)
+├── labelCatalog.js         # Current vending machine label options
+├── strainCatalog.js        # Official Sidewalk Saints Top 100 strain catalog
+├── pdfGenerator.js         # Printable PDF generation
 ├── public/
-│   └── labels/             # Label images (placeholder structure)
+│   └── labels/             # Real label image folders and placement docs
+│       ├── README.md       # Exact expected label image paths
 │       ├── og-kush/
 │       ├── blue-dream/
 │       └── ...
@@ -63,7 +65,21 @@ SidewalkSaintsVendingMachine/
 
 ## Label Catalog
 
-Currently includes 12 strains with 2-4 label series each:
+`strainCatalog.js` is the official Sidewalk Saints Top 100 strain catalog. It contains exactly 100 strains, numbered in official order, with:
+
+- `number`
+- `strain`
+- `strainSlug`
+- `sidewalkSinner`
+- `coreGag`
+
+Each official strain has a matching folder under:
+
+```text
+public/labels/[strain-slug]/
+```
+
+`labelCatalog.js` remains the current vending machine label option catalog used by the prototype selection workflow. It currently includes 12 strains with 2-4 label series each:
 
 - OG Kush
 - Blue Dream
@@ -84,22 +100,33 @@ Currently includes 12 strains with 2-4 label series each:
 - Early Cartoon Series
 - Sidewalk Sinners Series
 
-Images stored as `/public/labels/[strain-slug]/[series-slug].png`
+Images are loaded from:
+
+```text
+public/labels/[strain-slug]/[series-slug].png
+```
+
+Example:
+
+```text
+public/labels/og-kush/cigarette.png
+```
+
+See `public/labels/README.md` for the exact list of expected label files. If a file is missing, the machine displays a styled placeholder card in that slot or option thumbnail.
 
 ## Development TODOs
 
 ### High Priority (Version 1)
 
 - [ ] **Replace placeholder images** with real label artwork
-  - Create 50 label images (12 strains × ~4 series average)
-  - Store in `/public/labels/[strain-slug]/[series-slug].png`
+  - Add the expected PNG files listed in `public/labels/README.md`
+  - Store each file at `public/labels/[strain-slug]/[series-slug].png`
   
-- [ ] **Real PDF generation**
-  - Install jsPDF + html2canvas
-  - Implement label sheet layout (3×4 grid)
-  - Add Sidewalk Saints branding/logo
-  - Create printing instruction page
-  - Generate actual PDF (not text file)
+- [x] **Real PDF generation**
+  - Create 8.5" × 11" printable PDF label sheet
+  - Add 12 selected labels in a 3×4 grid
+  - Include strain name and label ID under each label
+  - Add a second page with basic printing instructions
 
 - [ ] **Payment integration**
   - Connect to Stripe or PayPal

@@ -39,15 +39,46 @@ function renderLabelSlots() {
         const slot = document.createElement('div');
         slot.className = 'label-slot';
         slot.onclick = () => openSelectionModal(index);
-        
-        const img = document.createElement('img');
-        img.className = 'label-image';
-        img.src = label.image;
-        img.alt = `${label.strain} - ${label.series}`;
-        
-        slot.appendChild(img);
+
+        slot.appendChild(createLabelImage(label));
         grid.appendChild(slot);
     });
+}
+
+function createLabelImage(label) {
+    const img = document.createElement('img');
+    img.className = 'label-image';
+    img.src = label.image;
+    img.alt = `${label.strain} - ${label.series}`;
+    img.onerror = () => {
+        img.replaceWith(createLabelPlaceholder(label));
+    };
+
+    return img;
+}
+
+function createLabelPlaceholder(label) {
+    const placeholder = document.createElement('div');
+    placeholder.className = 'label-placeholder';
+
+    const brand = document.createElement('span');
+    brand.className = 'placeholder-brand';
+    brand.textContent = 'SIDEWALK SAINTS';
+
+    const strain = document.createElement('span');
+    strain.className = 'placeholder-strain';
+    strain.textContent = label.strain;
+
+    const series = document.createElement('span');
+    series.className = 'placeholder-series';
+    series.textContent = label.series;
+
+    const id = document.createElement('span');
+    id.className = 'placeholder-id';
+    id.textContent = label.labelId;
+
+    placeholder.append(brand, strain, series, id);
+    return placeholder;
 }
 
 // ============================================================
@@ -58,6 +89,7 @@ function setupEventListeners() {
     // Main buttons
     document.getElementById('insertQuarterBtn').addEventListener('click', openDonationModal);
     document.getElementById('shakeBtn').addEventListener('click', shakeTheeMachine);
+    document.getElementById('instructionPlateBtn').addEventListener('click', openInstructionsModal);
     
     // Selection modal
     document.getElementById('strainDropdown').addEventListener('change', onStrainSelected);
@@ -82,6 +114,9 @@ function setupEventListeners() {
         }
     });
     document.getElementById('cancelCustomBtn').addEventListener('click', closeAllModals);
+
+    // Instructions modal
+    document.getElementById('instructionsCloseBtn').addEventListener('click', closeAllModals);
     
     // Close modals on overlay click
     document.querySelectorAll('.modal-overlay').forEach(overlay => {
@@ -138,12 +173,8 @@ function onStrainSelected(e) {
         thumb.className = 'option-thumbnail';
         thumb.type = 'button';
         thumb.onclick = () => selectLabel(label);
-        
-        const img = document.createElement('img');
-        img.src = label.image;
-        img.alt = `${label.strain} - ${label.series}`;
-        
-        thumb.appendChild(img);
+
+        thumb.appendChild(createLabelImage(label));
         grid.appendChild(thumb);
     });
     
@@ -160,6 +191,10 @@ function selectLabel(label) {
     
     // Close modal
     closeAllModals();
+}
+
+function openInstructionsModal() {
+    document.getElementById('instructionsModal').classList.add('active');
 }
 
 // ============================================================
@@ -243,17 +278,21 @@ function dispensePDF() {
     // Show dispense animation
     document.getElementById('dispenseModal').classList.add('active');
     
-    setTimeout(() => {
-        // Generate PDF with current selection
-        generatePDF(currentSelection.labels);
-        
-        // Increment counter
-        machineState.dispensedCount++;
-        saveOdometerCount();
-        updateOdometerDisplay();
-        
-        // Close dispense modal
-        document.getElementById('dispenseModal').classList.remove('active');
+    setTimeout(async () => {
+        try {
+            // Generate PDF with current selection
+            await generatePDF(currentSelection.labels);
+
+            // Increment counter
+            machineState.dispensedCount++;
+            saveOdometerCount();
+            updateOdometerDisplay();
+        } catch (error) {
+            console.error('PDF generation failed:', error);
+        } finally {
+            // Close dispense modal
+            document.getElementById('dispenseModal').classList.remove('active');
+        }
     }, 1500);
 }
 

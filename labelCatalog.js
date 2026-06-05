@@ -324,6 +324,16 @@ const LABEL_CATALOG = [
     }
 ];
 
+// Real label files live at public/labels/[strain-slug]/[series-slug].png.
+// Missing files are handled by the machine UI with a styled placeholder card.
+function getLabelImagePath(label) {
+    return `public/labels/${label.strainSlug}/${label.seriesSlug}.png`;
+}
+
+LABEL_CATALOG.forEach(label => {
+    label.image = getLabelImagePath(label);
+});
+
 // Get all unique strains sorted alphabetically
 function getAllStrains() {
     const strains = [...new Set(LABEL_CATALOG.map(label => label.strain))];
@@ -351,7 +361,6 @@ function getRandomInitialLabels() {
     return selected;
 }
 
-// TODO: Later - placeholder images will be replaced with real assets
-// Directory structure:
-// /public/labels/[strain-slug]/[series-slug].png
-// Example: /public/labels/og-kush/cigarette.png
+// Add real assets at:
+// public/labels/[strain-slug]/[series-slug].png
+// Example: public/labels/og-kush/cigarette.png
