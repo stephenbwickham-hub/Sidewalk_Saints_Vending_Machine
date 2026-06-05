@@ -63,7 +63,7 @@ body {
 }
 
 .machine-wrapper {
-    width: min(clamp(520px, 68vh, 760px), calc(100vw - 24px));
+    width: min(clamp(540px, 72vh, 790px), calc(100vw - 24px));
     height: 94vh;
     perspective: 1200px;
 }
@@ -88,13 +88,13 @@ body {
     overflow: hidden;
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto minmax(0, 1fr) auto auto;
+    grid-template-columns: minmax(0, 1fr) minmax(150px, 28%);
+    grid-template-rows: auto minmax(0, 1fr) 112px auto;
     grid-template-areas:
-        "header"
-        "display"
-        "controls"
-        "bottom";
+        "header header"
+        "display controls"
+        "tray controls"
+        "bottom bottom";
     height: 100%;
     transform: rotateY(-0.6deg);
 }
@@ -177,7 +177,7 @@ body {
 .cabinet-hinge {
     position: absolute;
     top: 134px;
-    bottom: 174px;
+    bottom: 148px;
     left: 9px;
     width: 7px;
     background:
@@ -198,8 +198,8 @@ body {
 .cabinet-side-seam {
     position: absolute;
     top: 128px;
-    right: 18px;
-    bottom: 164px;
+    right: 28%;
+    bottom: 44px;
     width: 2px;
     background: rgba(22, 30, 34, 0.42);
     box-shadow:
@@ -209,7 +209,7 @@ body {
 
 .cabinet-lock {
     position: absolute;
-    right: 17px;
+    right: calc(28% + 10px);
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -224,7 +224,7 @@ body {
 }
 
 .cabinet-lock-upper { top: 154px; }
-.cabinet-lock-lower { bottom: 186px; }
+.cabinet-lock-lower { bottom: 168px; }
 
 /* ============================================================
    MACHINE TOP (Header)
@@ -237,7 +237,7 @@ body {
         radial-gradient(circle at 82% 24%, rgba(83, 30, 24, 0.24) 0%, transparent 25%),
         repeating-linear-gradient(5deg, transparent 0, transparent 18px, rgba(255, 255, 255, 0.035) 18px, rgba(255, 255, 255, 0.035) 19px),
         linear-gradient(180deg, #bd463c 0%, var(--accent-red) 48%, var(--accent-red-dark) 100%);
-    padding: 10px 88px 8px 78px;
+    padding: 12px 110px 10px 94px;
     position: relative;
     z-index: 2;
     border-bottom: 7px solid;
@@ -299,7 +299,7 @@ body {
 
 .machine-display {
     grid-area: display;
-    padding: 13px 20px 12px;
+    padding: 14px 16px 10px 22px;
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent 18%, transparent 84%, rgba(0, 0, 0, 0.16)),
         linear-gradient(180deg, #8fb0c8 0%, #789ab3 100%);
@@ -309,15 +309,18 @@ body {
         inset 0 5px 8px rgba(255, 255, 255, 0.1),
         inset 0 -6px 12px rgba(0, 0, 0, 0.18);
     border-right: 0;
-    border-bottom: 4px solid rgba(43, 59, 66, 0.62);
+    border-right: 4px solid rgba(43, 59, 66, 0.62);
+    border-bottom: 0;
     min-height: 0;
+    display: flex;
+    align-items: center;
 }
 
 .glass-case {
     background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 22%),
         linear-gradient(180deg, #22282a 0%, #101416 100%);
-    border: 9px solid;
+    border: 10px solid;
     border-color: 
         var(--chrome-highlight) var(--chrome-dark)
         var(--chrome-dark) var(--chrome-highlight);
@@ -337,7 +340,10 @@ body {
         inset 3px 3px 0 rgba(255, 255, 255, 0.34),
         /* Chrome beveled edge - dark */
         inset -4px -4px 0 rgba(0, 0, 0, 0.42);
-    height: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    aspect-ratio: 4 / 3;
     min-height: 0;
 }
 
@@ -554,15 +560,18 @@ body {
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent 18%, transparent 84%, rgba(0, 0, 0, 0.18)),
         linear-gradient(180deg, #83a5bd 0%, #6f90a8 46%, #557187 100%);
-    padding: 8px 18px 9px;
+    padding: 15px 12px 13px;
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: 0.95fr 1.05fr 1.1fr 1fr 1.05fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "coin buttons door instructions contact";
-    grid-template-rows: 62px;
-    gap: 9px;
+        "buttons"
+        "coin"
+        "instructions"
+        "contact";
+    grid-template-rows: 112px 82px auto auto;
+    gap: 10px;
     align-items: stretch;
     border-top: 7px solid;
     border-color: var(--chrome-highlight) var(--chrome-dark) var(--chrome-dark) var(--chrome-highlight);
@@ -575,7 +584,7 @@ body {
 .machine-control-panel::before {
     content: '';
     position: absolute;
-    inset: 7px 13px;
+    inset: 9px;
     border: 1px solid rgba(30, 42, 48, 0.42);
     box-shadow:
         inset 1px 1px 0 rgba(255, 255, 255, 0.12),
@@ -587,7 +596,7 @@ body {
     grid-area: instructions;
     width: 100%;
     margin: 0 auto;
-    padding: 8px;
+    padding: 13px 8px;
     display: block;
     position: relative;
     background:
@@ -676,7 +685,7 @@ body {
     justify-content: center;
     width: 100%;
     position: relative;
-    padding: 8px;
+    padding: 10px;
     background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.42), transparent 32%),
         linear-gradient(to bottom, #d8dcda 0%, #969c9d 52%, #626869 100%);
@@ -696,7 +705,7 @@ body {
     border: 2px solid;
     border-color: #edf1ef #4c5253 #3c4142 #d3d9d6;
     border-radius: 5px;
-    height: 36px;
+    height: 52px;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -727,7 +736,7 @@ body {
     grid-area: buttons;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 }
 
 .machine-button {
@@ -738,11 +747,11 @@ body {
     border: 3px solid;
     border-color: #5a4a28 #3a2a18 #3a2a18 #7a6a48;
     border-radius: 5px;
-    padding: 5px 4px;
+    padding: 10px 6px;
     color: var(--text-light);
     font-weight: bold;
     font-family: 'Courier New', monospace;
-    font-size: 8px;
+    font-size: 9px;
     cursor: pointer;
     line-height: 1.15;
     letter-spacing: 0.35px;
@@ -803,10 +812,12 @@ body {
 }
 
 .dispense-door {
-    grid-area: door;
-    margin: 0;
-    width: 100%;
-    height: 62px;
+    grid-area: tray;
+    align-self: stretch;
+    justify-self: center;
+    margin: 10px 0 12px;
+    width: min(68%, 360px);
+    height: auto;
     position: relative;
     background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.28), transparent 33%),
@@ -822,10 +833,10 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 5px;
-    font-size: 7px;
+    padding-bottom: 12px;
+    font-size: 14px;
     font-weight: bold;
-    letter-spacing: 1.1px;
+    letter-spacing: 5px;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
@@ -833,9 +844,9 @@ body {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: 17px;
-    width: 46px;
-    height: 8px;
+    bottom: 32px;
+    width: 68px;
+    height: 10px;
     transform: translateX(-50%);
     background: linear-gradient(180deg, #f2f4f1, #838a8b 58%, #555b5c);
     border: 1px solid #444a4b;
@@ -847,10 +858,10 @@ body {
 
 .dispense-door-lip {
     position: absolute;
-    top: 9px;
-    left: 12px;
-    right: 12px;
-    height: 17px;
+    top: 11px;
+    left: 18px;
+    right: 18px;
+    height: 28px;
     background: linear-gradient(180deg, #2d3334, #101313);
     border: 1px solid #0b0d0d;
     border-radius: 2px;
@@ -864,7 +875,7 @@ body {
     width: 100%;
     margin: 0;
     position: relative;
-    padding: 5px;
+    padding: 10px 6px 7px;
     background:
         radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.32) 0%, transparent 22%),
         repeating-linear-gradient(
@@ -893,21 +904,21 @@ body {
 }
 
 .contact-plate-brand {
-    font-size: 5px;
+    font-size: 6px;
     font-weight: bold;
     letter-spacing: 0;
     margin-bottom: 3px;
 }
 
 .contact-plate-service {
-    font-size: 5px;
+    font-size: 6px;
     font-weight: bold;
     letter-spacing: 0.4px;
 }
 
 .contact-plate-email {
     margin-top: 3px;
-    font-size: 4px;
+    font-size: 5px;
     font-weight: bold;
     letter-spacing: 0;
     text-transform: none;
@@ -922,7 +933,7 @@ body {
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent 18%, transparent 84%, rgba(0, 0, 0, 0.22)),
         linear-gradient(to bottom, #557187, #405d72);
-    padding: 5px 18px 8px;
+    padding: 5px 18px 7px;
     position: relative;
     z-index: 2;
     border-top: 0;
@@ -930,16 +941,16 @@ body {
     justify-content: space-between;
     align-items: flex-end;
     gap: 8px;
-    min-height: 44px;
+    min-height: 34px;
     box-shadow:
         inset 0 2px 2px rgba(255, 255, 255, 0.08),
         inset 0 -5px 8px rgba(0, 0, 0, 0.3);
 }
 
 .manufacturer-plate {
-    width: 126px;
+    width: 118px;
     position: relative;
-    padding: 5px 6px;
+    padding: 3px 5px;
     background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.32), transparent 35%),
         linear-gradient(180deg, #c0c5c3, #7f8687 58%, #5e6566);
@@ -951,12 +962,21 @@ body {
         inset -1px -1px 0 rgba(0, 0, 0, 0.3),
         0 1px 2px rgba(0, 0, 0, 0.3);
     color: rgba(21, 24, 24, 0.78);
-    font-size: 5px;
+    font-size: 4px;
     font-weight: bold;
     line-height: 1.1;
     letter-spacing: 0.05px;
     text-align: center;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+
+.found-artifacts {
+    color: rgba(232, 220, 200, 0.54);
+    font-size: 6px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
 }
 
 .maintenance-odometer {
@@ -1409,8 +1429,8 @@ body {
     }
 
     .label-grid {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, minmax(0, 1fr));
     }
 
     .brand-header {

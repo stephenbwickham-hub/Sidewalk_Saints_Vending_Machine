@@ -42,20 +42,14 @@
                 </div>
             </div>
 
+            <!-- Non-interactive dispensing tray -->
+            <div class="dispense-door" aria-hidden="true">
+                <div class="dispense-door-lip"></div>
+                <span>PULL</span>
+            </div>
+
             <!-- Control panel -->
             <div class="machine-control-panel">
-                <!-- Machine instruction plate -->
-                <button class="instruction-plate" id="instructionPlateBtn" type="button">
-                    INSTRUCTIONS
-                </button>
-
-                <!-- Coin slot -->
-                <div class="coin-slot-area">
-                    <div class="coin-slot">
-                        <div class="slot-inner"></div>
-                    </div>
-                </div>
-
                 <!-- Main action buttons -->
                 <div class="button-row">
                     <button class="machine-button button-insert" id="insertQuarterBtn">
@@ -66,11 +60,17 @@
                     </button>
                 </div>
 
-                <!-- Non-interactive dispensing door -->
-                <div class="dispense-door" aria-hidden="true">
-                    <div class="dispense-door-lip"></div>
-                    <span>DISPENSE</span>
+                <!-- Coin slot -->
+                <div class="coin-slot-area">
+                    <div class="coin-slot">
+                        <div class="slot-inner"></div>
+                    </div>
                 </div>
+
+                <!-- Machine instruction plate -->
+                <button class="instruction-plate" id="instructionPlateBtn" type="button">
+                    INSTRUCTIONS
+                </button>
 
                 <!-- Manufacturer/service contact plate -->
                 <div class="contact-plate">
@@ -89,6 +89,7 @@
                     <div>EST. 2026</div>
                     <div>MODEL: SS-12</div>
                 </div>
+                <div class="found-artifacts">FOUND ARTIFACTS</div>
                 <div class="maintenance-odometer">
                     <div class="odometer-display">
                         <span id="odometerValue">000000</span>
