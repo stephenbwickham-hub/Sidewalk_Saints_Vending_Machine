@@ -63,7 +63,7 @@ body {
 }
 
 .machine-wrapper {
-    width: min(clamp(540px, 72vh, 790px), calc(100vw - 24px));
+    width: min(clamp(620px, 86vh, 900px), calc(100vw - 24px));
     height: 94vh;
     perspective: 1200px;
 }
@@ -88,7 +88,7 @@ body {
     overflow: hidden;
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(150px, 28%);
+    grid-template-columns: minmax(0, 1fr) minmax(150px, 26%);
     grid-template-rows: auto minmax(0, 1fr) 112px auto;
     grid-template-areas:
         "header header"
@@ -198,7 +198,7 @@ body {
 .cabinet-side-seam {
     position: absolute;
     top: 128px;
-    right: 28%;
+    right: 26%;
     bottom: 44px;
     width: 2px;
     background: rgba(22, 30, 34, 0.42);
@@ -209,7 +209,7 @@ body {
 
 .cabinet-lock {
     position: absolute;
-    right: calc(28% + 10px);
+    right: calc(26% + 10px);
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -299,7 +299,7 @@ body {
 
 .machine-display {
     grid-area: display;
-    padding: 14px 16px 10px 22px;
+    padding: 9px 12px 8px 18px;
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent 18%, transparent 84%, rgba(0, 0, 0, 0.16)),
         linear-gradient(180deg, #8fb0c8 0%, #789ab3 100%);
@@ -312,20 +312,18 @@ body {
     border-right: 4px solid rgba(43, 59, 66, 0.62);
     border-bottom: 0;
     min-height: 0;
-    display: flex;
-    align-items: center;
 }
 
 .glass-case {
     background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 22%),
         linear-gradient(180deg, #22282a 0%, #101416 100%);
-    border: 10px solid;
+    border: 8px solid;
     border-color: 
         var(--chrome-highlight) var(--chrome-dark)
         var(--chrome-dark) var(--chrome-highlight);
     border-radius: 8px;
-    padding: 8px;
+    padding: 6px;
     position: relative;
     display: flex;
     align-items: stretch;
@@ -341,9 +339,8 @@ body {
         /* Chrome beveled edge - dark */
         inset -4px -4px 0 rgba(0, 0, 0, 0.42);
     width: 100%;
-    height: auto;
-    max-height: 100%;
-    aspect-ratio: 4 / 3;
+    height: 100%;
+    max-height: none;
     min-height: 0;
 }
 
@@ -570,9 +567,10 @@ body {
         "coin"
         "instructions"
         "contact";
-    grid-template-rows: 112px 82px auto auto;
+    grid-template-rows: 132px 86px max-content max-content;
     gap: 10px;
     align-items: stretch;
+    align-content: start;
     border-top: 7px solid;
     border-color: var(--chrome-highlight) var(--chrome-dark) var(--chrome-dark) var(--chrome-highlight);
     box-shadow:
@@ -875,6 +873,7 @@ body {
     width: 100%;
     margin: 0;
     position: relative;
+    align-self: start;
     padding: 10px 6px 7px;
     background:
         radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.32) 0%, transparent 22%),
@@ -907,17 +906,18 @@ body {
     font-size: 6px;
     font-weight: bold;
     letter-spacing: 0;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
 
 .contact-plate-service {
     font-size: 6px;
     font-weight: bold;
     letter-spacing: 0.4px;
+    line-height: 1.05;
 }
 
 .contact-plate-email {
-    margin-top: 3px;
+    margin-top: 4px;
     font-size: 5px;
     font-weight: bold;
     letter-spacing: 0;
