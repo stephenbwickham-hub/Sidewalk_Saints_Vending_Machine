@@ -63,7 +63,7 @@ body {
 }
 
 .machine-wrapper {
-    width: min(clamp(480px, 58vh, 640px), calc(100vw - 24px));
+    width: min(clamp(520px, 68vh, 760px), calc(100vw - 24px));
     height: 94vh;
     perspective: 1200px;
 }
@@ -88,12 +88,13 @@ body {
     overflow: hidden;
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 128px;
-    grid-template-rows: auto minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr) auto auto;
     grid-template-areas:
-        "header header"
-        "display controls"
-        "bottom bottom";
+        "header"
+        "display"
+        "controls"
+        "bottom";
     height: 100%;
     transform: rotateY(-0.6deg);
 }
@@ -175,8 +176,8 @@ body {
 
 .cabinet-hinge {
     position: absolute;
-    top: 146px;
-    bottom: 86px;
+    top: 134px;
+    bottom: 174px;
     left: 9px;
     width: 7px;
     background:
@@ -196,9 +197,9 @@ body {
 
 .cabinet-side-seam {
     position: absolute;
-    top: 93px;
-    right: 128px;
-    bottom: 54px;
+    top: 128px;
+    right: 18px;
+    bottom: 164px;
     width: 2px;
     background: rgba(22, 30, 34, 0.42);
     box-shadow:
@@ -208,7 +209,7 @@ body {
 
 .cabinet-lock {
     position: absolute;
-    right: 55px;
+    right: 17px;
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -222,8 +223,8 @@ body {
         0 2px 3px rgba(0, 0, 0, 0.34);
 }
 
-.cabinet-lock-upper { top: 145px; }
-.cabinet-lock-lower { bottom: 103px; }
+.cabinet-lock-upper { top: 154px; }
+.cabinet-lock-lower { bottom: 186px; }
 
 /* ============================================================
    MACHINE TOP (Header)
@@ -236,7 +237,7 @@ body {
         radial-gradient(circle at 82% 24%, rgba(83, 30, 24, 0.24) 0%, transparent 25%),
         repeating-linear-gradient(5deg, transparent 0, transparent 18px, rgba(255, 255, 255, 0.035) 18px, rgba(255, 255, 255, 0.035) 19px),
         linear-gradient(180deg, #bd463c 0%, var(--accent-red) 48%, var(--accent-red-dark) 100%);
-    padding: 14px 68px 11px 58px;
+    padding: 10px 88px 8px 78px;
     position: relative;
     z-index: 2;
     border-bottom: 7px solid;
@@ -252,7 +253,7 @@ body {
     border: 2px solid;
     border-color: #fff4df #8c7353 #7d674a #fff9ea;
     border-radius: 8px;
-    padding: 7px 7px 6px;
+    padding: 6px 7px 5px;
     color: var(--accent-red-dark);
     text-align: center;
     text-shadow: 
@@ -271,14 +272,14 @@ body {
 }
 
 .brand-title {
-    font-size: 20px;
+    font-size: 19px;
     letter-spacing: 2px;
     line-height: 1.05;
 }
 
 .brand-subtitle {
-    margin-top: 3px;
-    font-size: 7px;
+    margin-top: 2px;
+    font-size: 6px;
     letter-spacing: 1.2px;
     line-height: 1;
 }
@@ -286,7 +287,7 @@ body {
 .machine-line {
     height: 4px;
     background: linear-gradient(to right, transparent 0%, var(--trim-cream-dark) 12%, var(--trim-cream) 50%, var(--trim-cream-dark) 88%, transparent 100%);
-    margin-top: 7px;
+    margin-top: 5px;
     box-shadow: 
         0 1px 2px rgba(0, 0, 0, 0.45),
         0 -1px 0 rgba(255, 255, 255, 0.18);
@@ -298,7 +299,7 @@ body {
 
 .machine-display {
     grid-area: display;
-    padding: 12px 10px 11px 18px;
+    padding: 13px 20px 12px;
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent 18%, transparent 84%, rgba(0, 0, 0, 0.16)),
         linear-gradient(180deg, #8fb0c8 0%, #789ab3 100%);
@@ -307,7 +308,8 @@ body {
     box-shadow:
         inset 0 5px 8px rgba(255, 255, 255, 0.1),
         inset 0 -6px 12px rgba(0, 0, 0, 0.18);
-    border-right: 3px solid rgba(43, 59, 66, 0.72);
+    border-right: 0;
+    border-bottom: 4px solid rgba(43, 59, 66, 0.62);
     min-height: 0;
 }
 
@@ -315,12 +317,12 @@ body {
     background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 22%),
         linear-gradient(180deg, #22282a 0%, #101416 100%);
-    border: 8px solid;
+    border: 9px solid;
     border-color: 
         var(--chrome-highlight) var(--chrome-dark)
         var(--chrome-dark) var(--chrome-highlight);
     border-radius: 8px;
-    padding: 5px;
+    padding: 8px;
     position: relative;
     display: flex;
     align-items: stretch;
@@ -380,7 +382,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, minmax(0, 1fr));
-    gap: 5px;
+    gap: 7px;
     position: relative;
     z-index: 3;
     width: 100%;
@@ -396,7 +398,7 @@ body {
     border-color: 
         #f5f7f5 #555a5b
         #444849 #e3e7e5;
-    border-radius: 3px;
+    border-radius: 4px;
     cursor: pointer;
     overflow: hidden;
     position: relative;
@@ -522,20 +524,20 @@ body {
 
 .placeholder-brand {
     color: var(--accent-red-dark);
-    font-size: 7px;
+    font-size: 9px;
     font-weight: bold;
     letter-spacing: 0.45px;
 }
 
 .placeholder-strain {
-    font-size: 10px;
+    font-size: 13px;
     font-weight: bold;
     line-height: 1.05;
 }
 
 .placeholder-series,
 .placeholder-id {
-    font-size: 6px;
+    font-size: 8px;
     line-height: 1.1;
 }
 
@@ -552,19 +554,15 @@ body {
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent 18%, transparent 84%, rgba(0, 0, 0, 0.18)),
         linear-gradient(180deg, #83a5bd 0%, #6f90a8 46%, #557187 100%);
-    padding: 12px 10px 11px;
+    padding: 8px 18px 9px;
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 0.95fr 1.05fr 1.1fr 1fr 1.05fr;
     grid-template-areas:
-        "coin"
-        "buttons"
-        "instructions"
-        "door"
-        "contact";
-    grid-template-rows: 64px 78px auto 64px auto;
-    gap: 8px;
+        "coin buttons door instructions contact";
+    grid-template-rows: 62px;
+    gap: 9px;
     align-items: stretch;
     border-top: 7px solid;
     border-color: var(--chrome-highlight) var(--chrome-dark) var(--chrome-dark) var(--chrome-highlight);
@@ -577,7 +575,7 @@ body {
 .machine-control-panel::before {
     content: '';
     position: absolute;
-    inset: 7px;
+    inset: 7px 13px;
     border: 1px solid rgba(30, 42, 48, 0.42);
     box-shadow:
         inset 1px 1px 0 rgba(255, 255, 255, 0.12),
@@ -589,7 +587,7 @@ body {
     grid-area: instructions;
     width: 100%;
     margin: 0 auto;
-    padding: 4px 8px;
+    padding: 8px;
     display: block;
     position: relative;
     background:
@@ -678,7 +676,7 @@ body {
     justify-content: center;
     width: 100%;
     position: relative;
-    padding: 7px;
+    padding: 8px;
     background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.42), transparent 32%),
         linear-gradient(to bottom, #d8dcda 0%, #969c9d 52%, #626869 100%);
@@ -698,7 +696,7 @@ body {
     border: 2px solid;
     border-color: #edf1ef #4c5253 #3c4142 #d3d9d6;
     border-radius: 5px;
-    height: 44px;
+    height: 36px;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -729,7 +727,7 @@ body {
     grid-area: buttons;
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 6px;
 }
 
 .machine-button {
@@ -740,7 +738,7 @@ body {
     border: 3px solid;
     border-color: #5a4a28 #3a2a18 #3a2a18 #7a6a48;
     border-radius: 5px;
-    padding: 7px 5px;
+    padding: 5px 4px;
     color: var(--text-light);
     font-weight: bold;
     font-family: 'Courier New', monospace;
@@ -808,7 +806,7 @@ body {
     grid-area: door;
     margin: 0;
     width: 100%;
-    height: 64px;
+    height: 62px;
     position: relative;
     background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.28), transparent 33%),
@@ -836,8 +834,8 @@ body {
     position: absolute;
     left: 50%;
     bottom: 17px;
-    width: 34px;
-    height: 7px;
+    width: 46px;
+    height: 8px;
     transform: translateX(-50%);
     background: linear-gradient(180deg, #f2f4f1, #838a8b 58%, #555b5c);
     border: 1px solid #444a4b;
@@ -849,10 +847,10 @@ body {
 
 .dispense-door-lip {
     position: absolute;
-    top: 8px;
-    left: 10px;
-    right: 10px;
-    height: 18px;
+    top: 9px;
+    left: 12px;
+    right: 12px;
+    height: 17px;
     background: linear-gradient(180deg, #2d3334, #101313);
     border: 1px solid #0b0d0d;
     border-radius: 2px;
@@ -866,7 +864,7 @@ body {
     width: 100%;
     margin: 0;
     position: relative;
-    padding: 5px 4px 4px;
+    padding: 5px;
     background:
         radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.32) 0%, transparent 22%),
         repeating-linear-gradient(
