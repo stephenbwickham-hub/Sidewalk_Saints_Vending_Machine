@@ -63,7 +63,7 @@ body {
 }
 
 .machine-wrapper {
-    width: min(clamp(310px, 34vh, 370px), calc(100vw - 24px));
+    width: min(clamp(300px, 32vh, 350px), calc(100vw - 24px));
     height: 95vh;
     perspective: 1200px;
 }
@@ -76,15 +76,15 @@ body {
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, transparent 14%, transparent 82%, rgba(0, 0, 0, 0.2) 100%),
         linear-gradient(180deg, var(--machine-blue-light) 0%, var(--machine-blue) 24%, #7fa2bb 58%, var(--machine-blue-dark) 100%);
-    border-radius: 54px 54px 20px 20px;
+    border-radius: 56px 56px 18px 18px;
     box-shadow:
-        18px 28px 45px rgba(0, 0, 0, 0.5),
+        22px 28px 48px rgba(0, 0, 0, 0.55),
         -8px 18px 26px rgba(0, 0, 0, 0.24),
-        inset 8px 0 14px rgba(255, 255, 255, 0.18),
-        inset -12px 0 20px rgba(0, 0, 0, 0.22),
+        inset 10px 0 18px rgba(255, 255, 255, 0.18),
+        inset -16px 0 24px rgba(0, 0, 0, 0.28),
         inset 0 4px 0 rgba(255, 255, 255, 0.18),
         inset 0 -8px 18px rgba(0, 0, 0, 0.28);
-    border: 5px solid #3f5e72;
+    border: 6px solid #42677c;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -149,7 +149,7 @@ body {
         radial-gradient(circle at 82% 24%, rgba(83, 30, 24, 0.24) 0%, transparent 25%),
         repeating-linear-gradient(5deg, transparent 0, transparent 18px, rgba(255, 255, 255, 0.035) 18px, rgba(255, 255, 255, 0.035) 19px),
         linear-gradient(180deg, #bd463c 0%, var(--accent-red) 48%, var(--accent-red-dark) 100%);
-    padding: 16px 15px 12px;
+    padding: 15px 14px 12px;
     position: relative;
     z-index: 2;
     border-bottom: 7px solid;
@@ -165,10 +165,7 @@ body {
     border: 2px solid;
     border-color: #fff4df #8c7353 #7d674a #fff9ea;
     border-radius: 16px 16px 8px 8px;
-    padding: 6px 7px 5px;
-    font-size: 19px;
-    font-weight: bold;
-    letter-spacing: 2.4px;
+    padding: 7px 7px 6px;
     color: var(--accent-red-dark);
     text-align: center;
     text-shadow: 
@@ -178,6 +175,25 @@ body {
         inset 0 1px 2px rgba(255, 255, 255, 0.45),
         inset 0 -2px 3px rgba(0, 0, 0, 0.14),
         0 2px 6px rgba(0, 0, 0, 0.24);
+}
+
+.brand-title,
+.brand-subtitle {
+    display: block;
+    font-weight: bold;
+}
+
+.brand-title {
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1.05;
+}
+
+.brand-subtitle {
+    margin-top: 3px;
+    font-size: 7px;
+    letter-spacing: 1.2px;
+    line-height: 1;
 }
 
 .machine-line {
@@ -194,7 +210,7 @@ body {
    ============================================================ */
 
 .machine-display {
-    padding: 12px 13px 9px;
+    padding: 11px 12px 8px;
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent 18%, transparent 84%, rgba(0, 0, 0, 0.16)),
         linear-gradient(180deg, #8fb0c8 0%, #789ab3 100%);
@@ -203,7 +219,7 @@ body {
     box-shadow:
         inset 0 5px 8px rgba(255, 255, 255, 0.1),
         inset 0 -6px 12px rgba(0, 0, 0, 0.18);
-    flex: 1.55;
+    flex: 1.75;
     min-height: 0;
 }
 
@@ -211,12 +227,12 @@ body {
     background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 22%),
         linear-gradient(180deg, #22282a 0%, #101416 100%);
-    border: 10px solid;
+    border: 9px solid;
     border-color: 
         var(--chrome-highlight) var(--chrome-dark)
         var(--chrome-dark) var(--chrome-highlight);
     border-radius: 13px;
-    padding: 7px;
+    padding: 6px;
     position: relative;
     display: flex;
     align-items: stretch;
@@ -447,7 +463,7 @@ body {
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent 18%, transparent 84%, rgba(0, 0, 0, 0.18)),
         linear-gradient(180deg, #83a5bd 0%, #6f90a8 46%, #557187 100%);
-    padding: 10px 14px 12px;
+    padding: 9px 13px 11px;
     position: relative;
     z-index: 2;
     display: grid;
@@ -456,7 +472,7 @@ body {
         "instructions instructions"
         "coin buttons"
         "door contact";
-    gap: 8px 9px;
+    gap: 7px 8px;
     align-items: stretch;
     border-top: 7px solid;
     border-color: var(--chrome-highlight) var(--chrome-dark) var(--chrome-dark) var(--chrome-highlight);
@@ -468,7 +484,7 @@ body {
 
 .instruction-plate {
     grid-area: instructions;
-    width: 54%;
+    width: 52%;
     margin: 0 auto;
     padding: 4px 8px;
     display: block;
@@ -645,7 +661,7 @@ body {
     grid-area: door;
     margin: 0;
     width: 100%;
-    height: 46px;
+    height: 48px;
     position: relative;
     background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.28), transparent 33%),
@@ -666,6 +682,22 @@ body {
     font-weight: bold;
     letter-spacing: 1.1px;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.dispense-door::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 17px;
+    width: 34px;
+    height: 7px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, #f2f4f1, #838a8b 58%, #555b5c);
+    border: 1px solid #444a4b;
+    border-radius: 8px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.55),
+        0 2px 3px rgba(0, 0, 0, 0.35);
 }
 
 .dispense-door-lip {
@@ -715,16 +747,10 @@ body {
 }
 
 .contact-plate-brand {
-    font-size: 6px;
-    font-weight: bold;
-    letter-spacing: 0.55px;
-}
-
-.contact-plate-company {
-    margin-bottom: 3px;
     font-size: 5px;
     font-weight: bold;
-    letter-spacing: 0.45px;
+    letter-spacing: 0;
+    margin-bottom: 3px;
 }
 
 .contact-plate-service {
@@ -754,12 +780,35 @@ body {
     z-index: 2;
     border-top: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-end;
+    gap: 8px;
     min-height: 18px;
     box-shadow:
         inset 0 2px 2px rgba(255, 255, 255, 0.08),
         inset 0 -5px 8px rgba(0, 0, 0, 0.3);
+}
+
+.manufacturer-plate {
+    max-width: 58%;
+    padding: 3px 5px;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.32), transparent 35%),
+        linear-gradient(180deg, #c0c5c3, #7f8687 58%, #5e6566);
+    border: 1px solid;
+    border-color: #edf1ef #565c5d #424849 #d5dbd8;
+    border-radius: 3px;
+    box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.38),
+        inset -1px -1px 0 rgba(0, 0, 0, 0.3),
+        0 1px 2px rgba(0, 0, 0, 0.3);
+    color: rgba(21, 24, 24, 0.78);
+    font-size: 4px;
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: 0.05px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.32);
 }
 
 .maintenance-odometer {
