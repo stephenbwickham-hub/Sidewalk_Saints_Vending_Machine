@@ -9,48 +9,93 @@
 <body>
     <div class="machine-wrapper">
         <div class="machine">
-            <!-- Top section with branding -->
+            <!-- Top marquee -->
             <div class="machine-top">
                 <div class="brand-header">SIDEWALK SAINTS</div>
+                <div class="machine-subtitle">CUSTOM LABEL DISPENSER</div>
                 <div class="machine-line"></div>
             </div>
 
-            <!-- Glass display with 12 label slots -->
-            <div class="machine-display">
-                <div class="glass-case">
-                    <div class="label-grid" id="labelGrid">
-                        <!-- 12 slots will be generated here -->
+            <!-- Main machine face -->
+            <div class="machine-face">
+                <!-- Left: label display and dispensing tray -->
+                <div class="display-column">
+                    <div class="machine-display">
+                        <div class="glass-case">
+                            <div class="label-grid" id="labelGrid">
+                                <!-- 12 slots will be generated here -->
+                            </div>
+                            <div class="glass-reflection"></div>
+                        </div>
                     </div>
-                    <div class="glass-reflection"></div>
+
+                    <div class="dispense-tray" aria-label="Dispensing tray">
+                        <div class="tray-label">DISPENSED LABEL SHEETS</div>
+                        <div class="tray-mouth"></div>
+                    </div>
+                </div>
+
+                <!-- Right: operator panel -->
+                <div class="operator-column">
+                    <div class="operator-panel">
+                        <div class="button-row">
+                            <button class="machine-button button-insert" id="insertQuarterBtn">
+                                INSERT<br>QUARTER
+                            </button>
+                            <button class="machine-button button-shake" id="shakeBtn">
+                                SHAKE<br>THE MACHINE
+                            </button>
+                        </div>
+
+                        <div class="coin-slot-area">
+                            <div class="coin-label">COIN SLOT</div>
+                            <div class="coin-slot">
+                                <div class="slot-inner"></div>
+                            </div>
+                        </div>
+
+                        <div class="machine-plate instructions-plate">
+                            <div class="plate-title">INSTRUCTIONS</div>
+                            <ol>
+                                <li>CLICK ANY LABEL WINDOW</li>
+                                <li>CHOOSE A STRAIN</li>
+                                <li>PICK A LABEL STYLE</li>
+                                <li>FILL ALL 12 WINDOWS</li>
+                                <li>INSERT QUARTER</li>
+                                <li>OR SHAKE MACHINE</li>
+                                <li>PRINT AT 100% SCALE</li>
+                                <li>CUT OUT AND APPLY TO TOP OF 4 OZ. HERB JAR</li>
+                            </ol>
+                        </div>
+
+                        <div class="machine-plate contact-plate">
+                            <div class="plate-title">SIDEWALK SAINTS DISPENSING CO.</div>
+                            <div>SERVICE</div>
+                            <div>REQUESTS</div>
+                            <div>SUGGESTIONS</div>
+                            <a href="mailto:sidewalksaints316@gmail.com">sidewalksaints316@gmail.com</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Control panel -->
-            <div class="machine-control-panel">
-                <!-- Coin slot -->
-                <div class="coin-slot-area">
-                    <div class="coin-slot">
-                        <div class="slot-inner"></div>
-                    </div>
-                </div>
-
-                <!-- Main action buttons -->
-                <div class="button-row">
-                    <button class="machine-button button-insert" id="insertQuarterBtn">
-                        INSERT<br>QUARTER
-                    </button>
-                    <button class="machine-button button-shake" id="shakeBtn">
-                        SHAKE<br>THE MACHINE
-                    </button>
-                </div>
-            </div>
-
-            <!-- Bottom maintenance counter -->
+            <!-- Bottom machine details -->
             <div class="machine-bottom">
                 <div class="maintenance-odometer">
+                    <div class="odometer-label">DISPENSED TO DATE</div>
                     <div class="odometer-display">
                         <span id="odometerValue">000000</span>
                     </div>
+                </div>
+
+                <div class="artifact-bay">
+                    <div class="artifact-label">ARTIFACT</div>
+                    <div class="artifact-window">PENDING</div>
+                </div>
+
+                <div class="manufacturer-plate">
+                    <div>SIDEWALK SAINTS DISPENSING CO.</div>
+                    <div>EST. 2026 &nbsp; MODEL SS-12</div>
                 </div>
             </div>
         </div>
@@ -63,7 +108,6 @@
             <div class="modal-header">SELECT LABEL</div>
             
             <div class="modal-content">
-                <!-- Strain selector -->
                 <div class="strain-selector" id="strainSelector">
                     <label class="strain-label">Strain:</label>
                     <select id="strainDropdown" class="strain-dropdown">
@@ -71,7 +115,6 @@
                     </select>
                 </div>
 
-                <!-- Label options grid (shown after strain selected) -->
                 <div class="label-options" id="labelOptions" style="display: none;">
                     <div class="options-header">Available Labels:</div>
                     <div class="options-grid" id="optionsGrid">
