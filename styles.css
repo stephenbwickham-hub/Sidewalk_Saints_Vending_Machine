@@ -212,18 +212,18 @@ body {
 
 /* Insert Quarter button area */
 .machine-stage .hotspot-insert {
-    left: 69.8% !important;
-    top: 25.7% !important;
+    left: 65.8% !important;
+    top: 30.5% !important;
     width: 7.2% !important;
-    height: 8.0% !important;
+    height: 5.8% !important;
 }
 
 /* Shake Machine button area */
 .machine-stage .hotspot-shake {
-    left: 69.8% !important;
-    top: 38.7% !important;
+    left: 65.8% !important;
+    top: 43.6% !important;
     width: 7.2% !important;
-    height: 8.8% !important;
+    height: 6.6% !important;
 }
 
 .machine-stage .hotspot:active {
@@ -237,10 +237,10 @@ body {
 
 .machine-stage .odometer-overlay {
     position: absolute !important;
-    left: 24.7% !important;
-    top: 88.75% !important;
-    width: 8.2% !important;
-    height: 2.2% !important;
+    left: 25.0% !important;
+    top: 88.0% !important;
+    width: 8.0% !important;
+    height: 2.0% !important;
     z-index: 9999 !important;
     display: flex !important;
     align-items: center !important;
@@ -253,11 +253,9 @@ body {
         inset 0 1px 3px rgba(0, 0, 0, 0.9),
         0 0 2px rgba(0, 0, 0, 0.8) !important;
 
-    /* TEMPORARY MAGENTA ALIGNMENT GUIDE */
     outline: 3px solid magenta !important;
     outline-offset: -3px !important;
 }
-
 .machine-stage .odometer-overlay span {
     display: block !important;
     color: #ffffff !important;
