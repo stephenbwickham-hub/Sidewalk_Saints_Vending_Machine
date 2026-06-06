@@ -67,14 +67,14 @@ body {
 
 .machine-stage .label-grid {
     position: absolute !important;
-    left: 24.0% !important;
-    top: 30.3% !important;
-    width: 42.9% !important;
-    height: 34.9% !important;
+    left: 28.1% !important;
+    top: 29.8% !important;
+    width: 39.0% !important;
+    height: 35.0% !important;
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
     grid-template-rows: repeat(3, 1fr) !important;
-    gap: 3.7% !important;
+    gap: 3.9% !important;
     z-index: 20 !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -190,7 +190,11 @@ body {
     font-size: 0.72em !important;
     letter-spacing: 0.03em !important;
 }
-
+.machine-stage .label-slot img {
+    color: transparent !important;
+    font-size: 0 !important;
+    text-indent: -9999px !important;
+}
 /* ============================================================
    INVISIBLE WORKING HOTSPOTS
    ============================================================ */
