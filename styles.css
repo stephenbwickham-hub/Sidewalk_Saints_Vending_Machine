@@ -575,56 +575,63 @@ body {
     }
 }
 /* ============================================================
-   FINAL FORCE-OVERRIDE ALIGNMENT TEST
-   This must be the LAST thing in styles.css
+   FINAL OVERLAY ALIGNMENT
+   Keep this at the VERY BOTTOM of styles.css
    ============================================================ */
 
 .machine-stage {
     aspect-ratio: 1086 / 1448 !important;
 }
 
-/* Label windows */
+/* 12 label windows */
 .machine-stage .label-grid {
-    left: 26.0% !important;
-    top: 27.9% !important;
-    width: 36.5% !important;
-    height: 32.0% !important;
-    gap: 4.6% !important;
+    left: 26.2% !important;
+    top: 27.4% !important;
+    width: 35.7% !important;
+    height: 31.6% !important;
+    gap: 5.1% !important;
 }
 
-/* Insert Quarter */
+/* Insert Quarter box */
 .machine-stage .hotspot-insert {
-    left: 68.9% !important;
-    top: 27.6% !important;
-    width: 6.5% !important;
-    height: 8.1% !important;
+    left: 72.2% !important;
+    top: 27.7% !important;
+    width: 6.1% !important;
+    height: 7.8% !important;
 }
 
-/* Shake Machine */
+/* Shake Machine box */
 .machine-stage .hotspot-shake {
-    left: 68.9% !important;
+    left: 72.2% !important;
     top: 40.4% !important;
-    width: 6.5% !important;
-    height: 8.5% !important;
+    width: 6.1% !important;
+    height: 7.9% !important;
 }
 
-/* Odometer */
+/* Dynamic odometer */
 .machine-stage .odometer-overlay {
-    left: 24.2% !important;
-    top: 86.2% !important;
-    width: 7.1% !important;
-    height: 1.9% !important;
+    left: 22.6% !important;
+    top: 84.25% !important;
+    width: 7.0% !important;
+    height: 1.8% !important;
 }
 
-/* CSS load marker */
-.machine-stage::before {
-    content: "ALIGNMENT CSS LOADED";
-    position: absolute;
-    left: 2%;
-    top: 2%;
-    z-index: 10000;
-    color: lime;
-    background: black;
-    font-size: 12px;
-    padding: 4px 6px;
+/* Keep guides visible while checking alignment */
+.machine-stage .label-slot {
+    outline: 2px solid rgba(255, 255, 0, 0.85) !important;
+    outline-offset: -2px !important;
+    background: rgba(255, 255, 0, 0.08) !important;
+}
+
+.machine-stage .hotspot,
+.machine-stage button.hotspot {
+    outline: 3px solid cyan !important;
+    outline-offset: -3px !important;
+    background: rgba(0, 255, 255, 0.22) !important;
+}
+
+.machine-stage .odometer-overlay {
+    outline: 3px solid magenta !important;
+    outline-offset: -3px !important;
+    background: rgba(0, 0, 0, 0.9) !important;
 }
