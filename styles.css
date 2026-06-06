@@ -67,14 +67,14 @@ body {
 
 .machine-stage .label-grid {
     position: absolute !important;
-    left: 28.1% !important;
-    top: 29.8% !important;
-    width: 39.0% !important;
-    height: 35.0% !important;
+    left: 20.7% !important;
+    top: 29.9% !important;
+    width: 42.9% !important;
+    height: 31.8% !important;
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
     grid-template-rows: repeat(3, 1fr) !important;
-    gap: 3.9% !important;
+    gap: 4.5% !important;
     z-index: 20 !important;
     margin: 0 !important;
     padding: 0 !important;
