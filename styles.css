@@ -599,18 +599,18 @@ body {
     row-gap: 5.91% !important;
 }
 
-/* Insert Quarter control plate - nudged down and slightly right */
+/* Insert Quarter control plate */
 .machine-stage .hotspot-insert {
-    left: 72.25% !important;
-    top: 26.00% !important;
+    left: 72.45% !important;
+    top: 26.20% !important;
     width: 6.55% !important;
     height: 7.65% !important;
 }
 
-/* Shake Machine control plate - nudged down and slightly right */
+/* Shake Machine control plate */
 .machine-stage .hotspot-shake {
-    left: 72.50% !important;
-    top: 37.05% !important;
+    left: 72.70% !important;
+    top: 37.25% !important;
     width: 6.25% !important;
     height: 7.65% !important;
 }
