@@ -599,24 +599,21 @@ body {
     row-gap: 5.91% !important;
 }
 
-/* Insert Quarter control plate
-   Pixel map: x 781, y 369, w 81, h 121 */
+/* Insert Quarter control plate - tiny final nudge */
 .machine-stage .hotspot-insert {
-    left: 71.92% !important;
-    top: 25.48% !important;
-    width: 7.46% !important;
-    height: 8.36% !important;
+    left: 72.1% !important;
+    top: 25.85% !important;
+    width: 6.55% !important;
+    height: 8.15% !important;
 }
 
-/* Shake Machine control plate
-   Pixel map: x 785, y 526, w 77, h 122 */
+/* Shake Machine control plate - tiny final nudge */
 .machine-stage .hotspot-shake {
-    left: 72.28% !important;
-    top: 36.33% !important;
-    width: 7.09% !important;
-    height: 8.43% !important;
+    left: 72.55% !important;
+    top: 36.95% !important;
+    width: 6.25% !important;
+    height: 8.05% !important;
 }
-
 /* Dynamic odometer number window
    Pixel map: x 298, y 1241, w 87, h 31 */
 .machine-stage .odometer-overlay {
