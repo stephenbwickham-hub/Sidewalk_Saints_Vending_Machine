@@ -41,8 +41,8 @@ body {
 
 .machine-stage {
     position: relative !important;
-    width: min(94vw, 780px) !important;
-    aspect-ratio: 1122 / 1402 !important;
+    width: min(94vw, 680px) !important;
+    aspect-ratio: 1024 / 1536 !important;
     overflow: hidden !important;
     margin: 0 auto !important;
     display: block !important;
@@ -98,6 +98,9 @@ body {
     box-shadow: none !important;
     transform: none !important;
     transition: filter 0.12s ease, transform 0.12s ease !important;
+   outline: 2px solid rgba(255, 255, 0, 0.75) !important;
+outline-offset: -2px !important;
+background: rgba(255, 255, 0, 0.08) !important;
 }
 
 .machine-stage .label-slot::before {
