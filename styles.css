@@ -601,16 +601,16 @@ body {
 
 /* Insert Quarter control plate */
 .machine-stage .hotspot-insert {
-    left: 72.45% !important;
-    top: 26.20% !important;
+    left: 73.75% !important;
+    top: 27.50% !important;
     width: 6.55% !important;
     height: 7.65% !important;
 }
 
 /* Shake Machine control plate */
 .machine-stage .hotspot-shake {
-    left: 72.70% !important;
-    top: 37.25% !important;
+    left: 74.00% !important;
+    top: 38.55% !important;
     width: 6.25% !important;
     height: 7.65% !important;
 }
