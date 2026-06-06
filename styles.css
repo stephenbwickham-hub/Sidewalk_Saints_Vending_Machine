@@ -1,18 +1,17 @@
 /* ============================================================
    SIDEWALK SAINTS VENDING MACHINE
-   FINAL IMAGE-SHELL OVERLAY STYLESHEET
+   CLEAN IMAGE-SHELL OVERLAY STYLESHEET
 
-   Replace your entire styles.css with this file.
-   Required repo image path: assets/machine-shell.png
+   Replace the entire styles.css with this file.
+
+   Required image path:
+   assets/machine-shell.png
+
+   Alignment guides are intentionally ON:
+   yellow = label slots
+   cyan = Insert Quarter / Shake Machine hotspots
+   magenta = live odometer
    ============================================================ */
-
-:root {
-    --cream: #efe3c7;
-    --aged-paper: #d8c8a8;
-    --red: #9d2f2f;
-    --red-dark: #5e1717;
-    --black: #050505;
-}
 
 * {
     margin: 0;
@@ -27,12 +26,12 @@ body {
 }
 
 body {
-    font-family: "Courier New", Courier, monospace;
     min-height: 100vh;
+    font-family: "Courier New", Courier, monospace;
+    color: #111;
     background:
         radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.05), transparent 36%),
         linear-gradient(135deg, #202020 0%, #101010 100%);
-    color: #111;
 }
 
 /* ============================================================
@@ -62,7 +61,8 @@ body {
 }
 
 /* ============================================================
-   LIVE LABEL OVERLAY
+   LIVE LABEL GRID
+   Tune only left/top/width/height/gap here.
    ============================================================ */
 
 .machine-stage .label-grid {
@@ -82,25 +82,29 @@ body {
 }
 
 .machine-stage .label-slot {
+    position: relative !important;
     width: 100% !important;
     height: 100% !important;
     min-width: 0 !important;
     min-height: 0 !important;
     aspect-ratio: auto !important;
-    position: relative !important;
-    cursor: pointer !important;
-    overflow: hidden !important;
-    border: none !important;
-    border-radius: 3px !important;
     margin: 0 !important;
     padding: 0 !important;
-    background: transparent !important;
+    border: none !important;
+    border-radius: 3px !important;
+    overflow: hidden !important;
     box-shadow: none !important;
+    cursor: pointer !important;
     transform: none !important;
     transition: filter 0.12s ease, transform 0.12s ease !important;
-   outline: 2px solid rgba(255, 255, 0, 0.75) !important;
-outline-offset: -2px !important;
-background: rgba(255, 255, 0, 0.08) !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+
+    /* TEMPORARY YELLOW ALIGNMENT GUIDE */
+    background: rgba(255, 255, 0, 0.08) !important;
+    outline: 2px solid rgba(255, 255, 0, 0.85) !important;
+    outline-offset: -2px !important;
 }
 
 .machine-stage .label-slot::before {
@@ -138,9 +142,11 @@ background: rgba(255, 255, 0, 0.08) !important;
     display: block !important;
     position: relative !important;
     z-index: 2 !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    text-indent: -9999px !important;
 }
 
-/* Missing image / placeholder labels */
 .machine-stage .label-placeholder,
 .machine-stage .placeholder-card,
 .machine-stage .missing-label,
@@ -175,114 +181,93 @@ background: rgba(255, 255, 0, 0.08) !important;
     box-shadow: none !important;
 }
 
-.machine-stage .label-placeholder .strain,
-.machine-stage .placeholder-card .strain,
-.machine-stage .missing-label .strain,
-.machine-stage .label-card .strain,
-.machine-stage .label-placeholder strong,
-.machine-stage .placeholder-card strong {
-    color: #742020 !important;
-    font-size: 1.02em !important;
-    letter-spacing: 0.02em !important;
-}
-
-.machine-stage .label-placeholder .series,
-.machine-stage .placeholder-card .series,
-.machine-stage .missing-label .series,
-.machine-stage .label-card .series {
-    font-size: 0.72em !important;
-    letter-spacing: 0.03em !important;
-}
-.machine-stage .label-slot img {
-    color: transparent !important;
-    font-size: 0 !important;
-    text-indent: -9999px !important;
-}
 /* ============================================================
-   INVISIBLE WORKING HOTSPOTS - TUNED
+   CLICKABLE HOTSPOTS
+   Tune only left/top/width/height here.
    ============================================================ */
-/* Temporary alignment guides */
-.hotspot {
-    outline: 2px solid rgba(0, 255, 255, 0.85) !important;
-    outline-offset: -2px !important;
-    background: rgba(0, 255, 255, 0.08) !important;
-}
 
-.odometer-overlay {
-    outline: 2px solid rgba(255, 0, 255, 0.85) !important;
-    outline-offset: -2px !important;
-    background: rgba(0, 0, 0, 0.85) !important;
-}
-.hotspot {
+.machine-stage .hotspot,
+.machine-stage button.hotspot {
     position: absolute !important;
-    z-index: 30 !important;
+    z-index: 9999 !important;
+    margin: 0 !important;
+    padding: 0 !important;
     border: none !important;
-    background: transparent !important;
     color: transparent !important;
     font-size: 0 !important;
     line-height: 0 !important;
     overflow: hidden !important;
     cursor: pointer !important;
-    margin: 0 !important;
-    padding: 0 !important;
     appearance: none !important;
     -webkit-appearance: none !important;
-}
 
-.hotspot:hover {
-    outline: 2px solid rgba(255, 238, 170, 0.36) !important;
-    outline-offset: 2px !important;
-}
-
-.hotspot:active {
-    transform: translateY(1px) !important;
+    /* TEMPORARY CYAN ALIGNMENT GUIDE */
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: rgba(0, 255, 255, 0.22) !important;
+    outline: 3px solid cyan !important;
+    outline-offset: -3px !important;
 }
 
 /* Insert Quarter button area */
-.hotspot-insert {
+.machine-stage .hotspot-insert {
     left: 69.8% !important;
     top: 25.7% !important;
     width: 7.2% !important;
     height: 8.0% !important;
 }
 
-.hotspot-shake {
+/* Shake Machine button area */
+.machine-stage .hotspot-shake {
     left: 69.8% !important;
     top: 38.7% !important;
     width: 7.2% !important;
     height: 8.8% !important;
 }
 
+.machine-stage .hotspot:active {
+    transform: translateY(1px) !important;
+}
+
 /* ============================================================
-   LIVE ODOMETER - TUNED
+   LIVE ODOMETER
+   Tune only left/top/width/height here.
    ============================================================ */
 
-.odometer-overlay {
+.machine-stage .odometer-overlay {
     position: absolute !important;
     left: 24.7% !important;
     top: 88.75% !important;
     width: 8.2% !important;
     height: 2.2% !important;
-    z-index: 35 !important;
+    z-index: 9999 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     pointer-events: none !important;
-    background: #050505 !important;
+
+    background: rgba(0, 0, 0, 0.9) !important;
     border-radius: 2px !important;
     box-shadow:
         inset 0 1px 3px rgba(0, 0, 0, 0.9),
         0 0 2px rgba(0, 0, 0, 0.8) !important;
+
+    /* TEMPORARY MAGENTA ALIGNMENT GUIDE */
+    outline: 3px solid magenta !important;
+    outline-offset: -3px !important;
 }
 
-.odometer-overlay span {
+.machine-stage .odometer-overlay span {
     display: block !important;
-    color: #f0e7c8 !important;
+    color: #ffffff !important;
     font-family: "Courier New", Courier, monospace !important;
     font-size: clamp(6px, 0.72vw, 10px) !important;
     font-weight: bold !important;
     letter-spacing: 0.14em !important;
     line-height: 1 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
     text-shadow:
         0 0 2px rgba(255, 236, 160, 0.7),
         0 1px 2px #000 !important;
@@ -575,7 +560,6 @@ background: rgba(255, 255, 0, 0.08) !important;
 
 @media (max-width: 720px) {
     body {
-        align-items: flex-start;
         padding: 8px;
     }
 
@@ -590,9 +574,5 @@ background: rgba(255, 255, 0, 0.08) !important;
     .machine-stage .label-card {
         font-size: clamp(4px, 1.05vw, 7px) !important;
         padding: 3px !important;
-    }
-
-    .hotspot:hover {
-        outline: none !important;
     }
 }
