@@ -7,106 +7,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="machine-wrapper">
-        <div class="machine">
-            <!-- Top marquee -->
-            <div class="machine-top">
-                <div class="brand-header">SIDEWALK SAINTS</div>
-                <div class="machine-subtitle">CUSTOM LABEL DISPENSER</div>
-                <div class="machine-line"></div>
-            </div>
+    <main class="machine-stage" aria-label="Sidewalk Saints Custom Label Dispenser">
+        <img class="machine-shell" src="assets/machine-shell.png" alt="Sidewalk Saints Custom Label Dispenser vending machine">
 
-            <!-- Main machine face -->
-            <div class="machine-face">
-                <!-- Left: label display and dispensing tray -->
-                <div class="display-column">
-                    <div class="machine-display">
-                        <div class="glass-case">
-                            <div class="label-grid" id="labelGrid">
-                                <!-- 12 slots will be generated here -->
-                            </div>
-                            <div class="glass-reflection"></div>
-                        </div>
-                    </div>
-
-                    <div class="dispense-tray" aria-label="Dispensing tray">
-                        <div class="tray-label">DISPENSED LABEL SHEETS</div>
-                        <div class="tray-mouth"></div>
-                    </div>
-                </div>
-
-                <!-- Right: operator panel -->
-                <div class="operator-column">
-                    <div class="operator-panel">
-                        <div class="button-row">
-                            <button class="machine-button button-insert" id="insertQuarterBtn">
-                                INSERT<br>QUARTER
-                            </button>
-                            <button class="machine-button button-shake" id="shakeBtn">
-                                SHAKE<br>THE MACHINE
-                            </button>
-                        </div>
-
-                        <div class="coin-slot-area">
-                            <div class="coin-label">COIN SLOT</div>
-                            <div class="coin-slot">
-                                <div class="slot-inner"></div>
-                            </div>
-                        </div>
-
-                        <div class="machine-plate instructions-plate">
-                            <div class="plate-title">INSTRUCTIONS</div>
-                            <ol>
-                                <li>CLICK ANY LABEL WINDOW</li>
-                                <li>CHOOSE A STRAIN</li>
-                                <li>PICK A LABEL STYLE</li>
-                                <li>FILL ALL 12 WINDOWS</li>
-                                <li>INSERT QUARTER</li>
-                                <li>OR SHAKE MACHINE</li>
-                                <li>PRINT AT 100% SCALE</li>
-                                <li>CUT OUT AND APPLY<br><span class="instruction-cont">TO TOP OF 4 OZ. HERB JAR</span></li>
-                            </ol>
-                        </div>
-
-                        <div class="machine-plate contact-plate">
-                            <div class="plate-title">SIDEWALK SAINTS DISPENSING CO.</div>
-                            <div>SERVICE</div>
-                            <div>REQUESTS</div>
-                            <div>SUGGESTIONS</div>
-                            <a href="mailto:sidewalksaints316@gmail.com">sidewalksaints316@gmail.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bottom machine details -->
-            <div class="machine-bottom">
-                <div class="maintenance-odometer">
-                    <div class="odometer-label">DISPENSED TO DATE</div>
-                    <div class="odometer-display">
-                        <span id="odometerValue">000000</span>
-                    </div>
-                </div>
-
-                <div class="artifact-bay">
-                    <div class="artifact-label">ARTIFACT</div>
-                    <div class="artifact-window">PENDING</div>
-                </div>
-
-                <div class="manufacturer-plate">
-                    <div>SIDEWALK SAINTS DISPENSING CO.</div>
-                    <div>EST. 2026 &nbsp; MODEL SS-12</div>
-                </div>
-            </div>
+        <!-- Live label windows over the empty machine windows -->
+        <div class="label-grid" id="labelGrid" aria-label="Selected labels">
+            <!-- 12 slots will be generated here by script.js -->
         </div>
-    </div>
+
+        <!-- Invisible working controls over the rendered machine buttons -->
+        <button class="hotspot hotspot-insert" id="insertQuarterBtn" aria-label="Insert quarter">
+            INSERT QUARTER
+        </button>
+
+        <button class="hotspot hotspot-shake" id="shakeBtn" aria-label="Shake the machine">
+            SHAKE THE MACHINE
+        </button>
+
+        <!-- Live odometer over the rendered odometer plate -->
+        <div class="odometer-overlay" aria-label="Dispensed to date">
+            <span id="odometerValue">000000</span>
+        </div>
+    </main>
 
     <!-- Selection Modal -->
     <div class="modal" id="selectionModal">
         <div class="modal-overlay"></div>
         <div class="modal-panel">
             <div class="modal-header">SELECT LABEL</div>
-            
+
             <div class="modal-content">
                 <div class="strain-selector" id="strainSelector">
                     <label class="strain-label">Strain:</label>
@@ -132,7 +61,7 @@
         <div class="modal-overlay"></div>
         <div class="modal-panel donation-panel">
             <div class="modal-header">INSERT DONATION</div>
-            
+
             <div class="modal-content donation-content">
                 <button class="donation-button" data-amount="1.00">
                     <div class="donation-amount">$1.00</div>
@@ -151,7 +80,7 @@
         <div class="modal-overlay"></div>
         <div class="modal-panel custom-panel">
             <div class="modal-header">CUSTOM AMOUNT</div>
-            
+
             <div class="modal-content custom-content">
                 <div class="currency-input">
                     <span class="currency-symbol">$</span>
