@@ -41,7 +41,7 @@ body {
 .machine-stage {
     position: relative !important;
     width: min(94vw, 680px) !important;
-    aspect-ratio: 1024 / 1536 !important;
+    aspect-ratio: 1086 / 1448 !important;
     overflow: hidden !important;
     margin: 0 auto !important;
     display: block !important;
@@ -67,14 +67,14 @@ body {
 
 .machine-stage .label-grid {
     position: absolute !important;
-    left: 20.7% !important;
-    top: 29.9% !important;
-    width: 42.9% !important;
-    height: 31.8% !important;
+    left: 23.2% !important;
+    top: 27.9% !important;
+    width: 39.6% !important;
+    height: 33.8% !important;
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
     grid-template-rows: repeat(3, 1fr) !important;
-    gap: 4.5% !important;
+    gap: 3.9% !important;
     z-index: 20 !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -212,18 +212,18 @@ body {
 
 /* Insert Quarter button area */
 .machine-stage .hotspot-insert {
-    left: 65.8% !important;
-    top: 30.5% !important;
-    width: 7.2% !important;
-    height: 5.8% !important;
+    left: 67.6% !important;
+    top: 26.0% !important;
+    width: 7.7% !important;
+    height: 9.0% !important;
 }
 
 /* Shake Machine button area */
 .machine-stage .hotspot-shake {
-    left: 65.8% !important;
-    top: 43.6% !important;
-    width: 7.2% !important;
-    height: 6.6% !important;
+    left: 67.6% !important;
+    top: 38.6% !important;
+    width: 7.7% !important;
+    height: 9.1% !important;
 }
 
 .machine-stage .hotspot:active {
@@ -237,10 +237,10 @@ body {
 
 .machine-stage .odometer-overlay {
     position: absolute !important;
-    left: 25.0% !important;
-    top: 88.0% !important;
-    width: 8.0% !important;
-    height: 2.0% !important;
+    left: 23.0% !important;
+    top: 84.3% !important;
+    width: 8.4% !important;
+    height: 2.2% !important;
     z-index: 9999 !important;
     display: flex !important;
     align-items: center !important;
