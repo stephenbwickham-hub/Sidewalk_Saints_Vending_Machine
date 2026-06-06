@@ -575,7 +575,8 @@ body {
     }
 }
 /* ============================================================
-   FINAL OVERLAY ALIGNMENT - PASS 4
+   PIXEL-MAPPED OVERLAY ALIGNMENT
+   Based on machine-shell.png at 1086 x 1448
    Keep this at the VERY BOTTOM of styles.css
    ============================================================ */
 
@@ -583,40 +584,61 @@ body {
     aspect-ratio: 1086 / 1448 !important;
 }
 
-/* 12 label windows - leave close for now */
+/* 12 label windows
+   Pixel map: x 312, y 414, w 399, h 465 */
 .machine-stage .label-grid {
-    left: 28.1% !important;
-    top: 27.55% !important;
-    width: 33.1% !important;
-    height: 30.7% !important;
-    gap: 5.3% !important;
+    left: 28.73% !important;
+    top: 28.59% !important;
+    width: 36.74% !important;
+    height: 32.11% !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+    column-gap: 5.26% !important;
+    row-gap: 5.91% !important;
 }
 
-/* Insert Quarter box */
+/* Insert Quarter control plate
+   Pixel map: x 781, y 369, w 81, h 121 */
 .machine-stage .hotspot-insert {
-    left: 75.25% !important;
-    top: 26.85% !important;
-    width: 5.6% !important;
-    height: 7.2% !important;
+    left: 71.92% !important;
+    top: 25.48% !important;
+    width: 7.46% !important;
+    height: 8.36% !important;
 }
 
-/* Shake Machine box */
+/* Shake Machine control plate
+   Pixel map: x 785, y 526, w 77, h 122 */
 .machine-stage .hotspot-shake {
-    left: 75.25% !important;
-    top: 39.25% !important;
-    width: 5.6% !important;
-    height: 7.5% !important;
+    left: 72.28% !important;
+    top: 36.33% !important;
+    width: 7.09% !important;
+    height: 8.43% !important;
 }
 
-/* Dynamic odometer */
+/* Dynamic odometer number window
+   Pixel map: x 298, y 1241, w 87, h 31 */
 .machine-stage .odometer-overlay {
-    left: 23.9% !important;
-    top: 83.65% !important;
-    width: 5.6% !important;
-    height: 1.45% !important;
+    left: 27.44% !important;
+    top: 85.70% !important;
+    width: 8.01% !important;
+    height: 2.14% !important;
+
+    z-index: 9999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    pointer-events: none !important;
+
+    background: rgba(0, 0, 0, 0.92) !important;
+    border-radius: 2px !important;
+    box-shadow:
+        inset 0 1px 3px rgba(0, 0, 0, 0.95),
+        0 0 2px rgba(0, 0, 0, 0.8) !important;
 }
 
-/* Keep guides visible while checking alignment */
+/* Keep guides visible for this check */
 .machine-stage .label-slot {
     outline: 2px solid rgba(255, 255, 0, 0.85) !important;
     outline-offset: -2px !important;
@@ -633,5 +655,4 @@ body {
 .machine-stage .odometer-overlay {
     outline: 3px solid magenta !important;
     outline-offset: -3px !important;
-    background: rgba(0, 0, 0, 0.9) !important;
 }
