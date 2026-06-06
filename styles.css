@@ -1,18 +1,9 @@
 /* ============================================================
    SIDEWALK SAINTS VENDING MACHINE
-   CLEAN IMAGE-SHELL OVERLAY STYLESHEET
-
-   Replace the entire styles.css with this file.
-
-   Required image path:
-   assets/machine-shell.png
-
-   Alignment guides are intentionally ON:
-   yellow = label slots
-   cyan = Insert Quarter / Shake Machine hotspots
-   magenta = live odometer
+   CLEAN IMAGE-SHELL OVERLAY - VERSION LOCKED
    ============================================================ */
 
+/* Reset and body */
 * {
     margin: 0;
     padding: 0;
@@ -34,10 +25,7 @@ body {
         linear-gradient(135deg, #202020 0%, #101010 100%);
 }
 
-/* ============================================================
-   MACHINE IMAGE SHELL
-   ============================================================ */
-
+/* Machine shell */
 .machine-stage {
     position: relative !important;
     width: min(94vw, 680px) !important;
@@ -60,21 +48,17 @@ body {
     z-index: 1 !important;
 }
 
-/* ============================================================
-   LIVE LABEL GRID
-   Tune only left/top/width/height/gap here.
-   ============================================================ */
-
+/* Label grid */
 .machine-stage .label-grid {
     position: absolute !important;
-    left: 23.2% !important;
-    top: 27.9% !important;
-    width: 39.6% !important;
-    height: 33.8% !important;
+    left: 28.1% !important;
+    top: 27.55% !important;
+    width: 33.1% !important;
+    height: 30.7% !important;
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
     grid-template-rows: repeat(3, 1fr) !important;
-    gap: 3.9% !important;
+    gap: 5.3% !important;
     z-index: 20 !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -97,11 +81,13 @@ body {
     cursor: pointer !important;
     transform: none !important;
     transition: filter 0.12s ease, transform 0.12s ease !important;
+
+    /* Hide broken-image text while images load */
     color: transparent !important;
     font-size: 0 !important;
     line-height: 0 !important;
 
-    /* TEMPORARY YELLOW ALIGNMENT GUIDE */
+    /* TEMPORARY yellow alignment guide */
     background: rgba(255, 255, 0, 0.08) !important;
     outline: 2px solid rgba(255, 255, 0, 0.85) !important;
     outline-offset: -2px !important;
@@ -142,48 +128,10 @@ body {
     display: block !important;
     position: relative !important;
     z-index: 2 !important;
-    color: transparent !important;
-    font-size: 0 !important;
-    text-indent: -9999px !important;
-}
-
-.machine-stage .label-placeholder,
-.machine-stage .placeholder-card,
-.machine-stage .missing-label,
-.machine-stage .label-card {
-    width: 100% !important;
-    height: 100% !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    padding: 5px !important;
-    overflow: hidden !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    background:
-        linear-gradient(135deg, rgba(248, 242, 224, 0.94), rgba(221, 209, 185, 0.96)),
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 7px,
-            rgba(70, 45, 20, 0.035) 7px,
-            rgba(70, 45, 20, 0.035) 8px
-        ) !important;
-    color: #21160f !important;
-    font-family: "Courier New", Courier, monospace !important;
-    font-size: clamp(5px, 0.72vw, 9px) !important;
-    line-height: 1.05 !important;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    border: none !important;
-    box-shadow: none !important;
 }
 
 /* ============================================================
-   CLICKABLE HOTSPOTS
-   Tune only left/top/width/height here.
+   Hotspot buttons with final positions
    ============================================================ */
 
 .machine-stage .hotspot,
@@ -201,7 +149,7 @@ body {
     appearance: none !important;
     -webkit-appearance: none !important;
 
-    /* TEMPORARY CYAN ALIGNMENT GUIDE */
+    /* TEMPORARY cyan guide */
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -210,37 +158,31 @@ body {
     outline-offset: -3px !important;
 }
 
-/* Insert Quarter button area */
+/* Insert Quarter final */
 .machine-stage .hotspot-insert {
-    left: 67.6% !important;
-    top: 26.0% !important;
-    width: 7.7% !important;
-    height: 9.0% !important;
+    left: 72.45% !important;
+    top: 26.20% !important;
+    width: 7.85% !important;
+    height: 8.95% !important;
 }
 
-/* Shake Machine button area */
+/* Shake Machine final */
 .machine-stage .hotspot-shake {
-    left: 67.6% !important;
-    top: 38.6% !important;
-    width: 7.7% !important;
-    height: 9.1% !important;
-}
-
-.machine-stage .hotspot:active {
-    transform: translateY(1px) !important;
+    left: 72.70% !important;
+    top: 37.25% !important;
+    width: 7.55% !important;
+    height: 8.95% !important;
 }
 
 /* ============================================================
-   LIVE ODOMETER
-   Tune only left/top/width/height here.
+   Odometer overlay with final position
    ============================================================ */
 
 .machine-stage .odometer-overlay {
-    position: absolute !important;
-    left: 23.0% !important;
-    top: 84.3% !important;
-    width: 8.4% !important;
-    height: 2.2% !important;
+    left: 23.9% !important;
+    top: 83.95% !important;
+    width: 5.6% !important;
+    height: 1.65% !important;
     z-index: 9999 !important;
     display: flex !important;
     align-items: center !important;
@@ -253,403 +195,7 @@ body {
         inset 0 1px 3px rgba(0, 0, 0, 0.9),
         0 0 2px rgba(0, 0, 0, 0.8) !important;
 
-    outline: 3px solid magenta !important;
-    outline-offset: -3px !important;
-}
-.machine-stage .odometer-overlay span {
-    display: block !important;
-    color: #ffffff !important;
-    font-family: "Courier New", Courier, monospace !important;
-    font-size: clamp(6px, 0.72vw, 10px) !important;
-    font-weight: bold !important;
-    letter-spacing: 0.14em !important;
-    line-height: 1 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    text-shadow:
-        0 0 2px rgba(255, 236, 160, 0.7),
-        0 1px 2px #000 !important;
-}
-
-/* ============================================================
-   MODALS
-   ============================================================ */
-
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 2000;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.modal.active {
-    display: flex;
-}
-
-.modal-overlay {
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(circle at 50% 45%, rgba(60, 35, 25, 0.55), rgba(0, 0, 0, 0.84));
-}
-
-.modal-panel {
-    position: relative;
-    z-index: 1;
-    max-width: 360px;
-    width: 100%;
-    padding: 18px;
-    border-radius: 10px;
-    border: 3px solid #3b2b21;
-    background:
-        linear-gradient(135deg, rgba(192, 206, 202, 0.96), rgba(110, 139, 151, 0.96)),
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 3px,
-            rgba(0, 0, 0, 0.035) 3px,
-            rgba(0, 0, 0, 0.035) 5px
-        );
-    box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.75),
-        inset 0 1px 0 rgba(255, 255, 255, 0.35),
-        inset 0 -2px 8px rgba(0, 0, 0, 0.25);
-}
-
-.modal-header {
-    margin-bottom: 14px;
-    padding: 10px 12px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 13px;
-    letter-spacing: 0.13em;
-    color: #331a16;
-    text-transform: uppercase;
-    border: 2px solid #6a5644;
-    border-radius: 5px;
-    background: linear-gradient(to bottom, #efe6d2, #cdbd9b);
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.6),
-        0 2px 4px rgba(0, 0, 0, 0.35);
-}
-
-.modal-content {
-    margin-bottom: 16px;
-}
-
-.strain-selector {
-    margin-bottom: 0;
-}
-
-.strain-label,
-.options-header {
-    display: block;
-    margin-bottom: 7px;
-    color: #f4ead6;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    text-shadow: 0 1px 2px #000;
-}
-
-.strain-dropdown {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #5b4a3a;
-    border-radius: 5px;
-    background: linear-gradient(to bottom, #f0e6d1, #cbb992);
-    color: #1e1510;
-    font-family: "Courier New", Courier, monospace;
-    font-weight: bold;
-    font-size: 12px;
-}
-
-.strain-dropdown:focus {
-    outline: none;
-    border-color: #9a2b2b;
-    box-shadow: 0 0 0 3px rgba(154, 43, 43, 0.25);
-}
-
-.label-options {
-    margin-top: 14px;
-}
-
-.options-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 9px;
-}
-
-.option-thumbnail {
-    aspect-ratio: 1;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    border: 3px solid #48433a;
-    border-radius: 5px;
-    background: #e8dcc8;
-    box-shadow:
-        0 4px 9px rgba(0, 0, 0, 0.45),
-        inset 0 0 7px rgba(0, 0, 0, 0.25);
-    transition: transform 0.12s ease, border-color 0.12s ease;
-}
-
-.option-thumbnail:hover {
-    transform: scale(1.04);
-    border-color: #9b2f2f;
-}
-
-.option-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.modal-close,
-.modal-button,
-.donation-button {
-    font-family: "Courier New", Courier, monospace;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.modal-close {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #231a14;
-    border-radius: 5px;
-    color: #f4ead6;
-    background: linear-gradient(to bottom, #7d7770, #45403c);
-    box-shadow:
-        0 3px 6px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.18);
-}
-
-.modal-close:hover {
-    transform: translateY(-1px);
-}
-
-.donation-panel,
-.custom-panel,
-.dispense-panel {
-    max-width: 300px;
-}
-
-.donation-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.donation-button {
-    padding: 16px;
-    border: 2px solid #6b4e18;
-    border-radius: 6px;
-    background: linear-gradient(to bottom, #ffe489, #d5a72f);
-    color: #1e1510;
-    box-shadow:
-        0 4px 8px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.45);
-}
-
-.donation-button:hover {
-    transform: translateY(-1px);
-}
-
-.donation-amount {
-    font-size: 15px;
-    letter-spacing: 0.08em;
-}
-
-.currency-input {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 10px;
-    border: 2px solid #5b4a3a;
-    border-radius: 5px;
-    background: linear-gradient(to bottom, #f0e6d1, #cbb992);
-}
-
-.currency-symbol {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-#customAmountInput {
-    flex: 1;
-    min-width: 0;
-    border: none;
-    background: transparent;
-    font-family: "Courier New", monospace;
-    font-size: 16px;
-    font-weight: bold;
-    color: #1e1510;
-}
-
-#customAmountInput:focus {
-    outline: none;
-}
-
-#customAmountInput::placeholder {
-    color: #7d7666;
-}
-
-.modal-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.modal-button {
-    flex: 1;
-    padding: 10px;
-    border: 2px solid #231a14;
-    border-radius: 5px;
-    color: #f4ead6;
-}
-
-.confirm-button {
-    background: linear-gradient(to bottom, #4f9a4f, #2c5f2c);
-}
-
-.cancel-button {
-    background: linear-gradient(to bottom, #777, #454545);
-}
-
-.dispense-panel {
-    text-align: center;
-}
-
-.dispense-animation {
-    padding: 28px 18px;
-}
-
-.rattle {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 18px;
-    border: 4px solid #efe3c7;
-    border-radius: 6px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.45);
-    animation: rattle 0.4s ease-in-out infinite;
-}
-
-@keyframes rattle {
-    0%, 100% { transform: translateX(0) rotate(0deg); }
-    25% { transform: translateX(-4px) rotate(-1deg); }
-    75% { transform: translateX(4px) rotate(1deg); }
-}
-
-.dispense-text {
-    color: #f4ead6;
-    font-weight: bold;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-
-@media (max-width: 720px) {
-    body {
-        padding: 8px;
-    }
-
-    .machine-stage {
-        width: 100vw !important;
-        max-width: none !important;
-    }
-
-    .machine-stage .label-placeholder,
-    .machine-stage .placeholder-card,
-    .machine-stage .missing-label,
-    .machine-stage .label-card {
-        font-size: clamp(4px, 1.05vw, 7px) !important;
-        padding: 3px !important;
-    }
-}
-/* ============================================================
-   PIXEL-MAPPED OVERLAY ALIGNMENT
-   Based on machine-shell.png at 1086 x 1448
-   Keep this at the VERY BOTTOM of styles.css
-   ============================================================ */
-
-.machine-stage {
-    aspect-ratio: 1086 / 1448 !important;
-}
-
-/* 12 label windows
-   Pixel map: x 312, y 414, w 399, h 465 */
-.machine-stage .label-grid {
-    left: 28.73% !important;
-    top: 28.59% !important;
-    width: 36.74% !important;
-    height: 32.11% !important;
-
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    grid-template-rows: repeat(3, 1fr) !important;
-    column-gap: 5.26% !important;
-    row-gap: 5.91% !important;
-}
-
-/* Insert Quarter control plate */
-.machine-stage .hotspot-insert {
-    left: 72.45% !important;  /* 73.75% - 1.3% */
-    top: 26.20% !important;   /* 27.50% - 1.3% */
-    width: 7.85% !important;  /* 6.55% + 1.3% */
-    height: 8.95% !important; /* 7.65% + 1.3% */
-}
-
-/* Shake Machine control plate */
-.machine-stage .hotspot-shake {
-    left: 72.70% !important;  /* 74.00% - 1.3% */
-    top: 37.25% !important;   /* 38.55% - 1.3% */
-    width: 7.55% !important;  /* 6.25% + 1.3% */
-    height: 8.95% !important; /* 7.65% + 1.3% */
-}
-/* Dynamic odometer number window
-   Pixel map: x 298, y 1241, w 87, h 31 */
-.machine-stage .odometer-overlay {
-    left: 27.44% !important;
-    top: 85.70% !important;
-    width: 8.01% !important;
-    height: 2.14% !important;
-
-    z-index: 9999 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    pointer-events: none !important;
-
-    background: rgba(0, 0, 0, 0.92) !important;
-    border-radius: 2px !important;
-    box-shadow:
-        inset 0 1px 3px rgba(0, 0, 0, 0.95),
-        0 0 2px rgba(0, 0, 0, 0.8) !important;
-}
-
-/* Keep guides visible for this check */
-.machine-stage .label-slot {
-    outline: 2px solid rgba(255, 255, 0, 0.85) !important;
-    outline-offset: -2px !important;
-    background: rgba(255, 255, 0, 0.08) !important;
-}
-
-.machine-stage .hotspot,
-.machine-stage button.hotspot {
-    outline: 3px solid cyan !important;
-    outline-offset: -3px !important;
-    background: rgba(0, 255, 255, 0.22) !important;
-}
-
-.machine-stage .odometer-overlay {
+    /* TEMPORARY magenta guide */
     outline: 3px solid magenta !important;
     outline-offset: -3px !important;
 }
