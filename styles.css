@@ -196,7 +196,7 @@ body {
     text-indent: -9999px !important;
 }
 /* ============================================================
-   INVISIBLE WORKING HOTSPOTS
+   INVISIBLE WORKING HOTSPOTS - TUNED
    ============================================================ */
 
 .hotspot {
@@ -206,9 +206,13 @@ body {
     background: transparent !important;
     color: transparent !important;
     font-size: 0 !important;
+    line-height: 0 !important;
+    overflow: hidden !important;
     cursor: pointer !important;
     margin: 0 !important;
     padding: 0 !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
 }
 
 .hotspot:hover {
@@ -220,30 +224,32 @@ body {
     transform: translateY(1px) !important;
 }
 
+/* Insert Quarter button area */
 .hotspot-insert {
-    left: 75.2% !important;
-    top: 25.7% !important;
-    width: 10.3% !important;
-    height: 8.7% !important;
+    left: 73.2% !important;
+    top: 26.0% !important;
+    width: 8.2% !important;
+    height: 9.2% !important;
 }
 
+/* Shake Machine button area */
 .hotspot-shake {
-    left: 75.2% !important;
-    top: 39.5% !important;
-    width: 10.3% !important;
-    height: 9.8% !important;
+    left: 73.2% !important;
+    top: 39.9% !important;
+    width: 8.2% !important;
+    height: 9.6% !important;
 }
 
 /* ============================================================
-   LIVE ODOMETER
+   LIVE ODOMETER - TUNED
    ============================================================ */
 
 .odometer-overlay {
     position: absolute !important;
-    left: 23.4% !important;
-    top: 90.7% !important;
-    width: 8.3% !important;
-    height: 2.0% !important;
+    left: 29.4% !important;
+    top: 88.15% !important;
+    width: 6.9% !important;
+    height: 1.55% !important;
     z-index: 25 !important;
     display: flex !important;
     align-items: center !important;
@@ -256,9 +262,9 @@ body {
     display: block !important;
     color: #f0e7c8 !important;
     font-family: "Courier New", Courier, monospace !important;
-    font-size: clamp(6px, 0.78vw, 11px) !important;
+    font-size: clamp(5px, 0.62vw, 9px) !important;
     font-weight: bold !important;
-    letter-spacing: 0.16em !important;
+    letter-spacing: 0.14em !important;
     text-shadow:
         0 0 2px rgba(255, 236, 160, 0.7),
         0 1px 2px #000 !important;
