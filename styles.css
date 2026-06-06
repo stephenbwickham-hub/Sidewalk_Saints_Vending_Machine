@@ -575,7 +575,7 @@ body {
     }
 }
 /* ============================================================
-   FINAL OVERLAY ALIGNMENT
+   FINAL OVERLAY ALIGNMENT - PASS 2
    Keep this at the VERY BOTTOM of styles.css
    ============================================================ */
 
@@ -585,35 +585,35 @@ body {
 
 /* 12 label windows */
 .machine-stage .label-grid {
-    left: 26.2% !important;
-    top: 27.4% !important;
-    width: 35.7% !important;
-    height: 31.6% !important;
-    gap: 5.1% !important;
+    left: 27.9% !important;
+    top: 27.7% !important;
+    width: 33.8% !important;
+    height: 31.0% !important;
+    gap: 5.0% !important;
 }
 
 /* Insert Quarter box */
 .machine-stage .hotspot-insert {
-    left: 72.2% !important;
-    top: 27.7% !important;
-    width: 6.1% !important;
-    height: 7.8% !important;
+    left: 75.0% !important;
+    top: 27.1% !important;
+    width: 6.0% !important;
+    height: 7.4% !important;
 }
 
 /* Shake Machine box */
 .machine-stage .hotspot-shake {
-    left: 72.2% !important;
-    top: 40.4% !important;
-    width: 6.1% !important;
-    height: 7.9% !important;
+    left: 75.0% !important;
+    top: 39.8% !important;
+    width: 6.0% !important;
+    height: 7.5% !important;
 }
 
 /* Dynamic odometer */
 .machine-stage .odometer-overlay {
-    left: 22.6% !important;
-    top: 84.25% !important;
+    left: 22.3% !important;
+    top: 84.15% !important;
     width: 7.0% !important;
-    height: 1.8% !important;
+    height: 1.75% !important;
 }
 
 /* Keep guides visible while checking alignment */
