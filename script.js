@@ -220,7 +220,7 @@ function shakeTheeMachine() {
     }
     
     // Animate shake
-    const machine = document.querySelector('.machine');
+    const machine = document.querySelector('.machine-stage');
     machine.style.animation = 'none';
     setTimeout(() => {
         machine.style.animation = 'rattle 0.4s ease-in-out 1';

@@ -199,3 +199,12 @@ body {
     outline: 3px solid magenta !important;
     outline-offset: -3px !important;
 }
+
+/* Shake animation used by script.js (shakeTheeMachine) */
+@keyframes rattle {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-5px) rotate(-0.4deg); }
+    40% { transform: translateX(5px) rotate(0.4deg); }
+    60% { transform: translateX(-4px) rotate(-0.3deg); }
+    80% { transform: translateX(4px) rotate(0.3deg); }
+}
