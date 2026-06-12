@@ -34,10 +34,10 @@ This is not ecommerce. It's a machine experience.
 - Simple rattle animation
 
 ✅ **PDF Dispense**
-- Generates printable sheet with 12 selected labels
-- Includes strain name and label ID
-- TODO: Real PDF generation (currently placeholder text file)
-- TODO: Add printing instruction page
+- Fills the real template (`assets/sidewalk_saints_label_sheet_template.pdf`)
+- Stamps the 12 selected labels into the circular spaces at fixed coordinates
+- Falls back to strain name + label ID text if a label image is missing
+- Uses vendored pdf-lib (`assets/pdf-lib.min.js`), no CDN or build step
 
 ✅ **Odometer**
 - Displays anonymous dispense count
@@ -63,7 +63,26 @@ SidewalkSaintsVendingMachine/
 
 ## Label Catalog
 
-Currently includes 12 strains with 2-4 label series each:
+`labelCatalog.js` is a **generated file** — never edit it by hand. It is
+built from the manifests in `tools/manifests/` by `tools/build_catalog.py`
+(requires `pip install pandas openpyxl`).
+
+**Adding a new collection drop** (a manifest spreadsheet + a zip of PNGs):
+
+1. Save the manifest as `tools/manifests/<series-slug>.xlsx`
+   (columns: `id`, `strain`, `file_name`).
+2. Register the series name/prefix in the `SERIES` table of
+   `tools/build_catalog.py` if it's a brand-new series.
+3. Run: `python tools/build_catalog.py --ingest <series-slug> <zip-path>`
+
+That installs the art into `public/labels/[strain-slug]/[series-slug].png`
+and regenerates the catalog. A label only enters the catalog when its
+artwork exists — `tools/manifests/main-100-strain-roster.xlsx` is the
+planned roster for the legacy series, not live catalog data.
+
+The Plain Series covers 256 strains with real artwork. These 12 original
+strains also have Cigarette/Calendar/Cartoon/Sinners series (placeholder
+art for now, grandfathered in the `LEGACY` table of the build script):
 
 - OG Kush
 - Blue Dream
@@ -83,6 +102,7 @@ Currently includes 12 strains with 2-4 label series each:
 - Calendar Series
 - Early Cartoon Series
 - Sidewalk Sinners Series
+- Plain Series
 
 Images stored as `/public/labels/[strain-slug]/[series-slug].png`
 
@@ -94,12 +114,10 @@ Images stored as `/public/labels/[strain-slug]/[series-slug].png`
   - Create 50 label images (12 strains × ~4 series average)
   - Store in `/public/labels/[strain-slug]/[series-slug].png`
   
-- [ ] **Real PDF generation**
-  - Install jsPDF + html2canvas
-  - Implement label sheet layout (3×4 grid)
-  - Add Sidewalk Saints branding/logo
-  - Create printing instruction page
-  - Generate actual PDF (not text file)
+- [x] **Real PDF generation**
+  - Done: pdf-lib fills the template at fixed coordinates (see `pdfGenerator.js`)
+  - Note: requires serving over HTTP (e.g. `python -m http.server` or GitHub Pages);
+    opening `index.html` directly via file:// blocks the template fetch
 
 - [ ] **Payment integration**
   - Connect to Stripe or PayPal
