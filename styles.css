@@ -183,10 +183,10 @@ body {
 
 .machine-stage .odometer-overlay {
     position: absolute !important;
-    left: 26.3% !important;
+    left: 26.0% !important;
     top: 86.0% !important;
-    width: 11% !important;
-    height: 3% !important;
+    width: 10.1% !important;
+    height: 2.5% !important;
     z-index: 30 !important;
     display: flex !important;
     align-items: center !important;
@@ -202,8 +202,8 @@ body {
     color: #d8ccb4 !important;
     font-family: "Courier New", Courier, monospace !important;
     font-weight: 700 !important;
-    letter-spacing: 0.16em !important;
-    font-size: clamp(8px, 2.2vw, 15px) !important;
+    letter-spacing: 0.12em !important;
+    font-size: clamp(7px, 1.9vw, 13px) !important;
     line-height: 1 !important;
 }
 
