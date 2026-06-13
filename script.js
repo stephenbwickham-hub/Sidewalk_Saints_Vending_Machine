@@ -58,6 +58,10 @@ function setupEventListeners() {
     // Main buttons
     document.getElementById('insertQuarterBtn').addEventListener('click', openDonationModal);
     document.getElementById('shakeBtn').addEventListener('click', shakeTheeMachine);
+
+    // Instructions
+    document.getElementById('instructionsBtn').addEventListener('click', openInstructionsModal);
+    document.getElementById('instructionsCloseBtn').addEventListener('click', closeAllModals);
     
     // Selection modal
     document.getElementById('strainDropdown').addEventListener('change', onStrainSelected);
@@ -165,6 +169,10 @@ function selectLabel(label) {
 // ============================================================
 // DONATION FLOW
 // ============================================================
+
+function openInstructionsModal() {
+    document.getElementById('instructionsModal').classList.add('active');
+}
 
 function openDonationModal() {
     document.getElementById('donationModal').classList.add('active');
