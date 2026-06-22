@@ -255,7 +255,7 @@ function dispensePDF() {
         const dispensed = await generatePDF(currentSelection.labels);
 
         // Only bump the global odometer on an actual successful download.
-        // The Worker adds 12 (one per label) server-side; odometer.js owns the display.
+        // The Worker adds 1 per dispense server-side; odometer.js owns the display.
         if (dispensed && window.Odometer) {
             await window.Odometer.recordDispense();
         }

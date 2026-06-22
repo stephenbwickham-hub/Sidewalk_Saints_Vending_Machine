@@ -1,4 +1,4 @@
-const LABELS_PER_DISPENSE = 12;     // server-side on purpose; change here if a sheet ever holds a different count
+const INCREMENT_PER_DISPENSE = 1;   // one tick per dispense (per PDF download), not per label
 const ALLOWED_ORIGIN = "*";          // tighten to the site's exact origin in production
 
 function corsHeaders() {
@@ -36,7 +36,7 @@ export class OdometerCounter {
     }
     if (request.method === "POST" && pathname === "/increment") {
       const current = (await this.ctx.storage.get("count")) ?? 0;
-      const count = current + LABELS_PER_DISPENSE;     // atomic: single-threaded DO serializes requests
+      const count = current + INCREMENT_PER_DISPENSE;  // atomic: single-threaded DO serializes requests
       await this.ctx.storage.put("count", count);
       return json({ count });
     }
