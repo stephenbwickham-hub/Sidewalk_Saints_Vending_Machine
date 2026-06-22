@@ -10,15 +10,14 @@ let currentSelection = {
 
 let machineState = {
     shakeCount: 0,
-    maxShakes: 3,
-    dispensedCount: 0  // Anonymous counter for odometer
+    maxShakes: 3
 };
 
 // Initialize machine on page load
 document.addEventListener('DOMContentLoaded', () => {
     initializeMachine();
     setupEventListeners();
-    loadOdometerCount();
+    // Odometer display is owned by odometer.js (global server count).
 });
 
 // ============================================================
@@ -250,42 +249,20 @@ function shakeTheeMachine() {
 function dispensePDF() {
     // Show dispense animation
     document.getElementById('dispenseModal').classList.add('active');
-    
-    setTimeout(() => {
+
+    setTimeout(async () => {
         // Generate PDF with current selection
-        generatePDF(currentSelection.labels);
-        
-        // Increment counter
-        machineState.dispensedCount++;
-        saveOdometerCount();
-        updateOdometerDisplay();
-        
+        const dispensed = await generatePDF(currentSelection.labels);
+
+        // Only bump the global odometer on an actual successful download.
+        // The Worker adds 12 (one per label) server-side; odometer.js owns the display.
+        if (dispensed && window.Odometer) {
+            await window.Odometer.recordDispense();
+        }
+
         // Close dispense modal
         document.getElementById('dispenseModal').classList.remove('active');
     }, 1500);
-}
-
-// ============================================================
-// ODOMETER TRACKING
-// ============================================================
-
-function updateOdometerDisplay() {
-    const display = document.getElementById('odometerValue');
-    display.textContent = machineState.dispensedCount.toString().padStart(6, '0');
-}
-
-function saveOdometerCount() {
-    // Save to localStorage (client-side only, no tracking)
-    localStorage.setItem('sidewalk_saints_dispensed', machineState.dispensedCount.toString());
-}
-
-function loadOdometerCount() {
-    // Load from localStorage
-    const saved = localStorage.getItem('sidewalk_saints_dispensed');
-    if (saved) {
-        machineState.dispensedCount = parseInt(saved, 10);
-    }
-    updateOdometerDisplay();
 }
 
 // ============================================================

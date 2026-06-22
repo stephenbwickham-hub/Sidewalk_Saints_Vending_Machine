@@ -107,8 +107,10 @@ async function generatePDF(selectedLabels) {
         link.click();
         document.body.removeChild(link);
         URL.revokeObjectURL(url);
+        return true;
     } catch (err) {
         console.error('PDF generation failed:', err);
         alert('The machine jammed. Please try again.');
+        return false;
     }
 }
