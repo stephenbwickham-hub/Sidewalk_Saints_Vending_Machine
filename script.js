@@ -8,10 +8,16 @@ let currentSelection = {
     selectedSlotIndex: null  // Which slot is being edited
 };
 
-let machineState = {
-    shakeCount: 0,
-    maxShakes: 3
+// Payment links — replace these with your real Stripe payment links.
+const PAYMENT_LINKS = {
+    dollar: 'https://buy.stripe.com/REPLACE_WITH_DOLLAR_LINK',
+    custom: 'https://buy.stripe.com/REPLACE_WITH_CUSTOM_LINK'
 };
+
+function openPaymentLink(url) {
+    // Opens the hosted payment page in a new tab; payment is never required.
+    window.open(url, '_blank', 'noopener');
+}
 
 // Initialize machine on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -54,38 +60,27 @@ function renderLabelSlots() {
 // ============================================================
 
 function setupEventListeners() {
-    // Main buttons
+    // Insert Quarter opens the payment modal
     document.getElementById('insertQuarterBtn').addEventListener('click', openDonationModal);
-    document.getElementById('shakeBtn').addEventListener('click', shakeTheeMachine);
 
     // Instructions
     document.getElementById('instructionsBtn').addEventListener('click', openInstructionsModal);
     document.getElementById('instructionsCloseBtn').addEventListener('click', closeAllModals);
-    
+
     // Selection modal
     document.getElementById('strainDropdown').addEventListener('change', onStrainSelected);
     document.getElementById('modalCloseBtn').addEventListener('click', closeAllModals);
-    
-    // Donation modal
-    document.getElementById('customDonationBtn').addEventListener('click', openCustomDonationModal);
-    document.getElementById('donationCloseBtn').addEventListener('click', closeAllModals);
-    
-    document.querySelectorAll('.donation-button:not(#customDonationBtn)').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const amount = e.currentTarget.getAttribute('data-amount');
-            processDonation(amount);
-        });
+
+    // Payment modal
+    document.getElementById('paymentCloseBtn').addEventListener('click', closeAllModals);
+    document.getElementById('donate1Btn').addEventListener('click', () => openPaymentLink(PAYMENT_LINKS.dollar));
+    document.getElementById('customAmountBtn').addEventListener('click', () => openPaymentLink(PAYMENT_LINKS.custom));
+    document.getElementById('modalShakeBtn').addEventListener('click', () => {
+        // Free path: close the modal and run the existing dispense.
+        closeAllModals();
+        dispensePDF();
     });
-    
-    // Custom donation modal
-    document.getElementById('confirmCustomBtn').addEventListener('click', () => {
-        const amount = document.getElementById('customAmountInput').value;
-        if (amount && parseFloat(amount) > 0) {
-            processDonation(amount);
-        }
-    });
-    document.getElementById('cancelCustomBtn').addEventListener('click', closeAllModals);
-    
+
     // Close modals on overlay click
     document.querySelectorAll('.modal-overlay').forEach(overlay => {
         overlay.addEventListener('click', closeAllModals);
@@ -177,71 +172,6 @@ function openDonationModal() {
     document.getElementById('donationModal').classList.add('active');
 }
 
-function openCustomDonationModal() {
-    // Close donation modal, open custom modal
-    document.getElementById('donationModal').classList.remove('active');
-    document.getElementById('customDonationModal').classList.add('active');
-    
-    // Focus input
-    setTimeout(() => {
-        document.getElementById('customAmountInput').focus();
-    }, 100);
-}
-
-function processDonation(amount) {
-    // Close modals
-    closeAllModals();
-    
-    // TODO: Connect to real payment system here
-    // For now, just trigger dispense
-    console.log(`Donation received: $${amount}`);
-    
-    // Show dispense animation and generate PDF
-    dispensePDF();
-}
-
-// ============================================================
-// SHAKE THE MACHINE
-// ============================================================
-
-function shakeTheeMachine() {
-    if (machineState.shakeCount >= machineState.maxShakes) {
-        // Reset if at max
-        machineState.shakeCount = 0;
-    }
-    
-    machineState.shakeCount++;
-    
-    // Calculate probability of dispense
-    let shouldDispense = false;
-    
-    if (machineState.shakeCount === 1) {
-        // 20% on first shake
-        shouldDispense = Math.random() < 0.2;
-    } else if (machineState.shakeCount === 2) {
-        // 40% on second shake
-        shouldDispense = Math.random() < 0.4;
-    } else if (machineState.shakeCount === 3) {
-        // 100% on third shake
-        shouldDispense = true;
-    }
-    
-    // Animate shake
-    const machine = document.querySelector('.machine-stage');
-    machine.style.animation = 'none';
-    setTimeout(() => {
-        machine.style.animation = 'rattle 0.4s ease-in-out 1';
-    }, 10);
-    
-    if (shouldDispense) {
-        // Reset shake count and dispense
-        machineState.shakeCount = 0;
-        setTimeout(() => {
-            dispensePDF();
-        }, 500);
-    }
-}
-
 // ============================================================
 // PDF DISPENSE
 // ============================================================
@@ -287,16 +217,5 @@ document.addEventListener('keydown', (e) => {
     // ESC closes all modals
     if (e.key === 'Escape') {
         closeAllModals();
-    }
-    
-    // Enter confirms in custom amount modal if focused
-    if (e.key === 'Enter') {
-        const customModal = document.getElementById('customDonationModal');
-        if (customModal.classList.contains('active')) {
-            const amount = document.getElementById('customAmountInput').value;
-            if (amount && parseFloat(amount) > 0) {
-                processDonation(amount);
-            }
-        }
     }
 });

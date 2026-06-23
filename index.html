@@ -10,6 +10,9 @@
     <main class="machine-stage" aria-label="Sidewalk Saints Custom Label Dispenser">
         <img class="machine-shell" src="assets/machine-shell.png" alt="Sidewalk Saints Custom Label Dispenser vending machine">
 
+        <!-- Blended patch covering the baked-in "Shake the Machine" button (reversible) -->
+        <div class="shake-cover" aria-hidden="true"></div>
+
         <!-- Live label windows over the empty machine windows -->
         <div class="label-grid" id="labelGrid" aria-label="Selected labels">
             <!-- 12 slots will be generated here by script.js -->
@@ -18,10 +21,6 @@
         <!-- Invisible working controls over the rendered machine buttons -->
         <button class="hotspot hotspot-insert" id="insertQuarterBtn" aria-label="Insert quarter">
             INSERT QUARTER
-        </button>
-
-        <button class="hotspot hotspot-shake" id="shakeBtn" aria-label="Shake the machine">
-            SHAKE THE MACHINE
         </button>
 
         <button class="hotspot hotspot-instructions" id="instructionsBtn" aria-label="Instructions">
@@ -60,41 +59,18 @@
         </div>
     </div>
 
-    <!-- Donation Modal -->
+    <!-- Payment Modal (opened by Insert Quarter) -->
     <div class="modal" id="donationModal">
         <div class="modal-overlay"></div>
-        <div class="modal-panel donation-panel">
-            <div class="modal-header">INSERT DONATION</div>
+        <div class="modal-panel payment-panel">
+            <button class="modal-x" id="paymentCloseBtn" aria-label="Close">&times;</button>
 
-            <div class="modal-content donation-content">
-                <button class="donation-button" data-amount="1.00">
-                    <div class="donation-amount">$1.00</div>
-                </button>
-                <button class="donation-button" id="customDonationBtn">
-                    <div class="donation-amount">CUSTOM</div>
-                </button>
-            </div>
+            <p class="payment-tagline">A buck keeps the machine humming.</p>
 
-            <button class="modal-close" id="donationCloseBtn">CANCEL</button>
-        </div>
-    </div>
-
-    <!-- Custom Donation Modal -->
-    <div class="modal" id="customDonationModal">
-        <div class="modal-overlay"></div>
-        <div class="modal-panel custom-panel">
-            <div class="modal-header">CUSTOM AMOUNT</div>
-
-            <div class="modal-content custom-content">
-                <div class="currency-input">
-                    <span class="currency-symbol">$</span>
-                    <input type="number" id="customAmountInput" placeholder="0.00" step="0.01" min="0" max="999">
-                </div>
-            </div>
-
-            <div class="modal-buttons">
-                <button class="modal-button confirm-button" id="confirmCustomBtn">OK</button>
-                <button class="modal-button cancel-button" id="cancelCustomBtn">CANCEL</button>
+            <div class="payment-buttons">
+                <button class="payment-button donate-button" id="donate1Btn">DONATE $1</button>
+                <button class="payment-button" id="customAmountBtn">CUSTOM AMOUNT</button>
+                <button class="payment-button shake-button" id="modalShakeBtn">SHAKE THE MACHINE</button>
             </div>
         </div>
     </div>

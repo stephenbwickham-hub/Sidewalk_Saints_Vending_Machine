@@ -161,14 +161,6 @@ body {
     height: 8.95% !important;
 }
 
-/* Shake Machine final */
-.machine-stage .hotspot-shake {
-    left: 72.70% !important;
-    top: 37.25% !important;
-    width: 7.55% !important;
-    height: 8.95% !important;
-}
-
 /* Instructions plate */
 .machine-stage .hotspot-instructions {
     left: 69% !important;
@@ -453,4 +445,97 @@ body {
 .dispense-text {
     font-weight: 700;
     letter-spacing: 0.12em;
+}
+
+/* ============================================================
+   Shake-button cover patch (blends over the baked-in red button)
+   Anchored in the machine-stage coordinate system so it scales.
+   ============================================================ */
+.machine-stage .shake-cover {
+    position: absolute !important;
+    left: 71.4% !important;
+    top: 36.0% !important;
+    width: 10.8% !important;
+    height: 12.4% !important;
+    background-image: url('assets/shake-patch.png') !important;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    pointer-events: none !important;
+    z-index: 5 !important;
+}
+
+/* ============================================================
+   Payment modal (Insert Quarter)
+   ============================================================ */
+.payment-panel {
+    position: relative;
+    padding: 26px 18px 18px;
+    text-align: center;
+}
+
+.modal-x {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #5f5f5f;
+    font-family: inherit;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.modal-x:hover {
+    color: #b84040;
+}
+
+.payment-tagline {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 6px 0 16px;
+    color: #1c1a17;
+}
+
+.payment-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-button {
+    padding: 14px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #f4e8d4;
+    background: #6a6a6a;
+    border: 2px solid #4a4a4a;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: filter 0.12s ease, transform 0.08s ease;
+}
+
+.payment-button:hover {
+    filter: brightness(1.12);
+}
+
+.payment-button:active {
+    transform: translateY(1px);
+}
+
+.payment-button.donate-button {
+    background: #4f7a3f;
+    border-color: #3c5e30;
+}
+
+.payment-button.shake-button {
+    background: #b84040;
+    border-color: #8f2f2f;
 }
