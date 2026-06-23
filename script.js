@@ -10,8 +10,7 @@ let currentSelection = {
 
 // Payment links — replace these with your real Stripe payment links.
 const PAYMENT_LINKS = {
-    dollar: 'https://buy.stripe.com/00w3cv7cseLnfho5XW73G00',
-    custom: 'https://buy.stripe.com/REPLACE_WITH_CUSTOM_LINK'
+    dollar: 'https://buy.stripe.com/00w3cv7cseLnfho5XW73G00'
 };
 
 function openPaymentLink(url) {
@@ -74,7 +73,6 @@ function setupEventListeners() {
     // Payment modal
     document.getElementById('paymentCloseBtn').addEventListener('click', closeAllModals);
     document.getElementById('donate1Btn').addEventListener('click', () => openPaymentLink(PAYMENT_LINKS.dollar));
-    document.getElementById('customAmountBtn').addEventListener('click', () => openPaymentLink(PAYMENT_LINKS.custom));
     document.getElementById('modalShakeBtn').addEventListener('click', () => {
         // Free path: close the modal and run the existing dispense.
         closeAllModals();
