@@ -6,7 +6,7 @@
 
 const LABEL_CATALOG = [
 
-    // Cigarette Series (31)
+    // Cigarette Series (32)
     {
         strain: "AK-47",
         strainSlug: "ak-47",
@@ -22,6 +22,14 @@ const LABEL_CATALOG = [
         seriesSlug: "cigarette",
         image: "public/labels/animal-face/cigarette-main.png",
         labelId: "CIGA-ANIMAL-FACE-MAIN"
+    },
+    {
+        strain: "Banana Cream",
+        strainSlug: "banana-cream",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/banana-cream/cigarette-main.png",
+        labelId: "CIGA-BANANA-CREAM-MAIN"
     },
     {
         strain: "Biscotti",
@@ -256,7 +264,7 @@ const LABEL_CATALOG = [
         labelId: "CIGA-ZKITTLEZ-MAIN"
     },
 
-    // Pin-Up Series (17)
+    // Pin-Up Series (19)
     {
         strain: "Animal Face",
         strainSlug: "animal-face",
@@ -298,6 +306,14 @@ const LABEL_CATALOG = [
         labelId: "PIN-BUBBA-KUSH-MAIN"
     },
     {
+        strain: "Bubblegum Gushers",
+        strainSlug: "bubblegum-gushers",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/bubblegum-gushers/pinup-alt1.png",
+        labelId: "PIN-BUBBLEGUM-GUSHERS-ALT1"
+    },
+    {
         strain: "Cereal Milk",
         strainSlug: "cereal-milk",
         series: "Pin-Up Series",
@@ -328,6 +344,14 @@ const LABEL_CATALOG = [
         seriesSlug: "pinup",
         image: "public/labels/gorilla-glue/pinup-main.png",
         labelId: "PIN-GORILLA-GLUE-MAIN"
+    },
+    {
+        strain: "Granddaddy Purple",
+        strainSlug: "granddaddy-purple",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/granddaddy-purple/pinup-alt1.png",
+        labelId: "PIN-GRANDDADDY-PURPLE-ALT1"
     },
     {
         strain: "Granddaddy Purple",
