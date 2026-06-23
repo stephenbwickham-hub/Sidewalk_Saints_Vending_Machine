@@ -10,7 +10,7 @@ let currentSelection = {
 
 // Payment links — replace these with your real Stripe payment links.
 const PAYMENT_LINKS = {
-    dollar: 'https://buy.stripe.com/REPLACE_WITH_DOLLAR_LINK',
+    dollar: 'https://buy.stripe.com/00w3cv7cseLnfho5XW73G00',
     custom: 'https://buy.stripe.com/REPLACE_WITH_CUSTOM_LINK'
 };
 
