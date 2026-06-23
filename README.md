@@ -64,47 +64,38 @@ SidewalkSaintsVendingMachine/
 ## Label Catalog
 
 `labelCatalog.js` is a **generated file** — never edit it by hand. It is
-built from the manifests in `tools/manifests/` by `tools/build_catalog.py`
-(requires `pip install pandas openpyxl`).
+built by `tools/build_catalog.py` (requires `pip install pandas openpyxl`),
+which scans the artwork on disk: **every PNG under `public/labels/` becomes
+one selectable label**, so multiple variants of a series all show up as
+options the machine user can pick from.
 
-**Adding a new collection drop** (a manifest spreadsheet + a zip of PNGs):
+Naming convention:
+- `public/labels/<strain-slug>/plain.png` — the Plain label for a strain
+- `public/labels/<strain-slug>/<series>-<variant>.png` — real series art,
+  one file per variant (`main`, `alt1`, `alt2`, …)
 
-1. Save the manifest as `tools/manifests/<series-slug>.xlsx`
-   (columns: `id`, `strain`, `file_name`).
-2. Register the series name/prefix in the `SERIES` table of
-   `tools/build_catalog.py` if it's a brand-new series.
-3. Run: `python tools/build_catalog.py --ingest <series-slug> <zip-path>`
+Current series: **Cigarette, Pin-Up, Early Cartoon, Sidewalk Sinners,
+Plain** (Pin-Up replaced the old Calendar series). To add a brand-new
+series, register it in the `SERIES` table of `tools/build_catalog.py`.
 
-That installs the art into `public/labels/[strain-slug]/[series-slug].png`
-and regenerates the catalog. A label only enters the catalog when its
-artwork exists — `tools/manifests/main-100-strain-roster.xlsx` is the
-planned roster for the legacy series, not live catalog data.
+### Adding new labels (future workflow)
 
-The Plain Series covers 256 strains with real artwork. These 12 original
-strains also have Cigarette/Calendar/Cartoon/Sinners series (placeholder
-art for now, grandfathered in the `LEGACY` table of the build script):
+1. Put the new label PNGs in an incoming folder (anywhere, e.g. the desktop).
+2. Name each file `strain-series-variant.png`
+   (e.g. `sour-diesel-cigarette-main.png`, `gelato-sinners-alt1.png`).
+3. **Dry-run first** (changes nothing, just reports):
+   `python tools/build_catalog.py --ingest-folder "C:\path\to\folder" --dry-run`
+4. Fix any warnings it prints (missing series, typos, accidental new strains).
+5. **Real ingest:**
+   `python tools/build_catalog.py --ingest-folder "C:\path\to\folder"`
+6. Commit and push.
 
-- OG Kush
-- Blue Dream
-- Granddaddy Purple
-- Runtz
-- Pineapple Express
-- Sour Diesel
-- Cereal Milk
-- Forbidden Fruit
-- Bubba Kush
-- Gelato
-- Mochi
-- AK-47
-
-**Series Options:**
-- Cigarette Series
-- Calendar Series
-- Early Cartoon Series
-- Sidewalk Sinners Series
-- Plain Series
-
-Images stored as `/public/labels/[strain-slug]/[series-slug].png`
+The dry-run lists what *would* import, what would be skipped, and warnings —
+without touching the repo. The real ingest copies the art into place and
+regenerates `labelCatalog.js`. A label only enters the catalog when its
+artwork exists on disk. Note: `--ingest-folder` only imports into strain
+folders that already exist; a genuinely new strain is flagged and set aside
+(create `public/labels/<new-strain>/` first, then re-run).
 
 ## Development TODOs
 

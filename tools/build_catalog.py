@@ -16,6 +16,11 @@ Usage:
   python tools/build_catalog.py
       Rebuild labelCatalog.js from the images already in public/labels.
 
+  python tools/build_catalog.py --ingest-folder <path> --dry-run
+      Preview a drop WITHOUT changing anything: lists what would be imported,
+      what would be skipped, and warnings (missing/unknown series, likely
+      typos, accidental new strains, duplicate destinations). Run this first.
+
   python tools/build_catalog.py --ingest-folder <path>
       Install an art drop whose files are named <strain>-<series>-<variant>.png
       (copies each into public/labels/<strain>/<series>-<variant>.png), then
@@ -28,6 +33,7 @@ Usage:
 Requires: pip install pandas openpyxl
 """
 
+import difflib
 import json
 import os
 import re
@@ -62,6 +68,9 @@ SLUG_FIX = {
     "candy-land": "candyland",
     "cereal-mil": "cereal-milk",
 }
+
+# Series that no longer exist, kept only for friendlier dry-run messages.
+RETIRED_SERIES = {"calendar"}
 
 HELPERS = """
 // Get all unique strains sorted alphabetically
@@ -119,34 +128,117 @@ def entry_js(strain, slug, series_slug, image, label_id):
     )
 
 
-def ingest_folder(src):
+def analyze_drop(src):
+    """Parse a drop folder WITHOUT touching disk.
+
+    Shared by the real ingest and --dry-run so both classify files identically.
+    Returns (imports, warnings, skips):
+      imports  list of dicts {file, src, strain, series, variant, dest,
+               label_id, replaces, note} -- exactly the files the real ingest
+               would copy (existing strain + recognized series).
+      warnings list of (file, message) -- parsed but NOT imported (missing/
+               unknown series, unknown strain / likely typo), plus auto-correct
+               notices and duplicate-destination collisions.
+      skips    list of (file, message) -- junk / non-PNG, ignored entirely.
+    """
     src = Path(src)
     if not src.is_dir():
         sys.exit(f"not a folder: {src}")
-    copied = setaside = skipped = 0
-    aside = []
+    existing = sorted(d for d in os.listdir(LABELS) if (LABELS / d).is_dir())
+    series_words = set(SERIES) | RETIRED_SERIES
+    imports, warnings, skips = [], [], []
+
     for f in sorted(os.listdir(src)):
         if not f.lower().endswith(".png"):
+            skips.append((f, "not a PNG"))
             continue
         stem = re.sub(r"\.png$", "", f, flags=re.I).rstrip(".")
         if " " in stem or "ChatGPT" in f or "." in stem or "publiclabels" in stem:
-            skipped += 1
+            skips.append((f, "junk/unrecognized filename"))
             continue
         toks = stem.split("-")
         variant = toks[-1].lower() if VAR.match(toks[-1].lower()) else None
         rest = toks[:-1] if variant else toks
         series = rest[-1].lower() if rest and rest[-1].lower() in SERIES else None
         strain = "-".join(rest[:-1]).lower() if series else "-".join(rest).lower()
+
         if not series:
-            aside.append((f, "no series in name")); setaside += 1; continue
-        strain = SLUG_FIX.get(strain, strain)
-        if not (LABELS / strain).is_dir():
-            aside.append((f, f"unknown strain '{strain}'")); setaside += 1; continue
-        shutil.copyfile(src / f, LABELS / strain / f"{series}-{variant or 'main'}.png")
-        copied += 1
-    print(f"ingested {copied} files, skipped {skipped} junk, set aside {setaside}")
-    for f, why in aside:
-        print(f"  set aside: {f}  <- {why}")
+            cand = rest[-1].lower() if rest else ""
+            if cand in RETIRED_SERIES:
+                warnings.append((f, f"retired series '{cand}' (Calendar was replaced by Pin-Up)"))
+            else:
+                near = difflib.get_close_matches(cand, series_words, n=1, cutoff=0.7) if cand else []
+                if near:
+                    warnings.append((f, f"unknown series '{cand}'; did you mean '{near[0]}'?"))
+                else:
+                    warnings.append((f, "missing series"))
+            continue
+
+        note = None
+        if strain in SLUG_FIX:
+            corrected = SLUG_FIX[strain]
+            note = f"name auto-corrected '{strain}' -> '{corrected}'"
+            warnings.append((f, note))
+            strain = corrected
+
+        if strain not in existing:
+            near = difflib.get_close_matches(strain, existing, n=1, cutoff=0.75)
+            if near:
+                warnings.append((f, f"possible typo; did you mean '{near[0]}'? (set aside)"))
+            else:
+                warnings.append((f, f"would create NEW strain '{strain}' (not in catalog) -- set aside"))
+            continue
+
+        v = variant or "main"
+        dest = LABELS / strain / f"{series}-{v}.png"
+        imports.append({
+            "file": f, "src": src / f, "strain": strain, "series": series,
+            "variant": v, "dest": dest,
+            "label_id": f"{SERIES[series][1]}-{strain.upper()}-{v.upper()}",
+            "replaces": dest.exists(), "note": note,
+        })
+
+    # duplicate destinations within the drop (would silently overwrite each other)
+    by_dest = defaultdict(list)
+    for imp in imports:
+        by_dest[imp["dest"]].append(imp["file"])
+    for dest, fs in by_dest.items():
+        if len(fs) > 1:
+            warnings.append((" & ".join(fs), f"map to the same label ({dest.parent.name}/{dest.name}) -- last one would win"))
+
+    return imports, warnings, skips
+
+
+def ingest_folder(src, dry_run=False):
+    imports, warnings, skips = analyze_drop(src)
+
+    if dry_run:
+        print("DRY RUN -- no files will be changed.\n")
+        print(f"Would import ({len(imports)}):")
+        for imp in imports:
+            tag = "  (replaces existing)" if imp["replaces"] else ""
+            print(f"  - {imp['strain']} / {imp['series']} / {imp['variant']}{tag}")
+        if not imports:
+            print("  (none)")
+        print(f"\nWarnings ({len(warnings)}):")
+        for f, msg in warnings:
+            print(f"  - {f}: {msg}")
+        if not warnings:
+            print("  (none)")
+        print(f"\nSkipped ({len(skips)}):")
+        for f, msg in skips:
+            print(f"  - {f}: {msg}")
+        if not skips:
+            print("  (none)")
+        print("\nNothing was written. Re-run without --dry-run to import.")
+        return
+
+    for imp in imports:
+        imp["dest"].parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(imp["src"], imp["dest"])
+    print(f"ingested {len(imports)} files, skipped {len(skips)} junk, {len(warnings)} warning(s)")
+    for f, msg in warnings:
+        print(f"  warning: {f}: {msg}")
 
 
 def ingest_plain(zip_path):
@@ -236,11 +328,20 @@ def build():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 3 and sys.argv[1] == "--ingest-folder":
-        ingest_folder(sys.argv[2]); build()
-    elif len(sys.argv) == 4 and sys.argv[1] == "--ingest" and sys.argv[2] == "plain":
-        ingest_plain(sys.argv[3]); build()
-    elif len(sys.argv) == 1:
+    args = sys.argv[1:]
+    if args and args[0] == "--ingest-folder":
+        rest = args[1:]
+        dry = "--dry-run" in rest
+        paths = [a for a in rest if a != "--dry-run"]
+        if len(paths) != 1:
+            sys.exit(__doc__)
+        if dry:
+            ingest_folder(paths[0], dry_run=True)   # preview only, repo untouched
+        else:
+            ingest_folder(paths[0]); build()
+    elif len(args) == 3 and args[0] == "--ingest" and args[1] == "plain":
+        ingest_plain(args[2]); build()
+    elif not args:
         build()
     else:
         sys.exit(__doc__)
