@@ -1,310 +1,724 @@
 // ============================================================
 // Label Catalog - GENERATED FILE, do not edit by hand.
 // Rebuild with: python tools/build_catalog.py
-// Sources: tools/manifests/*.xlsx + public/labels/<strain>/<series>.png
+// Source of truth: the PNGs under public/labels/
 // ============================================================
 
 const LABEL_CATALOG = [
 
-    // Legacy series for the original 12 strains (placeholder art)
+    // Cigarette Series (30)
     {
-        strain: "OG Kush",
-        strainSlug: "og-kush",
+        strain: "AK-47",
+        strainSlug: "ak-47",
         series: "Cigarette Series",
         seriesSlug: "cigarette",
-        image: "public/labels/placeholder.png",
-        labelId: "OG-CIGA-001"
+        image: "public/labels/ak-47/cigarette-main.png",
+        labelId: "CIGA-AK-47-MAIN"
     },
     {
-        strain: "OG Kush",
-        strainSlug: "og-kush",
-        series: "Calendar Series",
-        seriesSlug: "calendar",
-        image: "public/labels/placeholder.png",
-        labelId: "OG-CAL-001"
+        strain: "Animal Face",
+        strainSlug: "animal-face",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/animal-face/cigarette-main.png",
+        labelId: "CIGA-ANIMAL-FACE-MAIN"
     },
     {
-        strain: "OG Kush",
-        strainSlug: "og-kush",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/placeholder.png",
-        labelId: "OG-CART-001"
-    },
-    {
-        strain: "OG Kush",
-        strainSlug: "og-kush",
-        series: "Sidewalk Sinners Series",
-        seriesSlug: "sinners",
-        image: "public/labels/placeholder.png",
-        labelId: "OG-SIN-001"
+        strain: "Biscotti",
+        strainSlug: "biscotti",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/biscotti/cigarette-main.png",
+        labelId: "CIGA-BISCOTTI-MAIN"
     },
     {
         strain: "Blue Dream",
         strainSlug: "blue-dream",
         series: "Cigarette Series",
         seriesSlug: "cigarette",
-        image: "public/labels/placeholder.png",
-        labelId: "BD-CIGA-001"
+        image: "public/labels/blue-dream/cigarette-alt.png",
+        labelId: "CIGA-BLUE-DREAM-ALT"
     },
     {
-        strain: "Blue Dream",
-        strainSlug: "blue-dream",
-        series: "Calendar Series",
-        seriesSlug: "calendar",
-        image: "public/labels/placeholder.png",
-        labelId: "BD-CAL-001"
-    },
-    {
-        strain: "Blue Dream",
-        strainSlug: "blue-dream",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/placeholder.png",
-        labelId: "BD-CART-001"
-    },
-    {
-        strain: "Blue Dream",
-        strainSlug: "blue-dream",
-        series: "Sidewalk Sinners Series",
-        seriesSlug: "sinners",
-        image: "public/labels/placeholder.png",
-        labelId: "BD-SIN-001"
-    },
-    {
-        strain: "Granddaddy Purple",
-        strainSlug: "granddaddy-purple",
+        strain: "Blueberry Muffin",
+        strainSlug: "blueberry-muffin",
         series: "Cigarette Series",
         seriesSlug: "cigarette",
-        image: "public/labels/placeholder.png",
-        labelId: "GDP-CIGA-001"
-    },
-    {
-        strain: "Granddaddy Purple",
-        strainSlug: "granddaddy-purple",
-        series: "Calendar Series",
-        seriesSlug: "calendar",
-        image: "public/labels/placeholder.png",
-        labelId: "GDP-CAL-001"
-    },
-    {
-        strain: "Granddaddy Purple",
-        strainSlug: "granddaddy-purple",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/placeholder.png",
-        labelId: "GDP-CART-001"
-    },
-    {
-        strain: "Runtz",
-        strainSlug: "runtz",
-        series: "Cigarette Series",
-        seriesSlug: "cigarette",
-        image: "public/labels/placeholder.png",
-        labelId: "RUNTZ-CIGA-001"
-    },
-    {
-        strain: "Runtz",
-        strainSlug: "runtz",
-        series: "Calendar Series",
-        seriesSlug: "calendar",
-        image: "public/labels/placeholder.png",
-        labelId: "RUNTZ-CAL-001"
-    },
-    {
-        strain: "Runtz",
-        strainSlug: "runtz",
-        series: "Sidewalk Sinners Series",
-        seriesSlug: "sinners",
-        image: "public/labels/placeholder.png",
-        labelId: "RUNTZ-SIN-001"
-    },
-    {
-        strain: "Pineapple Express",
-        strainSlug: "pineapple-express",
-        series: "Cigarette Series",
-        seriesSlug: "cigarette",
-        image: "public/labels/placeholder.png",
-        labelId: "PE-CIGA-001"
-    },
-    {
-        strain: "Pineapple Express",
-        strainSlug: "pineapple-express",
-        series: "Calendar Series",
-        seriesSlug: "calendar",
-        image: "public/labels/placeholder.png",
-        labelId: "PE-CAL-001"
-    },
-    {
-        strain: "Pineapple Express",
-        strainSlug: "pineapple-express",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/placeholder.png",
-        labelId: "PE-CART-001"
-    },
-    {
-        strain: "Sour Diesel",
-        strainSlug: "sour-diesel",
-        series: "Cigarette Series",
-        seriesSlug: "cigarette",
-        image: "public/labels/placeholder.png",
-        labelId: "SD-CIGA-001"
-    },
-    {
-        strain: "Sour Diesel",
-        strainSlug: "sour-diesel",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/placeholder.png",
-        labelId: "SD-CART-001"
-    },
-    {
-        strain: "Sour Diesel",
-        strainSlug: "sour-diesel",
-        series: "Sidewalk Sinners Series",
-        seriesSlug: "sinners",
-        image: "public/labels/placeholder.png",
-        labelId: "SD-SIN-001"
-    },
-    {
-        strain: "Cereal Milk",
-        strainSlug: "cereal-milk",
-        series: "Cigarette Series",
-        seriesSlug: "cigarette",
-        image: "public/labels/placeholder.png",
-        labelId: "CM-CIGA-001"
-    },
-    {
-        strain: "Cereal Milk",
-        strainSlug: "cereal-milk",
-        series: "Calendar Series",
-        seriesSlug: "calendar",
-        image: "public/labels/placeholder.png",
-        labelId: "CM-CAL-001"
-    },
-    {
-        strain: "Cereal Milk",
-        strainSlug: "cereal-milk",
-        series: "Sidewalk Sinners Series",
-        seriesSlug: "sinners",
-        image: "public/labels/placeholder.png",
-        labelId: "CM-SIN-001"
-    },
-    {
-        strain: "Forbidden Fruit",
-        strainSlug: "forbidden-fruit",
-        series: "Cigarette Series",
-        seriesSlug: "cigarette",
-        image: "public/labels/placeholder.png",
-        labelId: "FF-CIGA-001"
-    },
-    {
-        strain: "Forbidden Fruit",
-        strainSlug: "forbidden-fruit",
-        series: "Calendar Series",
-        seriesSlug: "calendar",
-        image: "public/labels/placeholder.png",
-        labelId: "FF-CAL-001"
-    },
-    {
-        strain: "Forbidden Fruit",
-        strainSlug: "forbidden-fruit",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/placeholder.png",
-        labelId: "FF-CART-001"
+        image: "public/labels/blueberry-muffin/cigarette-alt.png",
+        labelId: "CIGA-BLUEBERRY-MUFFIN-ALT"
     },
     {
         strain: "Bubba Kush",
         strainSlug: "bubba-kush",
         series: "Cigarette Series",
         seriesSlug: "cigarette",
-        image: "public/labels/placeholder.png",
-        labelId: "BK-CIGA-001"
+        image: "public/labels/bubba-kush/cigarette-alt.png",
+        labelId: "CIGA-BUBBA-KUSH-ALT"
     },
     {
-        strain: "Bubba Kush",
-        strainSlug: "bubba-kush",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/placeholder.png",
-        labelId: "BK-CART-001"
+        strain: "Cereal Milk",
+        strainSlug: "cereal-milk",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/cereal-milk/cigarette-alt.png",
+        labelId: "CIGA-CEREAL-MILK-ALT"
     },
     {
-        strain: "Bubba Kush",
-        strainSlug: "bubba-kush",
-        series: "Sidewalk Sinners Series",
-        seriesSlug: "sinners",
-        image: "public/labels/placeholder.png",
-        labelId: "BK-SIN-001"
+        strain: "Chemdawg",
+        strainSlug: "chemdawg",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/chemdawg/cigarette-main.png",
+        labelId: "CIGA-CHEMDAWG-MAIN"
     },
     {
         strain: "Gelato",
         strainSlug: "gelato",
         series: "Cigarette Series",
         seriesSlug: "cigarette",
-        image: "public/labels/placeholder.png",
-        labelId: "GEL-CIGA-001"
+        image: "public/labels/gelato/cigarette-alt1.png",
+        labelId: "CIGA-GELATO-ALT1"
     },
     {
         strain: "Gelato",
         strainSlug: "gelato",
-        series: "Calendar Series",
-        seriesSlug: "calendar",
-        image: "public/labels/placeholder.png",
-        labelId: "GEL-CAL-001"
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/gelato/cigarette-main.png",
+        labelId: "CIGA-GELATO-MAIN"
     },
     {
-        strain: "Gelato",
-        strainSlug: "gelato",
-        series: "Sidewalk Sinners Series",
-        seriesSlug: "sinners",
-        image: "public/labels/placeholder.png",
-        labelId: "GEL-SIN-001"
+        strain: "Green Crack",
+        strainSlug: "green-crack",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/green-crack/cigarette-main.png",
+        labelId: "CIGA-GREEN-CRACK-MAIN"
+    },
+    {
+        strain: "Jack Herer",
+        strainSlug: "jack-herer",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/jack-herer/cigarette-main.png",
+        labelId: "CIGA-JACK-HERER-MAIN"
+    },
+    {
+        strain: "LA Confidential",
+        strainSlug: "la-confidential",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/la-confidential/cigarette-main.png",
+        labelId: "CIGA-LA-CONFIDENTIAL-MAIN"
+    },
+    {
+        strain: "Lemon Haze",
+        strainSlug: "lemon-haze",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/lemon-haze/cigarette-alt.png",
+        labelId: "CIGA-LEMON-HAZE-ALT"
+    },
+    {
+        strain: "Lemon Haze",
+        strainSlug: "lemon-haze",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/lemon-haze/cigarette-alt1.png",
+        labelId: "CIGA-LEMON-HAZE-ALT1"
     },
     {
         strain: "Mochi",
         strainSlug: "mochi",
         series: "Cigarette Series",
         seriesSlug: "cigarette",
-        image: "public/labels/placeholder.png",
-        labelId: "MOCH-CIGA-001"
+        image: "public/labels/mochi/cigarette-main.png",
+        labelId: "CIGA-MOCHI-MAIN"
     },
     {
-        strain: "Mochi",
-        strainSlug: "mochi",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/placeholder.png",
-        labelId: "MOCH-CART-001"
-    },
-    {
-        strain: "AK-47",
-        strainSlug: "ak-47",
+        strain: "Motorbreath",
+        strainSlug: "motorbreath",
         series: "Cigarette Series",
         seriesSlug: "cigarette",
-        image: "public/labels/placeholder.png",
-        labelId: "AK47-CIGA-001"
+        image: "public/labels/motorbreath/cigarette-alt1.png",
+        labelId: "CIGA-MOTORBREATH-ALT1"
     },
     {
-        strain: "AK-47",
-        strainSlug: "ak-47",
-        series: "Calendar Series",
-        seriesSlug: "calendar",
-        image: "public/labels/placeholder.png",
-        labelId: "AK47-CAL-001"
+        strain: "Motorbreath",
+        strainSlug: "motorbreath",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/motorbreath/cigarette-main.png",
+        labelId: "CIGA-MOTORBREATH-MAIN"
     },
     {
-        strain: "AK-47",
-        strainSlug: "ak-47",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/placeholder.png",
-        labelId: "AK47-CART-001"
+        strain: "Northern Lights",
+        strainSlug: "northern-lights",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/northern-lights/cigarette-alt1.png",
+        labelId: "CIGA-NORTHERN-LIGHTS-ALT1"
+    },
+    {
+        strain: "Northern Lights",
+        strainSlug: "northern-lights",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/northern-lights/cigarette-main.png",
+        labelId: "CIGA-NORTHERN-LIGHTS-MAIN"
+    },
+    {
+        strain: "OG Kush",
+        strainSlug: "og-kush",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/og-kush/cigarette-main.png",
+        labelId: "CIGA-OG-KUSH-MAIN"
+    },
+    {
+        strain: "Oreoz",
+        strainSlug: "oreoz",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/oreoz/cigarette-main.png",
+        labelId: "CIGA-OREOZ-MAIN"
+    },
+    {
+        strain: "Trainwreck",
+        strainSlug: "trainwreck",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/trainwreck/cigarette-main.png",
+        labelId: "CIGA-TRAINWRECK-MAIN"
+    },
+    {
+        strain: "Tropicana Cookies",
+        strainSlug: "tropicana-cookies",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/tropicana-cookies/cigarette-main.png",
+        labelId: "CIGA-TROPICANA-COOKIES-MAIN"
+    },
+    {
+        strain: "Vanilla Frosting",
+        strainSlug: "vanilla-frosting",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/vanilla-frosting/cigarette-main.png",
+        labelId: "CIGA-VANILLA-FROSTING-MAIN"
+    },
+    {
+        strain: "Wedding Cake",
+        strainSlug: "wedding-cake",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/wedding-cake/cigarette-alt1.png",
+        labelId: "CIGA-WEDDING-CAKE-ALT1"
+    },
+    {
+        strain: "Wedding Cake",
+        strainSlug: "wedding-cake",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/wedding-cake/cigarette-main.png",
+        labelId: "CIGA-WEDDING-CAKE-MAIN"
+    },
+    {
+        strain: "White Widow",
+        strainSlug: "white-widow",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/white-widow/cigarette-alt1.png",
+        labelId: "CIGA-WHITE-WIDOW-ALT1"
+    },
+    {
+        strain: "White Widow",
+        strainSlug: "white-widow",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/white-widow/cigarette-main.png",
+        labelId: "CIGA-WHITE-WIDOW-MAIN"
+    },
+    {
+        strain: "Zkittlez",
+        strainSlug: "zkittlez",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/zkittlez/cigarette-main.png",
+        labelId: "CIGA-ZKITTLEZ-MAIN"
     },
 
-    // Plain Series - generated from tools/manifests/plain.xlsx
+    // Pin-Up Series (17)
+    {
+        strain: "Animal Face",
+        strainSlug: "animal-face",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/animal-face/pinup-main.png",
+        labelId: "PIN-ANIMAL-FACE-MAIN"
+    },
+    {
+        strain: "Blue Dream",
+        strainSlug: "blue-dream",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/blue-dream/pinup-alt1.png",
+        labelId: "PIN-BLUE-DREAM-ALT1"
+    },
+    {
+        strain: "Blue Dream",
+        strainSlug: "blue-dream",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/blue-dream/pinup-main.png",
+        labelId: "PIN-BLUE-DREAM-MAIN"
+    },
+    {
+        strain: "Bubba Kush",
+        strainSlug: "bubba-kush",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/bubba-kush/pinup-alt1.png",
+        labelId: "PIN-BUBBA-KUSH-ALT1"
+    },
+    {
+        strain: "Bubba Kush",
+        strainSlug: "bubba-kush",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/bubba-kush/pinup-main.png",
+        labelId: "PIN-BUBBA-KUSH-MAIN"
+    },
+    {
+        strain: "Cereal Milk",
+        strainSlug: "cereal-milk",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/cereal-milk/pinup-alt1.png",
+        labelId: "PIN-CEREAL-MILK-ALT1"
+    },
+    {
+        strain: "Cereal Milk",
+        strainSlug: "cereal-milk",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/cereal-milk/pinup-alt2.png",
+        labelId: "PIN-CEREAL-MILK-ALT2"
+    },
+    {
+        strain: "Cereal Milk",
+        strainSlug: "cereal-milk",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/cereal-milk/pinup-main.png",
+        labelId: "PIN-CEREAL-MILK-MAIN"
+    },
+    {
+        strain: "Gorilla Glue",
+        strainSlug: "gorilla-glue",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/gorilla-glue/pinup-main.png",
+        labelId: "PIN-GORILLA-GLUE-MAIN"
+    },
+    {
+        strain: "Granddaddy Purple",
+        strainSlug: "granddaddy-purple",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/granddaddy-purple/pinup-main.png",
+        labelId: "PIN-GRANDDADDY-PURPLE-MAIN"
+    },
+    {
+        strain: "Mochi",
+        strainSlug: "mochi",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/mochi/pinup-main.png",
+        labelId: "PIN-MOCHI-MAIN"
+    },
+    {
+        strain: "Pineapple Express",
+        strainSlug: "pineapple-express",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/pineapple-express/pinup-alt1.png",
+        labelId: "PIN-PINEAPPLE-EXPRESS-ALT1"
+    },
+    {
+        strain: "Pineapple Express",
+        strainSlug: "pineapple-express",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/pineapple-express/pinup-main.png",
+        labelId: "PIN-PINEAPPLE-EXPRESS-MAIN"
+    },
+    {
+        strain: "Runtz",
+        strainSlug: "runtz",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/runtz/pinup-main.png",
+        labelId: "PIN-RUNTZ-MAIN"
+    },
+    {
+        strain: "Sour Diesel",
+        strainSlug: "sour-diesel",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/sour-diesel/pinup-alt1.png",
+        labelId: "PIN-SOUR-DIESEL-ALT1"
+    },
+    {
+        strain: "Sour Diesel",
+        strainSlug: "sour-diesel",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/sour-diesel/pinup-main.png",
+        labelId: "PIN-SOUR-DIESEL-MAIN"
+    },
+    {
+        strain: "White Widow",
+        strainSlug: "white-widow",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/white-widow/pinup-main.png",
+        labelId: "PIN-WHITE-WIDOW-MAIN"
+    },
+
+    // Early Cartoon Series (10)
+    {
+        strain: "Candyland",
+        strainSlug: "candyland",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/candyland/cartoon-main.png",
+        labelId: "CART-CANDYLAND-MAIN"
+    },
+    {
+        strain: "Grape Ape",
+        strainSlug: "grape-ape",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/grape-ape/cartoon-main.png",
+        labelId: "CART-GRAPE-APE-MAIN"
+    },
+    {
+        strain: "Purple Punch",
+        strainSlug: "purple-punch",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/purple-punch/cartoon-alt1.png",
+        labelId: "CART-PURPLE-PUNCH-ALT1"
+    },
+    {
+        strain: "Purple Punch",
+        strainSlug: "purple-punch",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/purple-punch/cartoon-main.png",
+        labelId: "CART-PURPLE-PUNCH-MAIN"
+    },
+    {
+        strain: "Super Boof",
+        strainSlug: "super-boof",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/super-boof/cartoon-alt1.png",
+        labelId: "CART-SUPER-BOOF-ALT1"
+    },
+    {
+        strain: "Super Boof",
+        strainSlug: "super-boof",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/super-boof/cartoon-alt2.png",
+        labelId: "CART-SUPER-BOOF-ALT2"
+    },
+    {
+        strain: "Super Boof",
+        strainSlug: "super-boof",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/super-boof/cartoon-alt3.png",
+        labelId: "CART-SUPER-BOOF-ALT3"
+    },
+    {
+        strain: "Super Boof",
+        strainSlug: "super-boof",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/super-boof/cartoon-alt4.png",
+        labelId: "CART-SUPER-BOOF-ALT4"
+    },
+    {
+        strain: "Super Boof",
+        strainSlug: "super-boof",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/super-boof/cartoon-main.png",
+        labelId: "CART-SUPER-BOOF-MAIN"
+    },
+    {
+        strain: "White Widow",
+        strainSlug: "white-widow",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/white-widow/cartoon-main.png",
+        labelId: "CART-WHITE-WIDOW-MAIN"
+    },
+
+    // Sidewalk Sinners Series (31)
+    {
+        strain: "AK-47",
+        strainSlug: "ak-47",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/ak-47/sinners-alt1.png",
+        labelId: "SIN-AK-47-ALT1"
+    },
+    {
+        strain: "AK-47",
+        strainSlug: "ak-47",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/ak-47/sinners-alt2.png",
+        labelId: "SIN-AK-47-ALT2"
+    },
+    {
+        strain: "Blue Dream",
+        strainSlug: "blue-dream",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/blue-dream/sinners-main.png",
+        labelId: "SIN-BLUE-DREAM-MAIN"
+    },
+    {
+        strain: "Bubba Kush",
+        strainSlug: "bubba-kush",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/bubba-kush/sinners-alt1.png",
+        labelId: "SIN-BUBBA-KUSH-ALT1"
+    },
+    {
+        strain: "Cereal Milk",
+        strainSlug: "cereal-milk",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/cereal-milk/sinners-alt1.png",
+        labelId: "SIN-CEREAL-MILK-ALT1"
+    },
+    {
+        strain: "Cereal Milk",
+        strainSlug: "cereal-milk",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/cereal-milk/sinners-alt2.png",
+        labelId: "SIN-CEREAL-MILK-ALT2"
+    },
+    {
+        strain: "Forbidden Fruit",
+        strainSlug: "forbidden-fruit",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/forbidden-fruit/sinners-main.png",
+        labelId: "SIN-FORBIDDEN-FRUIT-MAIN"
+    },
+    {
+        strain: "Gelato",
+        strainSlug: "gelato",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/gelato/sinners-alt1.png",
+        labelId: "SIN-GELATO-ALT1"
+    },
+    {
+        strain: "Gelato",
+        strainSlug: "gelato",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/gelato/sinners-main.png",
+        labelId: "SIN-GELATO-MAIN"
+    },
+    {
+        strain: "Girl Scout Cookies",
+        strainSlug: "girl-scout-cookies",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/girl-scout-cookies/sinners-main.png",
+        labelId: "SIN-GIRL-SCOUT-COOKIES-MAIN"
+    },
+    {
+        strain: "Gorilla Glue",
+        strainSlug: "gorilla-glue",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/gorilla-glue/sinners-main.png",
+        labelId: "SIN-GORILLA-GLUE-MAIN"
+    },
+    {
+        strain: "Granddaddy Purple",
+        strainSlug: "granddaddy-purple",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/granddaddy-purple/sinners-main.png",
+        labelId: "SIN-GRANDDADDY-PURPLE-MAIN"
+    },
+    {
+        strain: "Ice Cream Cake",
+        strainSlug: "ice-cream-cake",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/ice-cream-cake/sinners-main.png",
+        labelId: "SIN-ICE-CREAM-CAKE-MAIN"
+    },
+    {
+        strain: "Jack Herer",
+        strainSlug: "jack-herer",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/jack-herer/sinners-alt1.png",
+        labelId: "SIN-JACK-HERER-ALT1"
+    },
+    {
+        strain: "Lemon Haze",
+        strainSlug: "lemon-haze",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/lemon-haze/sinners-alt1.png",
+        labelId: "SIN-LEMON-HAZE-ALT1"
+    },
+    {
+        strain: "Maui Wowie",
+        strainSlug: "maui-wowie",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/maui-wowie/sinners-alt1.png",
+        labelId: "SIN-MAUI-WOWIE-ALT1"
+    },
+    {
+        strain: "Maui Wowie",
+        strainSlug: "maui-wowie",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/maui-wowie/sinners-main.png",
+        labelId: "SIN-MAUI-WOWIE-MAIN"
+    },
+    {
+        strain: "Northern Lights",
+        strainSlug: "northern-lights",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/northern-lights/sinners-alt1.png",
+        labelId: "SIN-NORTHERN-LIGHTS-ALT1"
+    },
+    {
+        strain: "Northern Lights",
+        strainSlug: "northern-lights",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/northern-lights/sinners-main.png",
+        labelId: "SIN-NORTHERN-LIGHTS-MAIN"
+    },
+    {
+        strain: "OG Kush",
+        strainSlug: "og-kush",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/og-kush/sinners-alt1.png",
+        labelId: "SIN-OG-KUSH-ALT1"
+    },
+    {
+        strain: "Purple Punch",
+        strainSlug: "purple-punch",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/purple-punch/sinners-alt1.png",
+        labelId: "SIN-PURPLE-PUNCH-ALT1"
+    },
+    {
+        strain: "Runtz",
+        strainSlug: "runtz",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/runtz/sinners-main.png",
+        labelId: "SIN-RUNTZ-MAIN"
+    },
+    {
+        strain: "Sour Diesel",
+        strainSlug: "sour-diesel",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/sour-diesel/sinners-alt1.png",
+        labelId: "SIN-SOUR-DIESEL-ALT1"
+    },
+    {
+        strain: "Sour Diesel",
+        strainSlug: "sour-diesel",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/sour-diesel/sinners-alt2.png",
+        labelId: "SIN-SOUR-DIESEL-ALT2"
+    },
+    {
+        strain: "Sour Diesel",
+        strainSlug: "sour-diesel",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/sour-diesel/sinners-main.png",
+        labelId: "SIN-SOUR-DIESEL-MAIN"
+    },
+    {
+        strain: "Wedding Cake",
+        strainSlug: "wedding-cake",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/wedding-cake/sinners-alt1.png",
+        labelId: "SIN-WEDDING-CAKE-ALT1"
+    },
+    {
+        strain: "Wedding Cake",
+        strainSlug: "wedding-cake",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/wedding-cake/sinners-main.png",
+        labelId: "SIN-WEDDING-CAKE-MAIN"
+    },
+    {
+        strain: "White Widow",
+        strainSlug: "white-widow",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/white-widow/sinners-alt1.png",
+        labelId: "SIN-WHITE-WIDOW-ALT1"
+    },
+    {
+        strain: "White Widow",
+        strainSlug: "white-widow",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/white-widow/sinners-main.png",
+        labelId: "SIN-WHITE-WIDOW-MAIN"
+    },
+    {
+        strain: "Zkittlez",
+        strainSlug: "zkittlez",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/zkittlez/sinners-alt1.png",
+        labelId: "SIN-ZKITTLEZ-ALT1"
+    },
+    {
+        strain: "Zkittlez",
+        strainSlug: "zkittlez",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/zkittlez/sinners-main.png",
+        labelId: "SIN-ZKITTLEZ-MAIN"
+    },
+
+    // Plain Series (256)
     {
         strain: "Blue Dream",
         strainSlug: "blue-dream",
