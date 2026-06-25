@@ -6,7 +6,7 @@
 
 const LABEL_CATALOG = [
 
-    // Cigarette Series (32)
+    // Cigarette Series (36)
     {
         strain: "AK-47",
         strainSlug: "ak-47",
@@ -22,6 +22,14 @@ const LABEL_CATALOG = [
         seriesSlug: "cigarette",
         image: "public/labels/animal-face/cigarette-main.png",
         labelId: "CIGA-ANIMAL-FACE-MAIN"
+    },
+    {
+        strain: "Apple Fritter",
+        strainSlug: "apple-fritter",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/apple-fritter/cigarette-main.png",
+        labelId: "CIGA-APPLE-FRITTER-MAIN"
     },
     {
         strain: "Banana Cream",
@@ -72,6 +80,14 @@ const LABEL_CATALOG = [
         labelId: "CIGA-BUBBA-KUSH-ALT"
     },
     {
+        strain: "Candyland",
+        strainSlug: "candyland",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/candyland/cigarette-main.png",
+        labelId: "CIGA-CANDYLAND-MAIN"
+    },
+    {
         strain: "Cereal Milk",
         strainSlug: "cereal-milk",
         series: "Cigarette Series",
@@ -80,12 +96,28 @@ const LABEL_CATALOG = [
         labelId: "CIGA-CEREAL-MILK-ALT"
     },
     {
+        strain: "Cereal Milk",
+        strainSlug: "cereal-milk",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/cereal-milk/cigarette-main.png",
+        labelId: "CIGA-CEREAL-MILK-MAIN"
+    },
+    {
         strain: "Chemdawg",
         strainSlug: "chemdawg",
         series: "Cigarette Series",
         seriesSlug: "cigarette",
         image: "public/labels/chemdawg/cigarette-main.png",
         labelId: "CIGA-CHEMDAWG-MAIN"
+    },
+    {
+        strain: "Gary Payton",
+        strainSlug: "gary-payton",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/gary-payton/cigarette-main.png",
+        labelId: "CIGA-GARY-PAYTON-MAIN"
     },
     {
         strain: "Gelato",
@@ -264,7 +296,7 @@ const LABEL_CATALOG = [
         labelId: "CIGA-ZKITTLEZ-MAIN"
     },
 
-    // Pin-Up Series (19)
+    // Pin-Up Series (37)
     {
         strain: "Animal Face",
         strainSlug: "animal-face",
@@ -338,6 +370,38 @@ const LABEL_CATALOG = [
         labelId: "PIN-CEREAL-MILK-MAIN"
     },
     {
+        strain: "Do-Si-Dos",
+        strainSlug: "do-si-dos",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/do-si-dos/pinup-main.png",
+        labelId: "PIN-DO-SI-DOS-MAIN"
+    },
+    {
+        strain: "Durban Poison",
+        strainSlug: "durban-poison",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/durban-poison/pinup-alt1.png",
+        labelId: "PIN-DURBAN-POISON-ALT1"
+    },
+    {
+        strain: "Durban Poison",
+        strainSlug: "durban-poison",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/durban-poison/pinup-main.png",
+        labelId: "PIN-DURBAN-POISON-MAIN"
+    },
+    {
+        strain: "Gelato",
+        strainSlug: "gelato",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/gelato/pinup-main.png",
+        labelId: "PIN-GELATO-MAIN"
+    },
+    {
         strain: "Gorilla Glue",
         strainSlug: "gorilla-glue",
         series: "Pin-Up Series",
@@ -362,12 +426,60 @@ const LABEL_CATALOG = [
         labelId: "PIN-GRANDDADDY-PURPLE-MAIN"
     },
     {
+        strain: "Jack Herer",
+        strainSlug: "jack-herer",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/jack-herer/pinup-main.png",
+        labelId: "PIN-JACK-HERER-MAIN"
+    },
+    {
+        strain: "Lemon Haze",
+        strainSlug: "lemon-haze",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/lemon-haze/pinup-alt1.png",
+        labelId: "PIN-LEMON-HAZE-ALT1"
+    },
+    {
+        strain: "Lemon Haze",
+        strainSlug: "lemon-haze",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/lemon-haze/pinup-main.png",
+        labelId: "PIN-LEMON-HAZE-MAIN"
+    },
+    {
         strain: "Mochi",
         strainSlug: "mochi",
         series: "Pin-Up Series",
         seriesSlug: "pinup",
         image: "public/labels/mochi/pinup-main.png",
         labelId: "PIN-MOCHI-MAIN"
+    },
+    {
+        strain: "Northern Lights",
+        strainSlug: "northern-lights",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/northern-lights/pinup-alt.png",
+        labelId: "PIN-NORTHERN-LIGHTS-ALT"
+    },
+    {
+        strain: "Northern Lights",
+        strainSlug: "northern-lights",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/northern-lights/pinup-main.png",
+        labelId: "PIN-NORTHERN-LIGHTS-MAIN"
+    },
+    {
+        strain: "OG Kush",
+        strainSlug: "og-kush",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/og-kush/pinup-main.png",
+        labelId: "PIN-OG-KUSH-MAIN"
     },
     {
         strain: "Pineapple Express",
@@ -384,6 +496,22 @@ const LABEL_CATALOG = [
         seriesSlug: "pinup",
         image: "public/labels/pineapple-express/pinup-main.png",
         labelId: "PIN-PINEAPPLE-EXPRESS-MAIN"
+    },
+    {
+        strain: "Purple Punch",
+        strainSlug: "purple-punch",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/purple-punch/pinup-main.png",
+        labelId: "PIN-PURPLE-PUNCH-MAIN"
+    },
+    {
+        strain: "Runtz",
+        strainSlug: "runtz",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/runtz/pinup-alt1.png",
+        labelId: "PIN-RUNTZ-ALT1"
     },
     {
         strain: "Runtz",
@@ -410,6 +538,46 @@ const LABEL_CATALOG = [
         labelId: "PIN-SOUR-DIESEL-MAIN"
     },
     {
+        strain: "Strawberry Cough",
+        strainSlug: "strawberry-cough",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/strawberry-cough/pinup-alt1.png",
+        labelId: "PIN-STRAWBERRY-COUGH-ALT1"
+    },
+    {
+        strain: "Strawberry Cough",
+        strainSlug: "strawberry-cough",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/strawberry-cough/pinup-alt2.png",
+        labelId: "PIN-STRAWBERRY-COUGH-ALT2"
+    },
+    {
+        strain: "Strawberry Cough",
+        strainSlug: "strawberry-cough",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/strawberry-cough/pinup-main.png",
+        labelId: "PIN-STRAWBERRY-COUGH-MAIN"
+    },
+    {
+        strain: "Vanilla Frosting",
+        strainSlug: "vanilla-frosting",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/vanilla-frosting/pinup-alt1.png",
+        labelId: "PIN-VANILLA-FROSTING-ALT1"
+    },
+    {
+        strain: "Vanilla Frosting",
+        strainSlug: "vanilla-frosting",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/vanilla-frosting/pinup-main.png",
+        labelId: "PIN-VANILLA-FROSTING-MAIN"
+    },
+    {
         strain: "White Widow",
         strainSlug: "white-widow",
         series: "Pin-Up Series",
@@ -417,8 +585,32 @@ const LABEL_CATALOG = [
         image: "public/labels/white-widow/pinup-main.png",
         labelId: "PIN-WHITE-WIDOW-MAIN"
     },
+    {
+        strain: "Zookies",
+        strainSlug: "zookies",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/zookies/pinup-main.png",
+        labelId: "PIN-ZOOKIES-MAIN"
+    },
 
-    // Early Cartoon Series (10)
+    // Early Cartoon Series (18)
+    {
+        strain: "Blue Dream",
+        strainSlug: "blue-dream",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/blue-dream/cartoon-main.png",
+        labelId: "CART-BLUE-DREAM-MAIN"
+    },
+    {
+        strain: "Bubba Kush",
+        strainSlug: "bubba-kush",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/bubba-kush/cartoon-main.png",
+        labelId: "CART-BUBBA-KUSH-MAIN"
+    },
     {
         strain: "Candyland",
         strainSlug: "candyland",
@@ -428,12 +620,44 @@ const LABEL_CATALOG = [
         labelId: "CART-CANDYLAND-MAIN"
     },
     {
+        strain: "Forbidden Fruit",
+        strainSlug: "forbidden-fruit",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/forbidden-fruit/cartoon-main.png",
+        labelId: "CART-FORBIDDEN-FRUIT-MAIN"
+    },
+    {
+        strain: "Gorilla Glue",
+        strainSlug: "gorilla-glue",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/gorilla-glue/cartoon-main.png",
+        labelId: "CART-GORILLA-GLUE-MAIN"
+    },
+    {
         strain: "Grape Ape",
         strainSlug: "grape-ape",
         series: "Early Cartoon Series",
         seriesSlug: "cartoon",
         image: "public/labels/grape-ape/cartoon-main.png",
         labelId: "CART-GRAPE-APE-MAIN"
+    },
+    {
+        strain: "OG Kush",
+        strainSlug: "og-kush",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/og-kush/cartoon-main.png",
+        labelId: "CART-OG-KUSH-MAIN"
+    },
+    {
+        strain: "Pineapple Express",
+        strainSlug: "pineapple-express",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/pineapple-express/cartoon-main.png",
+        labelId: "CART-PINEAPPLE-EXPRESS-MAIN"
     },
     {
         strain: "Purple Punch",
@@ -450,6 +674,22 @@ const LABEL_CATALOG = [
         seriesSlug: "cartoon",
         image: "public/labels/purple-punch/cartoon-main.png",
         labelId: "CART-PURPLE-PUNCH-MAIN"
+    },
+    {
+        strain: "Runtz",
+        strainSlug: "runtz",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/runtz/cartoon-alt1.png",
+        labelId: "CART-RUNTZ-ALT1"
+    },
+    {
+        strain: "Runtz",
+        strainSlug: "runtz",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/runtz/cartoon-alt2.png",
+        labelId: "CART-RUNTZ-ALT2"
     },
     {
         strain: "Super Boof",
