@@ -114,6 +114,14 @@ def strain_names():
     return {slugify(r.strain): r.strain for r in df.itertuples()}
 
 
+def top100_slugs():
+    """Slugs of the Top-100 roster. Plain labels are limited to this set so
+    they don't overpower the machine; custom (real-art) series are not gated."""
+    df = pd.read_excel(MANIFESTS / "main-100-strain-roster.xlsx")
+    col = next(c for c in df.columns if "strain" in c.lower())
+    return {slugify(x) for x in df[col]}
+
+
 def entry_js(strain, slug, series_slug, image, label_id):
     series_name = SERIES[series_slug][0]
     return (
@@ -246,12 +254,15 @@ def ingest_plain(zip_path):
     if not manifest.exists():
         sys.exit(f"missing manifest {manifest}")
     df = pd.read_excel(manifest)
+    top = top100_slugs()
     with tempfile.TemporaryDirectory() as tmp:
         with zipfile.ZipFile(zip_path) as z:
             z.extractall(tmp)
         pngs = {p.name: p for p in Path(tmp).rglob("*.png")}
         n = 0
         for r in df.itertuples():
+            if slugify(r.strain) not in top:    # Plain limited to the Top-100
+                continue
             s = pngs.get(r.file_name)
             if s is None:
                 continue
@@ -304,11 +315,14 @@ def build():
             total += count
         print(f"{series_name}: {count} labels")
 
-    # Plain: one per strain, from the roster manifest.
+    # Plain: one per strain, from the roster manifest — limited to the Top-100.
     df = pd.read_excel(MANIFESTS / "plain.xlsx")
+    top = top100_slugs()
     plain_block, count = [], 0
     for r in df.itertuples():
         slug = slugify(r.strain)
+        if slug not in top:
+            continue
         image = f"public/labels/{slug}/plain.png"
         if not (REPO / image).exists():
             continue
