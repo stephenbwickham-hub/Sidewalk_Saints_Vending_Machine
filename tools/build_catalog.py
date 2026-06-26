@@ -296,7 +296,7 @@ def build():
             if not d.is_dir():
                 continue
             for fn in sorted(os.listdir(d)):
-                m = re.match(rf"^{series_slug}(?:-(.+))?\.png$", fn)
+                m = re.match(rf"^{series_slug}(?:-(.+))?\.(?:png|jpe?g)$", fn)
                 if not m:
                     continue
                 variant = m.group(1) or "main"

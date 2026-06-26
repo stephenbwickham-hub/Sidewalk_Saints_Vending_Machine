@@ -61,7 +61,9 @@ async function buildLabelSheetPdf(selectedLabels) {
                 const imageResponse = await fetch(label.image);
                 if (imageResponse.ok) {
                     const imageBytes = await imageResponse.arrayBuffer();
-                    image = await pdfDoc.embedPng(imageBytes);
+                    image = /\.jpe?g$/i.test(label.image)
+                        ? await pdfDoc.embedJpg(imageBytes)
+                        : await pdfDoc.embedPng(imageBytes);
                 }
                 embeddedImages[label.image] = image;
             }
