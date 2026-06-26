@@ -6,24 +6,27 @@
 // ============================================================
 
 // Fixed slot coordinates on the template page (PDF points, y measured
-// from the TOP of the page). The template page is 342.24 x 264.72 pt.
+// from the TOP of the page). Template page is 792 x 612 pt (US Letter
+// landscape); each guide is a perfect 1 7/8" (135 pt) circle. Each label
+// is drawn as a 135 pt square centered in its circle, so the round art
+// stays a perfect circle (never stretched).
 // Slot order matches the machine grid: left to right, top to bottom.
 const LABEL_SHEET_SLOTS = [
     // Row 1
-    { x: 8.6,   y: 29.3,  size: 55.2 },
-    { x: 70.0,  y: 29.3,  size: 55.2 },
-    { x: 218.4, y: 29.3,  size: 55.2 },
-    { x: 279.0, y: 29.3,  size: 55.2 },
+    { x: 19.6,  y: 59.2,  size: 135 },
+    { x: 155.8, y: 59.2,  size: 135 },
+    { x: 501.2, y: 59.2,  size: 135 },
+    { x: 636.6, y: 59.2,  size: 135 },
     // Row 2
-    { x: 8.6,   y: 99.8,  size: 55.2 },
-    { x: 70.0,  y: 99.8,  size: 55.2 },
-    { x: 218.4, y: 99.8,  size: 55.2 },
-    { x: 279.0, y: 99.8,  size: 55.2 },
+    { x: 19.6,  y: 225.0, size: 135 },
+    { x: 155.8, y: 225.0, size: 135 },
+    { x: 501.2, y: 225.0, size: 135 },
+    { x: 636.6, y: 225.0, size: 135 },
     // Row 3
-    { x: 8.6,   y: 171.4, size: 55.2 },
-    { x: 70.0,  y: 171.4, size: 55.2 },
-    { x: 218.4, y: 171.4, size: 55.2 },
-    { x: 279.0, y: 171.4, size: 55.2 }
+    { x: 19.6,  y: 392.7, size: 135 },
+    { x: 155.8, y: 392.7, size: 135 },
+    { x: 501.2, y: 392.7, size: 135 },
+    { x: 636.6, y: 392.7, size: 135 }
 ];
 
 const LABEL_SHEET_TEMPLATE = 'assets/sidewalk_saints_label_sheet_template.pdf';
