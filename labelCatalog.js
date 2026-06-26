@@ -594,7 +594,7 @@ const LABEL_CATALOG = [
         labelId: "PIN-ZOOKIES-MAIN"
     },
 
-    // Early Cartoon Series (18)
+    // Early Cartoon Series (16)
     {
         strain: "Blue Dream",
         strainSlug: "blue-dream",
@@ -698,22 +698,6 @@ const LABEL_CATALOG = [
         seriesSlug: "cartoon",
         image: "public/labels/super-boof/cartoon-alt1.png",
         labelId: "CART-SUPER-BOOF-ALT1"
-    },
-    {
-        strain: "Super Boof",
-        strainSlug: "super-boof",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/super-boof/cartoon-alt2.png",
-        labelId: "CART-SUPER-BOOF-ALT2"
-    },
-    {
-        strain: "Super Boof",
-        strainSlug: "super-boof",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/super-boof/cartoon-alt3.png",
-        labelId: "CART-SUPER-BOOF-ALT3"
     },
     {
         strain: "Super Boof",
