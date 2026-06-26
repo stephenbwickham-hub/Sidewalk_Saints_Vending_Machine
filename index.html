@@ -5,8 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sidewalk Saints Vending Machine</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Pre-hide the 21+ gate for visitors who already confirmed (no flash) -->
+    <script>
+        try { if (localStorage.getItem('sidewalk_saints_age_ok') === 'yes') document.documentElement.classList.add('age-ok'); } catch (e) {}
+    </script>
 </head>
 <body>
+    <!-- 21+ age gate: blocks the machine until confirmed (localStorage, no personal data) -->
+    <div class="age-gate" id="ageGate" role="dialog" aria-label="Age confirmation">
+        <div class="age-gate-overlay"></div>
+        <div class="age-gate-panel">
+            <div class="age-gate-header">SIDEWALK SAINTS</div>
+            <div class="age-gate-body" id="ageGateBody">
+                <p class="age-gate-line1">Sidewalk Saints is intended for adults 21+.</p>
+                <p class="age-gate-line2">By entering, you confirm that you are at least 21 years old.</p>
+                <div class="age-gate-buttons">
+                    <button class="age-gate-button confirm" id="ageConfirmBtn">I AM 21+</button>
+                    <button class="age-gate-button exit" id="ageExitBtn">EXIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main class="machine-stage" aria-label="Sidewalk Saints Custom Label Dispenser">
         <img class="machine-shell" src="assets/machine-shell.png" alt="Sidewalk Saints Custom Label Dispenser vending machine">
 
@@ -113,5 +133,6 @@
     <script src="pdfGenerator.js"></script>
     <script src="script.js"></script>
     <script src="odometer.js"></script>
+    <script src="agegate.js"></script>
 </body>
 </html>
