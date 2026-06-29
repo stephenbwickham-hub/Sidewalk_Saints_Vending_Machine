@@ -22,9 +22,10 @@ Usage:
       typos, accidental new strains, duplicate destinations). Run this first.
 
   python tools/build_catalog.py --ingest-folder <path>
-      Install an art drop whose files are named <strain>-<series>-<variant>.png
-      (copies each into public/labels/<strain>/<series>-<variant>.png), then
-      rebuild. Junk/unparseable files are skipped; unknown strains are listed.
+      Install an art drop whose files are named <strain>-<series>-<variant>.png.
+      Each image is downscaled to <=700px and saved into public/labels/ as JPEG
+      (opaque art) or PNG (transparent), then the catalog is rebuilt. Junk is
+      skipped; strains not on the roster (and not already present) are set aside.
 
   python tools/build_catalog.py --ingest plain <zip-path>
       Legacy manifest-based ingest for the Plain collection (uses
@@ -45,6 +46,7 @@ from collections import defaultdict
 from pathlib import Path
 
 import pandas as pd
+from PIL import Image
 
 REPO = Path(__file__).resolve().parent.parent
 MANIFESTS = REPO / "tools" / "manifests"
@@ -67,10 +69,18 @@ SLUG_FIX = {
     "grand-daddy-purple": "granddaddy-purple",
     "candy-land": "candyland",
     "cereal-mil": "cereal-milk",
+    "gmo": "gmo-cookies",
 }
+
+# Common series-name typos -> the real series slug.
+SERIES_FIX = {"catoon": "cartoon"}
 
 # Series that no longer exist, kept only for friendlier dry-run messages.
 RETIRED_SERIES = {"calendar"}
+
+# On import, labels are downscaled to this max dimension; opaque art is saved
+# as JPEG (small) and transparent art stays PNG.
+MAX_PX = 700
 
 HELPERS = """
 // Get all unique strains sorted alphabetically
@@ -122,6 +132,39 @@ def top100_slugs():
     return {slugify(x) for x in df[col]}
 
 
+def _has_alpha(im):
+    if im.mode in ("RGBA", "LA"):
+        return im.getchannel("A").getextrema()[0] < 255
+    return im.mode == "P" and "transparency" in im.info
+
+
+def label_ext(src_path):
+    """Extension an import would use: .png if the art is transparent, else .jpg."""
+    try:
+        return ".png" if _has_alpha(Image.open(src_path)) else ".jpg"
+    except Exception:
+        return ".png"
+
+
+def save_optimized(src_path, dest_base):
+    """Downscale to <=MAX_PX and write dest_base + (.jpg opaque / .png transparent),
+    first removing any prior version so a label never has both extensions."""
+    im = Image.open(src_path)
+    alpha = _has_alpha(im)
+    im = im.convert("RGBA") if alpha else im.convert("RGB")
+    im.thumbnail((MAX_PX, MAX_PX), Image.LANCZOS)
+    for e in (".png", ".jpg", ".jpeg"):
+        if os.path.exists(dest_base + e):
+            os.remove(dest_base + e)
+    if alpha:
+        out = dest_base + ".png"
+        im.save(out, "PNG", optimize=True)
+    else:
+        out = dest_base + ".jpg"
+        im.save(out, "JPEG", quality=88, optimize=True)
+    return out
+
+
 def entry_js(strain, slug, series_slug, image, label_id):
     series_name = SERIES[series_slug][0]
     return (
@@ -153,7 +196,9 @@ def analyze_drop(src):
     if not src.is_dir():
         sys.exit(f"not a folder: {src}")
     existing = sorted(d for d in os.listdir(LABELS) if (LABELS / d).is_dir())
-    series_words = set(SERIES) | RETIRED_SERIES
+    roster = set(strain_names())            # full 256-strain roster
+    known = set(existing) | roster          # importable strains (have art, or on the roster)
+    series_words = set(SERIES) | set(SERIES_FIX) | RETIRED_SERIES
     imports, warnings, skips = [], [], []
 
     for f in sorted(os.listdir(src)):
@@ -167,11 +212,11 @@ def analyze_drop(src):
         toks = stem.split("-")
         variant = toks[-1].lower() if VAR.match(toks[-1].lower()) else None
         rest = toks[:-1] if variant else toks
-        series = rest[-1].lower() if rest and rest[-1].lower() in SERIES else None
+        cand = rest[-1].lower() if rest else ""
+        series = cand if cand in SERIES else SERIES_FIX.get(cand)
         strain = "-".join(rest[:-1]).lower() if series else "-".join(rest).lower()
 
         if not series:
-            cand = rest[-1].lower() if rest else ""
             if cand in RETIRED_SERIES:
                 warnings.append((f, f"retired series '{cand}' (Calendar was replaced by Pin-Up)"))
             else:
@@ -181,29 +226,28 @@ def analyze_drop(src):
                 else:
                     warnings.append((f, "missing series"))
             continue
+        if cand in SERIES_FIX:
+            warnings.append((f, f"series '{cand}' read as '{series}'"))
 
-        note = None
         if strain in SLUG_FIX:
-            corrected = SLUG_FIX[strain]
-            note = f"name auto-corrected '{strain}' -> '{corrected}'"
-            warnings.append((f, note))
-            strain = corrected
+            warnings.append((f, f"name auto-corrected '{strain}' -> '{SLUG_FIX[strain]}'"))
+            strain = SLUG_FIX[strain]
 
-        if strain not in existing:
-            near = difflib.get_close_matches(strain, existing, n=1, cutoff=0.75)
+        if strain not in known:
+            near = difflib.get_close_matches(strain, sorted(known), n=1, cutoff=0.75)
             if near:
                 warnings.append((f, f"possible typo; did you mean '{near[0]}'? (set aside)"))
             else:
-                warnings.append((f, f"would create NEW strain '{strain}' (not in catalog) -- set aside"))
+                warnings.append((f, f"would create NEW strain '{strain}' (not in roster) -- set aside"))
             continue
 
         v = variant or "main"
-        dest = LABELS / strain / f"{series}-{v}.png"
+        dest = LABELS / strain / f"{series}-{v}{label_ext(src / f)}"
         imports.append({
             "file": f, "src": src / f, "strain": strain, "series": series,
             "variant": v, "dest": dest,
             "label_id": f"{SERIES[series][1]}-{strain.upper()}-{v.upper()}",
-            "replaces": dest.exists(), "note": note,
+            "replaces": dest.exists(), "note": None,
         })
 
     # duplicate destinations within the drop (would silently overwrite each other)
@@ -243,7 +287,7 @@ def ingest_folder(src, dry_run=False):
 
     for imp in imports:
         imp["dest"].parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(imp["src"], imp["dest"])
+        save_optimized(str(imp["src"]), os.path.splitext(str(imp["dest"]))[0])
     print(f"ingested {len(imports)} files, skipped {len(skips)} junk, {len(warnings)} warning(s)")
     for f, msg in warnings:
         print(f"  warning: {f}: {msg}")
