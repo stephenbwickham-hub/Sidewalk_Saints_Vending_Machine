@@ -653,3 +653,29 @@ html.age-ok .age-gate,
     font-weight: 700;
     font-size: 16px;
 }
+
+/* ============================================================
+   Crawlable SEO blurb (subtle caption beneath the machine)
+   ============================================================ */
+.site-blurb {
+    max-width: min(94vw, 640px);
+    margin: 14px auto 30px;
+    padding: 0 12px;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    color: #6e6e6e;
+}
+
+.site-blurb h1 {
+    margin: 0 0 6px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #808080;
+}
+
+.site-blurb p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.55;
+}
