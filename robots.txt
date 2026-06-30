@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sidewalksaintsvendingmachine.com/sitemap.xml
