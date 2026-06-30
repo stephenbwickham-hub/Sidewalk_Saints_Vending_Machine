@@ -6,7 +6,7 @@
 
 const LABEL_CATALOG = [
 
-    // Cigarette Series (41)
+    // Cigarette Series (44)
     {
         strain: "AK-47",
         strainSlug: "ak-47",
@@ -56,6 +56,14 @@ const LABEL_CATALOG = [
         labelId: "CIGA-BLACK-GARLIC-ALT"
     },
     {
+        strain: "Black Garlic",
+        strainSlug: "black-garlic",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/black-garlic/cigarette-main.jpg",
+        labelId: "CIGA-BLACK-GARLIC-MAIN"
+    },
+    {
         strain: "Blue Dream",
         strainSlug: "blue-dream",
         series: "Cigarette Series",
@@ -70,6 +78,14 @@ const LABEL_CATALOG = [
         seriesSlug: "cigarette",
         image: "public/labels/blueberry-muffin/cigarette-alt.jpg",
         labelId: "CIGA-BLUEBERRY-MUFFIN-ALT"
+    },
+    {
+        strain: "Blueberry Muffin",
+        strainSlug: "blueberry-muffin",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/blueberry-muffin/cigarette-main.jpg",
+        labelId: "CIGA-BLUEBERRY-MUFFIN-MAIN"
     },
     {
         strain: "Bubba Kush",
@@ -198,6 +214,14 @@ const LABEL_CATALOG = [
         seriesSlug: "cigarette",
         image: "public/labels/mac/cigarette-main.jpg",
         labelId: "CIGA-MAC-MAIN"
+    },
+    {
+        strain: "Mimosa",
+        strainSlug: "mimosa",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/mimosa/cigarette-main.jpg",
+        labelId: "CIGA-MIMOSA-MAIN"
     },
     {
         strain: "Mochi",
@@ -336,7 +360,7 @@ const LABEL_CATALOG = [
         labelId: "CIGA-ZKITTLEZ-MAIN"
     },
 
-    // Pin-Up Series (43)
+    // Pin-Up Series (57)
     {
         strain: "Animal Face",
         strainSlug: "animal-face",
@@ -344,6 +368,22 @@ const LABEL_CATALOG = [
         seriesSlug: "pinup",
         image: "public/labels/animal-face/pinup-main.jpg",
         labelId: "PIN-ANIMAL-FACE-MAIN"
+    },
+    {
+        strain: "Apple Fritter",
+        strainSlug: "apple-fritter",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/apple-fritter/pinup-main.jpg",
+        labelId: "PIN-APPLE-FRITTER-MAIN"
+    },
+    {
+        strain: "Black Garlic",
+        strainSlug: "black-garlic",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/black-garlic/pinup-main.jpg",
+        labelId: "PIN-BLACK-GARLIC-MAIN"
     },
     {
         strain: "Blue Dream",
@@ -358,8 +398,40 @@ const LABEL_CATALOG = [
         strainSlug: "blue-dream",
         series: "Pin-Up Series",
         seriesSlug: "pinup",
+        image: "public/labels/blue-dream/pinup-alt3.jpg",
+        labelId: "PIN-BLUE-DREAM-ALT3"
+    },
+    {
+        strain: "Blue Dream",
+        strainSlug: "blue-dream",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
         image: "public/labels/blue-dream/pinup-main.jpg",
         labelId: "PIN-BLUE-DREAM-MAIN"
+    },
+    {
+        strain: "Blueberry Muffin",
+        strainSlug: "blueberry-muffin",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/blueberry-muffin/pinup-alt3.jpg",
+        labelId: "PIN-BLUEBERRY-MUFFIN-ALT3"
+    },
+    {
+        strain: "Blueberry Muffin",
+        strainSlug: "blueberry-muffin",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/blueberry-muffin/pinup-alt4.jpg",
+        labelId: "PIN-BLUEBERRY-MUFFIN-ALT4"
+    },
+    {
+        strain: "Blueberry Muffin",
+        strainSlug: "blueberry-muffin",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/blueberry-muffin/pinup-alt5.jpg",
+        labelId: "PIN-BLUEBERRY-MUFFIN-ALT5"
     },
     {
         strain: "Bubba Kush",
@@ -470,8 +542,32 @@ const LABEL_CATALOG = [
         strainSlug: "gelato",
         series: "Pin-Up Series",
         seriesSlug: "pinup",
+        image: "public/labels/gelato/pinup-alt1.jpg",
+        labelId: "PIN-GELATO-ALT1"
+    },
+    {
+        strain: "Gelato",
+        strainSlug: "gelato",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/gelato/pinup-alt3.jpg",
+        labelId: "PIN-GELATO-ALT3"
+    },
+    {
+        strain: "Gelato",
+        strainSlug: "gelato",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
         image: "public/labels/gelato/pinup-main.jpg",
         labelId: "PIN-GELATO-MAIN"
+    },
+    {
+        strain: "GMO Cookies",
+        strainSlug: "gmo-cookies",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/gmo-cookies/pinup-main.jpg",
+        labelId: "PIN-GMO-COOKIES-MAIN"
     },
     {
         strain: "Gorilla Glue",
@@ -562,6 +658,14 @@ const LABEL_CATALOG = [
         labelId: "PIN-OG-KUSH-MAIN"
     },
     {
+        strain: "Permanent Marker",
+        strainSlug: "permanent-marker",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/permanent-marker/pinup-main.jpg",
+        labelId: "PIN-PERMANENT-MARKER-MAIN"
+    },
+    {
         strain: "Pineapple Express",
         strainSlug: "pineapple-express",
         series: "Pin-Up Series",
@@ -650,6 +754,22 @@ const LABEL_CATALOG = [
         labelId: "PIN-STRAWBERRY-COUGH-MAIN"
     },
     {
+        strain: "Super Boof",
+        strainSlug: "super-boof",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/super-boof/pinup-alt.jpg",
+        labelId: "PIN-SUPER-BOOF-ALT"
+    },
+    {
+        strain: "Tropicana Cookies",
+        strainSlug: "tropicana-cookies",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/tropicana-cookies/pinup-main.jpg",
+        labelId: "PIN-TROPICANA-COOKIES-MAIN"
+    },
+    {
         strain: "Vanilla Frosting",
         strainSlug: "vanilla-frosting",
         series: "Pin-Up Series",
@@ -664,6 +784,22 @@ const LABEL_CATALOG = [
         seriesSlug: "pinup",
         image: "public/labels/vanilla-frosting/pinup-main.jpg",
         labelId: "PIN-VANILLA-FROSTING-MAIN"
+    },
+    {
+        strain: "Wedding Cake",
+        strainSlug: "wedding-cake",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/wedding-cake/pinup-alt1.jpg",
+        labelId: "PIN-WEDDING-CAKE-ALT1"
+    },
+    {
+        strain: "Wedding Cake",
+        strainSlug: "wedding-cake",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/wedding-cake/pinup-main.jpg",
+        labelId: "PIN-WEDDING-CAKE-MAIN"
     },
     {
         strain: "White Widow",
@@ -682,7 +818,15 @@ const LABEL_CATALOG = [
         labelId: "PIN-ZOOKIES-MAIN"
     },
 
-    // Early Cartoon Series (25)
+    // Early Cartoon Series (32)
+    {
+        strain: "Biscotti",
+        strainSlug: "biscotti",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/biscotti/cartoon-main.jpg",
+        labelId: "CART-BISCOTTI-MAIN"
+    },
     {
         strain: "Blue Dream",
         strainSlug: "blue-dream",
@@ -708,6 +852,22 @@ const LABEL_CATALOG = [
         labelId: "CART-CANDYLAND-MAIN"
     },
     {
+        strain: "Chemdawg",
+        strainSlug: "chemdawg",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/chemdawg/cartoon-alt3.jpg",
+        labelId: "CART-CHEMDAWG-ALT3"
+    },
+    {
+        strain: "Do-Si-Dos",
+        strainSlug: "do-si-dos",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/do-si-dos/cartoon-main.jpg",
+        labelId: "CART-DO-SI-DOS-MAIN"
+    },
+    {
         strain: "Durban Poison",
         strainSlug: "durban-poison",
         series: "Early Cartoon Series",
@@ -722,6 +882,14 @@ const LABEL_CATALOG = [
         seriesSlug: "cartoon",
         image: "public/labels/forbidden-fruit/cartoon-main.jpg",
         labelId: "CART-FORBIDDEN-FRUIT-MAIN"
+    },
+    {
+        strain: "GMO Cookies",
+        strainSlug: "gmo-cookies",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/gmo-cookies/cartoon-main.jpg",
+        labelId: "CART-GMO-COOKIES-MAIN"
     },
     {
         strain: "Gorilla Glue",
@@ -754,6 +922,14 @@ const LABEL_CATALOG = [
         seriesSlug: "cartoon",
         image: "public/labels/jack-herer/cartoon-main.jpg",
         labelId: "CART-JACK-HERER-MAIN"
+    },
+    {
+        strain: "Kush Mints",
+        strainSlug: "kush-mints",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/kush-mints/cartoon-main.jpg",
+        labelId: "CART-KUSH-MINTS-MAIN"
     },
     {
         strain: "Mimosa",
@@ -810,6 +986,22 @@ const LABEL_CATALOG = [
         seriesSlug: "cartoon",
         image: "public/labels/runtz/cartoon-alt2.jpg",
         labelId: "CART-RUNTZ-ALT2"
+    },
+    {
+        strain: "Slurricane",
+        strainSlug: "slurricane",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/slurricane/cartoon-alt1.jpg",
+        labelId: "CART-SLURRICANE-ALT1"
+    },
+    {
+        strain: "Slurricane",
+        strainSlug: "slurricane",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/slurricane/cartoon-main.jpg",
+        labelId: "CART-SLURRICANE-MAIN"
     },
     {
         strain: "Sour Diesel",
