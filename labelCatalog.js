@@ -6,7 +6,7 @@
 
 const LABEL_CATALOG = [
 
-    // Cigarette Series (44)
+    // Cigarette Series (43)
     {
         strain: "AK-47",
         strainSlug: "ak-47",
@@ -62,14 +62,6 @@ const LABEL_CATALOG = [
         seriesSlug: "cigarette",
         image: "public/labels/black-garlic/cigarette-main.jpg",
         labelId: "CIGA-BLACK-GARLIC-MAIN"
-    },
-    {
-        strain: "Blue Dream",
-        strainSlug: "blue-dream",
-        series: "Cigarette Series",
-        seriesSlug: "cigarette",
-        image: "public/labels/blue-dream/cigarette-alt.jpg",
-        labelId: "CIGA-BLUE-DREAM-ALT"
     },
     {
         strain: "Blueberry Muffin",
