@@ -818,7 +818,7 @@ const LABEL_CATALOG = [
         labelId: "PIN-ZOOKIES-MAIN"
     },
 
-    // Early Cartoon Series (32)
+    // Early Cartoon Series (29)
     {
         strain: "Biscotti",
         strainSlug: "biscotti",
@@ -1034,30 +1034,6 @@ const LABEL_CATALOG = [
         seriesSlug: "cartoon",
         image: "public/labels/super-boof/cartoon-alt1.jpg",
         labelId: "CART-SUPER-BOOF-ALT1"
-    },
-    {
-        strain: "Super Boof",
-        strainSlug: "super-boof",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/super-boof/cartoon-alt2.jpg",
-        labelId: "CART-SUPER-BOOF-ALT2"
-    },
-    {
-        strain: "Super Boof",
-        strainSlug: "super-boof",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/super-boof/cartoon-alt3.jpg",
-        labelId: "CART-SUPER-BOOF-ALT3"
-    },
-    {
-        strain: "Super Boof",
-        strainSlug: "super-boof",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/super-boof/cartoon-alt4.jpg",
-        labelId: "CART-SUPER-BOOF-ALT4"
     },
     {
         strain: "Super Boof",
