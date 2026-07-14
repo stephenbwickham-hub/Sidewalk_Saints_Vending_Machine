@@ -6,7 +6,7 @@
 
 const LABEL_CATALOG = [
 
-    // Cigarette Series (43)
+    // Cigarette Series (45)
     {
         strain: "AK-47",
         strainSlug: "ak-47",
@@ -62,6 +62,14 @@ const LABEL_CATALOG = [
         seriesSlug: "cigarette",
         image: "public/labels/black-garlic/cigarette-main.jpg",
         labelId: "CIGA-BLACK-GARLIC-MAIN"
+    },
+    {
+        strain: "Blue Dream",
+        strainSlug: "blue-dream",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/blue-dream/cigarette-main.jpg",
+        labelId: "CIGA-BLUE-DREAM-MAIN"
     },
     {
         strain: "Blueberry Muffin",
@@ -288,6 +296,14 @@ const LABEL_CATALOG = [
         labelId: "CIGA-PURPLE-PUNCH-MAIN"
     },
     {
+        strain: "Slurricane",
+        strainSlug: "slurricane",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/slurricane/cigarette-main.jpg",
+        labelId: "CIGA-SLURRICANE-MAIN"
+    },
+    {
         strain: "Trainwreck",
         strainSlug: "trainwreck",
         series: "Cigarette Series",
@@ -352,7 +368,7 @@ const LABEL_CATALOG = [
         labelId: "CIGA-ZKITTLEZ-MAIN"
     },
 
-    // Pin-Up Series (57)
+    // Pin-Up Series (68)
     {
         strain: "Animal Face",
         strainSlug: "animal-face",
@@ -450,6 +466,22 @@ const LABEL_CATALOG = [
         labelId: "PIN-BUBBLEGUM-GUSHERS-ALT1"
     },
     {
+        strain: "Cap Junky",
+        strainSlug: "cap-junky",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/cap-junky/pinup-alt.jpg",
+        labelId: "PIN-CAP-JUNKY-ALT"
+    },
+    {
+        strain: "Cap Junky",
+        strainSlug: "cap-junky",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/cap-junky/pinup-main.jpg",
+        labelId: "PIN-CAP-JUNKY-MAIN"
+    },
+    {
         strain: "Cereal Milk",
         strainSlug: "cereal-milk",
         series: "Pin-Up Series",
@@ -530,6 +562,14 @@ const LABEL_CATALOG = [
         labelId: "PIN-FORBIDDEN-FRUIT-MAIN"
     },
     {
+        strain: "Gary Payton",
+        strainSlug: "gary-payton",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/gary-payton/pinup-alt.jpg",
+        labelId: "PIN-GARY-PAYTON-ALT"
+    },
+    {
         strain: "Gelato",
         strainSlug: "gelato",
         series: "Pin-Up Series",
@@ -586,6 +626,38 @@ const LABEL_CATALOG = [
         labelId: "PIN-GRANDDADDY-PURPLE-MAIN"
     },
     {
+        strain: "Green Crack",
+        strainSlug: "green-crack",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/green-crack/pinup-alt.jpg",
+        labelId: "PIN-GREEN-CRACK-ALT"
+    },
+    {
+        strain: "Green Crack",
+        strainSlug: "green-crack",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/green-crack/pinup-main.jpg",
+        labelId: "PIN-GREEN-CRACK-MAIN"
+    },
+    {
+        strain: "Ice Cream Cake",
+        strainSlug: "ice-cream-cake",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/ice-cream-cake/pinup-alt.jpg",
+        labelId: "PIN-ICE-CREAM-CAKE-ALT"
+    },
+    {
+        strain: "Ice Cream Cake",
+        strainSlug: "ice-cream-cake",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/ice-cream-cake/pinup-main.jpg",
+        labelId: "PIN-ICE-CREAM-CAKE-MAIN"
+    },
+    {
         strain: "Jack Herer",
         strainSlug: "jack-herer",
         series: "Pin-Up Series",
@@ -602,6 +674,22 @@ const LABEL_CATALOG = [
         labelId: "PIN-KUSH-MINTS-MAIN"
     },
     {
+        strain: "Lemon Cherry Gelato",
+        strainSlug: "lemon-cherry-gelato",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/lemon-cherry-gelato/pinup-alt.jpg",
+        labelId: "PIN-LEMON-CHERRY-GELATO-ALT"
+    },
+    {
+        strain: "Lemon Cherry Gelato",
+        strainSlug: "lemon-cherry-gelato",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/lemon-cherry-gelato/pinup-main.jpg",
+        labelId: "PIN-LEMON-CHERRY-GELATO-MAIN"
+    },
+    {
         strain: "Lemon Haze",
         strainSlug: "lemon-haze",
         series: "Pin-Up Series",
@@ -616,6 +704,22 @@ const LABEL_CATALOG = [
         seriesSlug: "pinup",
         image: "public/labels/lemon-haze/pinup-main.jpg",
         labelId: "PIN-LEMON-HAZE-MAIN"
+    },
+    {
+        strain: "Maui Wowie",
+        strainSlug: "maui-wowie",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/maui-wowie/pinup-alt.jpg",
+        labelId: "PIN-MAUI-WOWIE-ALT"
+    },
+    {
+        strain: "Maui Wowie",
+        strainSlug: "maui-wowie",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/maui-wowie/pinup-main.jpg",
+        labelId: "PIN-MAUI-WOWIE-MAIN"
     },
     {
         strain: "Mochi",
@@ -810,7 +914,15 @@ const LABEL_CATALOG = [
         labelId: "PIN-ZOOKIES-MAIN"
     },
 
-    // Early Cartoon Series (29)
+    // Early Cartoon Series (32)
+    {
+        strain: "Animal Face",
+        strainSlug: "animal-face",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/animal-face/cartoon-main.jpg",
+        labelId: "CART-ANIMAL-FACE-MAIN"
+    },
     {
         strain: "Biscotti",
         strainSlug: "biscotti",
@@ -1034,6 +1146,22 @@ const LABEL_CATALOG = [
         seriesSlug: "cartoon",
         image: "public/labels/super-boof/cartoon-main.jpg",
         labelId: "CART-SUPER-BOOF-MAIN"
+    },
+    {
+        strain: "Vanilla Frosting",
+        strainSlug: "vanilla-frosting",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/vanilla-frosting/cartoon-main.jpg",
+        labelId: "CART-VANILLA-FROSTING-MAIN"
+    },
+    {
+        strain: "Wedding Cake",
+        strainSlug: "wedding-cake",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/wedding-cake/cartoon-main.jpg",
+        labelId: "CART-WEDDING-CAKE-MAIN"
     },
     {
         strain: "White Widow",
