@@ -18,22 +18,66 @@ body {
 
 body {
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
     font-family: "Courier New", Courier, monospace;
     color: #111;
-    background:
-        radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.05), transparent 36%),
-        linear-gradient(135deg, #202020 0%, #101010 100%);
+    /* WALL + FLOOR room. wall.png is 16:9, seamless horizontally, with its own
+       baseboard/floor at 84.1%. Sized to the viewport height and tiled across,
+       so extra width is simply more of the same wall and the floor line is
+       always at 15.9vh from the bottom — never stretched or mirrored. */
+    background-color: #ae946f;              /* wall top, fills any sliver above */
+    background-image: url('assets/wall.png');
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    background-size: auto 100vh;
 }
 
-/* Machine shell */
+/* Machine — the star of the site. Sized by viewport HEIGHT so it dominates the
+   room and stays immune to width changes; it only reflows at the mobile
+   breakpoint. Feet are at 97.1% of the box; the wall's floor is 15.9vh up, so
+   we seat the box to land the feet a touch onto the floor. */
 .machine-stage {
-    position: relative !important;
-    width: min(94vw, 680px) !important;
-    aspect-ratio: 1086 / 1448 !important;
-    overflow: hidden !important;
-    margin: 0 auto !important;
+    --mh: 86vh;                             /* machine height */
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: calc(13.6vh - 0.029 * var(--mh)) !important;
+    height: var(--mh) !important;
+    aspect-ratio: 1024 / 1536 !important;
+    max-width: 96vw !important;
+    z-index: 2 !important;
     display: block !important;
-    filter: drop-shadow(0 26px 52px rgba(0, 0, 0, 0.62));
+    filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.42));
+}
+
+/* Messaging poster on the wall beside the machine. It is not advertising —
+   a quiet notice for anyone who looks. Never covers the machine, and drops
+   away on narrow screens where the machine needs the room. */
+.wall-poster {
+    position: absolute;
+    left: 18vw;
+    bottom: 42vh;
+    height: 26vh;
+    width: auto;
+    z-index: 1;
+    transform: rotate(-1.2deg);
+    /* clip the light paper corners so no white shows against the wall */
+    border-radius: 3%;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.32));
+}
+
+/* Mobile: machine reflows to width; poster steps aside. */
+@media (max-width: 820px) {
+    .wall-poster { display: none; }
+}
+@media (max-width: 700px) {
+    .machine-stage {
+        --mh: auto;
+        height: auto !important;
+        width: 94vw !important;
+        bottom: 12vh !important;
+    }
 }
 
 .machine-shell {
@@ -51,15 +95,15 @@ body {
 /* Label grid */
 .machine-stage .label-grid {
     position: absolute !important;
-    left: 29.17% !important;
-    top: 28.93% !important;
-    width: 36.67% !important;
-    height: 32.41% !important;
+    left: 20.6% !important;
+    top: 23.2% !important;
+    width: 45.4% !important;
+    height: 36.2% !important;
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
     grid-template-rows: repeat(3, 1fr) !important;
-    column-gap: 6.2% !important;
-    row-gap: 6.3% !important;
+    column-gap: 4.8% !important;
+    row-gap: 5.8% !important;
     z-index: 20 !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -155,18 +199,18 @@ body {
 
 /* Insert Quarter final */
 .machine-stage .hotspot-insert {
-    left: 72.45% !important;
-    top: 26.20% !important;
-    width: 7.85% !important;
-    height: 8.95% !important;
+    left: 71% !important;
+    top: 17.5% !important;
+    width: 16.5% !important;
+    height: 14% !important;
 }
 
 /* Instructions plate */
 .machine-stage .hotspot-instructions {
-    left: 69% !important;
-    top: 50% !important;
-    width: 13% !important;
-    height: 16.5% !important;
+    left: 70.9% !important;
+    top: 45.6% !important;
+    width: 15.5% !important;
+    height: 18.9% !important;
 }
 
 /* ============================================================
@@ -175,10 +219,10 @@ body {
 
 .machine-stage .odometer-overlay {
     position: absolute !important;
-    left: 26.0% !important;
-    top: 86.0% !important;
-    width: 10.1% !important;
-    height: 2.5% !important;
+    left: 17.4% !important;
+    top: 87.6% !important;
+    width: 13.2% !important;
+    height: 3.5% !important;
     z-index: 30 !important;
     display: flex !important;
     align-items: center !important;
@@ -658,12 +702,16 @@ html.age-ok .age-gate,
    Crawlable SEO blurb (subtle caption beneath the machine)
    ============================================================ */
 .site-blurb {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 8px;
+    z-index: 1;
     max-width: min(94vw, 640px);
-    margin: 14px auto 30px;
     padding: 0 12px;
     text-align: center;
     font-family: "Courier New", Courier, monospace;
-    color: #6e6e6e;
+    color: #5a4a33;
 }
 
 .site-blurb h1 {
