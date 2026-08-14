@@ -6,7 +6,7 @@
 
 const LABEL_CATALOG = [
 
-    // Cigarette Series (45)
+    // Cigarette Series (40)
     {
         strain: "AK-47",
         strainSlug: "ak-47",
@@ -196,14 +196,6 @@ const LABEL_CATALOG = [
         strainSlug: "lemon-haze",
         series: "Cigarette Series",
         seriesSlug: "cigarette",
-        image: "public/labels/lemon-haze/cigarette-alt.jpg",
-        labelId: "CIGA-LEMON-HAZE-ALT"
-    },
-    {
-        strain: "Lemon Haze",
-        strainSlug: "lemon-haze",
-        series: "Cigarette Series",
-        seriesSlug: "cigarette",
         image: "public/labels/lemon-haze/cigarette-alt1.jpg",
         labelId: "CIGA-LEMON-HAZE-ALT1"
     },
@@ -236,14 +228,6 @@ const LABEL_CATALOG = [
         strainSlug: "motorbreath",
         series: "Cigarette Series",
         seriesSlug: "cigarette",
-        image: "public/labels/motorbreath/cigarette-alt1.jpg",
-        labelId: "CIGA-MOTORBREATH-ALT1"
-    },
-    {
-        strain: "Motorbreath",
-        strainSlug: "motorbreath",
-        series: "Cigarette Series",
-        seriesSlug: "cigarette",
         image: "public/labels/motorbreath/cigarette-main.jpg",
         labelId: "CIGA-MOTORBREATH-MAIN"
     },
@@ -254,14 +238,6 @@ const LABEL_CATALOG = [
         seriesSlug: "cigarette",
         image: "public/labels/northern-lights/cigarette-alt1.jpg",
         labelId: "CIGA-NORTHERN-LIGHTS-ALT1"
-    },
-    {
-        strain: "Northern Lights",
-        strainSlug: "northern-lights",
-        series: "Cigarette Series",
-        seriesSlug: "cigarette",
-        image: "public/labels/northern-lights/cigarette-main.jpg",
-        labelId: "CIGA-NORTHERN-LIGHTS-MAIN"
     },
     {
         strain: "OG Kush",
@@ -332,14 +308,6 @@ const LABEL_CATALOG = [
         strainSlug: "wedding-cake",
         series: "Cigarette Series",
         seriesSlug: "cigarette",
-        image: "public/labels/wedding-cake/cigarette-alt1.jpg",
-        labelId: "CIGA-WEDDING-CAKE-ALT1"
-    },
-    {
-        strain: "Wedding Cake",
-        strainSlug: "wedding-cake",
-        series: "Cigarette Series",
-        seriesSlug: "cigarette",
         image: "public/labels/wedding-cake/cigarette-main.jpg",
         labelId: "CIGA-WEDDING-CAKE-MAIN"
     },
@@ -352,14 +320,6 @@ const LABEL_CATALOG = [
         labelId: "CIGA-WHITE-WIDOW-ALT1"
     },
     {
-        strain: "White Widow",
-        strainSlug: "white-widow",
-        series: "Cigarette Series",
-        seriesSlug: "cigarette",
-        image: "public/labels/white-widow/cigarette-main.jpg",
-        labelId: "CIGA-WHITE-WIDOW-MAIN"
-    },
-    {
         strain: "Zkittlez",
         strainSlug: "zkittlez",
         series: "Cigarette Series",
@@ -368,7 +328,7 @@ const LABEL_CATALOG = [
         labelId: "CIGA-ZKITTLEZ-MAIN"
     },
 
-    // Pin-Up Series (68)
+    // Pin-Up Series (60)
     {
         strain: "Animal Face",
         strainSlug: "animal-face",
@@ -426,30 +386,6 @@ const LABEL_CATALOG = [
         labelId: "PIN-BLUEBERRY-MUFFIN-ALT3"
     },
     {
-        strain: "Blueberry Muffin",
-        strainSlug: "blueberry-muffin",
-        series: "Pin-Up Series",
-        seriesSlug: "pinup",
-        image: "public/labels/blueberry-muffin/pinup-alt4.jpg",
-        labelId: "PIN-BLUEBERRY-MUFFIN-ALT4"
-    },
-    {
-        strain: "Blueberry Muffin",
-        strainSlug: "blueberry-muffin",
-        series: "Pin-Up Series",
-        seriesSlug: "pinup",
-        image: "public/labels/blueberry-muffin/pinup-alt5.jpg",
-        labelId: "PIN-BLUEBERRY-MUFFIN-ALT5"
-    },
-    {
-        strain: "Bubba Kush",
-        strainSlug: "bubba-kush",
-        series: "Pin-Up Series",
-        seriesSlug: "pinup",
-        image: "public/labels/bubba-kush/pinup-alt1.jpg",
-        labelId: "PIN-BUBBA-KUSH-ALT1"
-    },
-    {
         strain: "Bubba Kush",
         strainSlug: "bubba-kush",
         series: "Pin-Up Series",
@@ -496,14 +432,6 @@ const LABEL_CATALOG = [
         seriesSlug: "pinup",
         image: "public/labels/cereal-milk/pinup-alt2.jpg",
         labelId: "PIN-CEREAL-MILK-ALT2"
-    },
-    {
-        strain: "Cereal Milk",
-        strainSlug: "cereal-milk",
-        series: "Pin-Up Series",
-        seriesSlug: "pinup",
-        image: "public/labels/cereal-milk/pinup-main.jpg",
-        labelId: "PIN-CEREAL-MILK-MAIN"
     },
     {
         strain: "Chemdawg",
@@ -568,14 +496,6 @@ const LABEL_CATALOG = [
         seriesSlug: "pinup",
         image: "public/labels/gary-payton/pinup-alt.jpg",
         labelId: "PIN-GARY-PAYTON-ALT"
-    },
-    {
-        strain: "Gelato",
-        strainSlug: "gelato",
-        series: "Pin-Up Series",
-        seriesSlug: "pinup",
-        image: "public/labels/gelato/pinup-alt1.jpg",
-        labelId: "PIN-GELATO-ALT1"
     },
     {
         strain: "Gelato",
@@ -766,14 +686,6 @@ const LABEL_CATALOG = [
         strainSlug: "pineapple-express",
         series: "Pin-Up Series",
         seriesSlug: "pinup",
-        image: "public/labels/pineapple-express/pinup-alt1.jpg",
-        labelId: "PIN-PINEAPPLE-EXPRESS-ALT1"
-    },
-    {
-        strain: "Pineapple Express",
-        strainSlug: "pineapple-express",
-        series: "Pin-Up Series",
-        seriesSlug: "pinup",
         image: "public/labels/pineapple-express/pinup-main.jpg",
         labelId: "PIN-PINEAPPLE-EXPRESS-MAIN"
     },
@@ -830,14 +742,6 @@ const LABEL_CATALOG = [
         strainSlug: "strawberry-cough",
         series: "Pin-Up Series",
         seriesSlug: "pinup",
-        image: "public/labels/strawberry-cough/pinup-alt1.jpg",
-        labelId: "PIN-STRAWBERRY-COUGH-ALT1"
-    },
-    {
-        strain: "Strawberry Cough",
-        strainSlug: "strawberry-cough",
-        series: "Pin-Up Series",
-        seriesSlug: "pinup",
         image: "public/labels/strawberry-cough/pinup-alt2.jpg",
         labelId: "PIN-STRAWBERRY-COUGH-ALT2"
     },
@@ -848,14 +752,6 @@ const LABEL_CATALOG = [
         seriesSlug: "pinup",
         image: "public/labels/strawberry-cough/pinup-main.jpg",
         labelId: "PIN-STRAWBERRY-COUGH-MAIN"
-    },
-    {
-        strain: "Super Boof",
-        strainSlug: "super-boof",
-        series: "Pin-Up Series",
-        seriesSlug: "pinup",
-        image: "public/labels/super-boof/pinup-alt.jpg",
-        labelId: "PIN-SUPER-BOOF-ALT"
     },
     {
         strain: "Tropicana Cookies",
@@ -914,7 +810,7 @@ const LABEL_CATALOG = [
         labelId: "PIN-ZOOKIES-MAIN"
     },
 
-    // Early Cartoon Series (32)
+    // Early Cartoon Series (33)
     {
         strain: "Animal Face",
         strainSlug: "animal-face",
@@ -986,6 +882,14 @@ const LABEL_CATALOG = [
         seriesSlug: "cartoon",
         image: "public/labels/forbidden-fruit/cartoon-main.jpg",
         labelId: "CART-FORBIDDEN-FRUIT-MAIN"
+    },
+    {
+        strain: "GMO Cookies",
+        strainSlug: "gmo-cookies",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/gmo-cookies/cartoon-alt1.jpg",
+        labelId: "CART-GMO-COOKIES-ALT1"
     },
     {
         strain: "GMO Cookies",
@@ -1172,7 +1076,7 @@ const LABEL_CATALOG = [
         labelId: "CART-WHITE-WIDOW-MAIN"
     },
 
-    // Sidewalk Sinners Series (31)
+    // Sidewalk Sinners Series (26)
     {
         strain: "AK-47",
         strainSlug: "ak-47",
@@ -1236,14 +1140,6 @@ const LABEL_CATALOG = [
         seriesSlug: "sinners",
         image: "public/labels/gelato/sinners-alt1.jpg",
         labelId: "SIN-GELATO-ALT1"
-    },
-    {
-        strain: "Gelato",
-        strainSlug: "gelato",
-        series: "Sidewalk Sinners Series",
-        seriesSlug: "sinners",
-        image: "public/labels/gelato/sinners-main.jpg",
-        labelId: "SIN-GELATO-MAIN"
     },
     {
         strain: "Girl Scout Cookies",
@@ -1314,14 +1210,6 @@ const LABEL_CATALOG = [
         strainSlug: "northern-lights",
         series: "Sidewalk Sinners Series",
         seriesSlug: "sinners",
-        image: "public/labels/northern-lights/sinners-alt1.jpg",
-        labelId: "SIN-NORTHERN-LIGHTS-ALT1"
-    },
-    {
-        strain: "Northern Lights",
-        strainSlug: "northern-lights",
-        series: "Sidewalk Sinners Series",
-        seriesSlug: "sinners",
         image: "public/labels/northern-lights/sinners-main.jpg",
         labelId: "SIN-NORTHERN-LIGHTS-MAIN"
     },
@@ -1382,22 +1270,6 @@ const LABEL_CATALOG = [
         labelId: "SIN-WEDDING-CAKE-ALT1"
     },
     {
-        strain: "Wedding Cake",
-        strainSlug: "wedding-cake",
-        series: "Sidewalk Sinners Series",
-        seriesSlug: "sinners",
-        image: "public/labels/wedding-cake/sinners-main.jpg",
-        labelId: "SIN-WEDDING-CAKE-MAIN"
-    },
-    {
-        strain: "White Widow",
-        strainSlug: "white-widow",
-        series: "Sidewalk Sinners Series",
-        seriesSlug: "sinners",
-        image: "public/labels/white-widow/sinners-alt1.jpg",
-        labelId: "SIN-WHITE-WIDOW-ALT1"
-    },
-    {
         strain: "White Widow",
         strainSlug: "white-widow",
         series: "Sidewalk Sinners Series",
@@ -1412,14 +1284,6 @@ const LABEL_CATALOG = [
         seriesSlug: "sinners",
         image: "public/labels/zkittlez/sinners-alt1.jpg",
         labelId: "SIN-ZKITTLEZ-ALT1"
-    },
-    {
-        strain: "Zkittlez",
-        strainSlug: "zkittlez",
-        series: "Sidewalk Sinners Series",
-        seriesSlug: "sinners",
-        image: "public/labels/zkittlez/sinners-main.jpg",
-        labelId: "SIN-ZKITTLEZ-MAIN"
     },
 
     // Plain Series (90)
