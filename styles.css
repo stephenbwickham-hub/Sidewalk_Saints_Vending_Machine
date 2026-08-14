@@ -48,6 +48,8 @@ body {
     max-width: 96vw !important;
     z-index: 2 !important;
     display: block !important;
+    /* query container so overlay text (odometer) scales WITH the machine */
+    container-type: size !important;
     filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.42));
 }
 
@@ -239,7 +241,7 @@ body {
     font-family: "Courier New", Courier, monospace !important;
     font-weight: 700 !important;
     letter-spacing: 0.12em !important;
-    font-size: clamp(7px, 1.9vw, 13px) !important;
+    font-size: 2.7cqw !important;   /* scales with the machine, not the viewport */
     line-height: 1 !important;
 }
 
@@ -711,19 +713,20 @@ html.age-ok .age-gate,
     padding: 0 12px;
     text-align: center;
     font-family: "Courier New", Courier, monospace;
-    color: #5a4a33;
+    /* blends into the floor but stays legible — never pops */
+    color: #4a3924;
 }
 
 .site-blurb h1 {
-    margin: 0 0 6px;
-    font-size: 13px;
+    margin: 0 0 5px;
+    font-size: clamp(9px, 1.35vh, 15px);   /* scales with viewport height */
     font-weight: 700;
     letter-spacing: 0.03em;
-    color: #808080;
+    color: #3f301d;
 }
 
 .site-blurb p {
     margin: 0;
-    font-size: 12px;
-    line-height: 1.55;
+    font-size: clamp(8px, 1.15vh, 13px);
+    line-height: 1.5;
 }
