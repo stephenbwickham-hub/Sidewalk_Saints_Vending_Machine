@@ -328,7 +328,7 @@ const LABEL_CATALOG = [
         labelId: "CIGA-ZKITTLEZ-MAIN"
     },
 
-    // Pin-Up Series (61)
+    // Pin-Up Series (62)
     {
         strain: "Animal Face",
         strainSlug: "animal-face",
@@ -456,6 +456,14 @@ const LABEL_CATALOG = [
         seriesSlug: "pinup",
         image: "public/labels/chemdawg/pinup-main.jpg",
         labelId: "PIN-CHEMDAWG-MAIN"
+    },
+    {
+        strain: "Cherry Haze",
+        strainSlug: "cherry-haze",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/cherry-haze/pinup-main.jpg",
+        labelId: "PIN-CHERRY-HAZE-MAIN"
     },
     {
         strain: "Do-Si-Dos",
@@ -818,7 +826,7 @@ const LABEL_CATALOG = [
         labelId: "PIN-ZOOKIES-MAIN"
     },
 
-    // Early Cartoon Series (36)
+    // Early Cartoon Series (37)
     {
         strain: "Animal Face",
         strainSlug: "animal-face",
@@ -866,6 +874,14 @@ const LABEL_CATALOG = [
         seriesSlug: "cartoon",
         image: "public/labels/chemdawg/cartoon-alt3.jpg",
         labelId: "CART-CHEMDAWG-ALT3"
+    },
+    {
+        strain: "Cherry Haze",
+        strainSlug: "cherry-haze",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/cherry-haze/cartoon-alt1.jpg",
+        labelId: "CART-CHERRY-HAZE-ALT1"
     },
     {
         strain: "Cherry Haze",
