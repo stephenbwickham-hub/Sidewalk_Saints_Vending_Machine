@@ -328,7 +328,7 @@ const LABEL_CATALOG = [
         labelId: "CIGA-ZKITTLEZ-MAIN"
     },
 
-    // Pin-Up Series (60)
+    // Pin-Up Series (61)
     {
         strain: "Animal Face",
         strainSlug: "animal-face",
@@ -344,6 +344,14 @@ const LABEL_CATALOG = [
         seriesSlug: "pinup",
         image: "public/labels/apple-fritter/pinup-main.jpg",
         labelId: "PIN-APPLE-FRITTER-MAIN"
+    },
+    {
+        strain: "Biscotti",
+        strainSlug: "biscotti",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/biscotti/pinup-main.jpg",
+        labelId: "PIN-BISCOTTI-MAIN"
     },
     {
         strain: "Black Garlic",
@@ -810,7 +818,7 @@ const LABEL_CATALOG = [
         labelId: "PIN-ZOOKIES-MAIN"
     },
 
-    // Early Cartoon Series (33)
+    // Early Cartoon Series (36)
     {
         strain: "Animal Face",
         strainSlug: "animal-face",
@@ -858,6 +866,14 @@ const LABEL_CATALOG = [
         seriesSlug: "cartoon",
         image: "public/labels/chemdawg/cartoon-alt3.jpg",
         labelId: "CART-CHEMDAWG-ALT3"
+    },
+    {
+        strain: "Cherry Haze",
+        strainSlug: "cherry-haze",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/cherry-haze/cartoon-main.jpg",
+        labelId: "CART-CHERRY-HAZE-MAIN"
     },
     {
         strain: "Do-Si-Dos",
@@ -956,12 +972,28 @@ const LABEL_CATALOG = [
         labelId: "CART-OG-KUSH-MAIN"
     },
     {
+        strain: "Peanut Butter Breath",
+        strainSlug: "peanut-butter-breath",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/peanut-butter-breath/cartoon-main.jpg",
+        labelId: "CART-PEANUT-BUTTER-BREATH-MAIN"
+    },
+    {
         strain: "Pineapple Express",
         strainSlug: "pineapple-express",
         series: "Early Cartoon Series",
         seriesSlug: "cartoon",
         image: "public/labels/pineapple-express/cartoon-main.jpg",
         labelId: "CART-PINEAPPLE-EXPRESS-MAIN"
+    },
+    {
+        strain: "Pound Cake",
+        strainSlug: "pound-cake",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/pound-cake/cartoon-main.jpg",
+        labelId: "CART-POUND-CAKE-MAIN"
     },
     {
         strain: "Purple Punch",
@@ -1076,7 +1108,7 @@ const LABEL_CATALOG = [
         labelId: "CART-WHITE-WIDOW-MAIN"
     },
 
-    // Sidewalk Sinners Series (26)
+    // Sidewalk Sinners Series (27)
     {
         strain: "AK-47",
         strainSlug: "ak-47",
@@ -1092,6 +1124,14 @@ const LABEL_CATALOG = [
         seriesSlug: "sinners",
         image: "public/labels/ak-47/sinners-alt2.jpg",
         labelId: "SIN-AK-47-ALT2"
+    },
+    {
+        strain: "Apple Fritter",
+        strainSlug: "apple-fritter",
+        series: "Sidewalk Sinners Series",
+        seriesSlug: "sinners",
+        image: "public/labels/apple-fritter/sinners-main.jpg",
+        labelId: "SIN-APPLE-FRITTER-MAIN"
     },
     {
         strain: "Blue Dream",
