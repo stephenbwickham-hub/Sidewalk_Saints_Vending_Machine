@@ -6,7 +6,7 @@
 
 const LABEL_CATALOG = [
 
-    // Cigarette Series (40)
+    // Cigarette Series (41)
     {
         strain: "AK-47",
         strainSlug: "ak-47",
@@ -288,6 +288,14 @@ const LABEL_CATALOG = [
         labelId: "CIGA-TRAINWRECK-MAIN"
     },
     {
+        strain: "Tropicana Cherry",
+        strainSlug: "tropicana-cherry",
+        series: "Cigarette Series",
+        seriesSlug: "cigarette",
+        image: "public/labels/tropicana-cherry/cigarette-main.jpg",
+        labelId: "CIGA-TROPICANA-CHERRY-MAIN"
+    },
+    {
         strain: "Tropicana Cookies",
         strainSlug: "tropicana-cookies",
         series: "Cigarette Series",
@@ -328,7 +336,7 @@ const LABEL_CATALOG = [
         labelId: "CIGA-ZKITTLEZ-MAIN"
     },
 
-    // Pin-Up Series (62)
+    // Pin-Up Series (63)
     {
         strain: "Animal Face",
         strainSlug: "animal-face",
@@ -768,6 +776,14 @@ const LABEL_CATALOG = [
         seriesSlug: "pinup",
         image: "public/labels/strawberry-cough/pinup-main.jpg",
         labelId: "PIN-STRAWBERRY-COUGH-MAIN"
+    },
+    {
+        strain: "Tropicana Cherry",
+        strainSlug: "tropicana-cherry",
+        series: "Pin-Up Series",
+        seriesSlug: "pinup",
+        image: "public/labels/tropicana-cherry/pinup-main.jpg",
+        labelId: "PIN-TROPICANA-CHERRY-MAIN"
     },
     {
         strain: "Tropicana Cookies",
