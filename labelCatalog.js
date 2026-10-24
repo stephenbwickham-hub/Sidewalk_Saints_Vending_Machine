@@ -6,7 +6,7 @@
 
 const LABEL_CATALOG = [
 
-    // Cigarette Series (41)
+    // Cigarette Series (40)
     {
         strain: "AK-47",
         strainSlug: "ak-47",
@@ -288,14 +288,6 @@ const LABEL_CATALOG = [
         labelId: "CIGA-TRAINWRECK-MAIN"
     },
     {
-        strain: "Tropicana Cherry",
-        strainSlug: "tropicana-cherry",
-        series: "Cigarette Series",
-        seriesSlug: "cigarette",
-        image: "public/labels/tropicana-cherry/cigarette-main.jpg",
-        labelId: "CIGA-TROPICANA-CHERRY-MAIN"
-    },
-    {
         strain: "Tropicana Cookies",
         strainSlug: "tropicana-cookies",
         series: "Cigarette Series",
@@ -336,7 +328,7 @@ const LABEL_CATALOG = [
         labelId: "CIGA-ZKITTLEZ-MAIN"
     },
 
-    // Pin-Up Series (63)
+    // Pin-Up Series (62)
     {
         strain: "Animal Face",
         strainSlug: "animal-face",
@@ -778,14 +770,6 @@ const LABEL_CATALOG = [
         labelId: "PIN-STRAWBERRY-COUGH-MAIN"
     },
     {
-        strain: "Tropicana Cherry",
-        strainSlug: "tropicana-cherry",
-        series: "Pin-Up Series",
-        seriesSlug: "pinup",
-        image: "public/labels/tropicana-cherry/pinup-main.jpg",
-        labelId: "PIN-TROPICANA-CHERRY-MAIN"
-    },
-    {
         strain: "Tropicana Cookies",
         strainSlug: "tropicana-cookies",
         series: "Pin-Up Series",
@@ -842,7 +826,7 @@ const LABEL_CATALOG = [
         labelId: "PIN-ZOOKIES-MAIN"
     },
 
-    // Early Cartoon Series (37)
+    // Early Cartoon Series (38)
     {
         strain: "Animal Face",
         strainSlug: "animal-face",
@@ -1114,6 +1098,14 @@ const LABEL_CATALOG = [
         seriesSlug: "cartoon",
         image: "public/labels/super-boof/cartoon-main.jpg",
         labelId: "CART-SUPER-BOOF-MAIN"
+    },
+    {
+        strain: "Tropicana Cherry",
+        strainSlug: "tropicana-cherry",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/tropicana-cherry/cartoon-main.jpg",
+        labelId: "CART-TROPICANA-CHERRY-MAIN"
     },
     {
         strain: "Vanilla Frosting",
