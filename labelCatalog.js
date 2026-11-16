@@ -972,6 +972,14 @@ const LABEL_CATALOG = [
         labelId: "CART-KUSH-MINTS-MAIN"
     },
     {
+        strain: "London Pound Cake",
+        strainSlug: "london-pound-cake",
+        series: "Early Cartoon Series",
+        seriesSlug: "cartoon",
+        image: "public/labels/london-pound-cake/cartoon-main.jpg",
+        labelId: "CART-LONDON-POUND-CAKE-MAIN"
+    },
+    {
         strain: "Mimosa",
         strainSlug: "mimosa",
         series: "Early Cartoon Series",
@@ -1002,14 +1010,6 @@ const LABEL_CATALOG = [
         seriesSlug: "cartoon",
         image: "public/labels/pineapple-express/cartoon-main.jpg",
         labelId: "CART-PINEAPPLE-EXPRESS-MAIN"
-    },
-    {
-        strain: "Pound Cake",
-        strainSlug: "pound-cake",
-        series: "Early Cartoon Series",
-        seriesSlug: "cartoon",
-        image: "public/labels/pound-cake/cartoon-main.jpg",
-        labelId: "CART-POUND-CAKE-MAIN"
     },
     {
         strain: "Purple Punch",
@@ -1348,6 +1348,976 @@ const LABEL_CATALOG = [
         seriesSlug: "sinners",
         image: "public/labels/zkittlez/sinners-alt1.jpg",
         labelId: "SIN-ZKITTLEZ-ALT1"
+    },
+
+    // XX Floral (121)
+    {
+        strain: "9 Pound Hammer",
+        strainSlug: "9-pound-hammer",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/9-pound-hammer/xx-floral-main.jpg",
+        labelId: "XXF-9-POUND-HAMMER-MAIN"
+    },
+    {
+        strain: "Acapulco Gold",
+        strainSlug: "acapulco-gold",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/acapulco-gold/xx-floral-main.jpg",
+        labelId: "XXF-ACAPULCO-GOLD-MAIN"
+    },
+    {
+        strain: "Afghani Kush",
+        strainSlug: "afghani-kush",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/afghani-kush/xx-floral-main.jpg",
+        labelId: "XXF-AFGHANI-KUSH-MAIN"
+    },
+    {
+        strain: "Agent Orange",
+        strainSlug: "agent-orange",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/agent-orange/xx-floral-main.jpg",
+        labelId: "XXF-AGENT-ORANGE-MAIN"
+    },
+    {
+        strain: "AK-47",
+        strainSlug: "ak-47",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/ak-47/xx-floral-main.jpg",
+        labelId: "XXF-AK-47-MAIN"
+    },
+    {
+        strain: "Alaskan Thunder Fuck",
+        strainSlug: "alaskan-thunder-fuck",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/alaskan-thunder-fuck/xx-floral-main.jpg",
+        labelId: "XXF-ALASKAN-THUNDER-FUCK-MAIN"
+    },
+    {
+        strain: "Alien OG",
+        strainSlug: "alien-og",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/alien-og/xx-floral-main.jpg",
+        labelId: "XXF-ALIEN-OG-MAIN"
+    },
+    {
+        strain: "Amnesia Haze",
+        strainSlug: "amnesia-haze",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/amnesia-haze/xx-floral-main.jpg",
+        labelId: "XXF-AMNESIA-HAZE-MAIN"
+    },
+    {
+        strain: "Animal Face",
+        strainSlug: "animal-face",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/animal-face/xx-floral-main.jpg",
+        labelId: "XXF-ANIMAL-FACE-MAIN"
+    },
+    {
+        strain: "Apple Fritter",
+        strainSlug: "apple-fritter",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/apple-fritter/xx-floral-main.jpg",
+        labelId: "XXF-APPLE-FRITTER-MAIN"
+    },
+    {
+        strain: "Banana Cream",
+        strainSlug: "banana-cream",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/banana-cream/xx-floral-main.jpg",
+        labelId: "XXF-BANANA-CREAM-MAIN"
+    },
+    {
+        strain: "Banana Kush",
+        strainSlug: "banana-kush",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/banana-kush/xx-floral-main.jpg",
+        labelId: "XXF-BANANA-KUSH-MAIN"
+    },
+    {
+        strain: "Big Sur Holy Weed",
+        strainSlug: "big-sur-holy-weed",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/big-sur-holy-weed/xx-floral-main.jpg",
+        labelId: "XXF-BIG-SUR-HOLY-WEED-MAIN"
+    },
+    {
+        strain: "Biscotti",
+        strainSlug: "biscotti",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/biscotti/xx-floral-main.jpg",
+        labelId: "XXF-BISCOTTI-MAIN"
+    },
+    {
+        strain: "Black Cherry Gelato",
+        strainSlug: "black-cherry-gelato",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/black-cherry-gelato/xx-floral-main.jpg",
+        labelId: "XXF-BLACK-CHERRY-GELATO-MAIN"
+    },
+    {
+        strain: "Black Garlic",
+        strainSlug: "black-garlic",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/black-garlic/xx-floral-main.jpg",
+        labelId: "XXF-BLACK-GARLIC-MAIN"
+    },
+    {
+        strain: "Blackberry Kush",
+        strainSlug: "blackberry-kush",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/blackberry-kush/xx-floral-main.jpg",
+        labelId: "XXF-BLACKBERRY-KUSH-MAIN"
+    },
+    {
+        strain: "Blue Cheese",
+        strainSlug: "blue-cheese",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/blue-cheese/xx-floral-main.jpg",
+        labelId: "XXF-BLUE-CHEESE-MAIN"
+    },
+    {
+        strain: "Blue Cookies",
+        strainSlug: "blue-cookies",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/blue-cookies/xx-floral-main.jpg",
+        labelId: "XXF-BLUE-COOKIES-MAIN"
+    },
+    {
+        strain: "Blue Dream",
+        strainSlug: "blue-dream",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/blue-dream/xx-floral-main.jpg",
+        labelId: "XXF-BLUE-DREAM-MAIN"
+    },
+    {
+        strain: "Blueberry",
+        strainSlug: "blueberry",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/blueberry/xx-floral-main.jpg",
+        labelId: "XXF-BLUEBERRY-MAIN"
+    },
+    {
+        strain: "Blueberry Muffin",
+        strainSlug: "blueberry-muffin",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/blueberry-muffin/xx-floral-main.jpg",
+        labelId: "XXF-BLUEBERRY-MUFFIN-MAIN"
+    },
+    {
+        strain: "Bruce Banner",
+        strainSlug: "bruce-banner",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/bruce-banner/xx-floral-main.jpg",
+        labelId: "XXF-BRUCE-BANNER-MAIN"
+    },
+    {
+        strain: "Bubba Kush",
+        strainSlug: "bubba-kush",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/bubba-kush/xx-floral-main.jpg",
+        labelId: "XXF-BUBBA-KUSH-MAIN"
+    },
+    {
+        strain: "Bubblegum Gushers",
+        strainSlug: "bubblegum-gushers",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/bubblegum-gushers/xx-floral-main.jpg",
+        labelId: "XXF-BUBBLEGUM-GUSHERS-MAIN"
+    },
+    {
+        strain: "California Orange",
+        strainSlug: "california-orange",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/california-orange/xx-floral-main.jpg",
+        labelId: "XXF-CALIFORNIA-ORANGE-MAIN"
+    },
+    {
+        strain: "Candyland",
+        strainSlug: "candyland",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/candyland/xx-floral-main.jpg",
+        labelId: "XXF-CANDYLAND-MAIN"
+    },
+    {
+        strain: "Cap Junky",
+        strainSlug: "cap-junky",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/cap-junky/xx-floral-main.jpg",
+        labelId: "XXF-CAP-JUNKY-MAIN"
+    },
+    {
+        strain: "Cereal Milk",
+        strainSlug: "cereal-milk",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/cereal-milk/xx-floral-main.jpg",
+        labelId: "XXF-CEREAL-MILK-MAIN"
+    },
+    {
+        strain: "Chemdawg",
+        strainSlug: "chemdawg",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/chemdawg/xx-floral-main.jpg",
+        labelId: "XXF-CHEMDAWG-MAIN"
+    },
+    {
+        strain: "Cherry Haze",
+        strainSlug: "cherry-haze",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/cherry-haze/xx-floral-main.jpg",
+        labelId: "XXF-CHERRY-HAZE-MAIN"
+    },
+    {
+        strain: "Cherry Pie",
+        strainSlug: "cherry-pie",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/cherry-pie/xx-floral-main.jpg",
+        labelId: "XXF-CHERRY-PIE-MAIN"
+    },
+    {
+        strain: "Chocolope",
+        strainSlug: "chocolope",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/chocolope/xx-floral-main.jpg",
+        labelId: "XXF-CHOCOLOPE-MAIN"
+    },
+    {
+        strain: "Cinderella 99",
+        strainSlug: "cinderella-99",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/cinderella-99/xx-floral-main.jpg",
+        labelId: "XXF-CINDERELLA-99-MAIN"
+    },
+    {
+        strain: "Colombian Gold",
+        strainSlug: "colombian-gold",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/colombian-gold/xx-floral-main.jpg",
+        labelId: "XXF-COLOMBIAN-GOLD-MAIN"
+    },
+    {
+        strain: "Cookies and Cream",
+        strainSlug: "cookies-and-cream",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/cookies-and-cream/xx-floral-main.jpg",
+        labelId: "XXF-COOKIES-AND-CREAM-MAIN"
+    },
+    {
+        strain: "Critical Mass",
+        strainSlug: "critical-mass",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/critical-mass/xx-floral-main.jpg",
+        labelId: "XXF-CRITICAL-MASS-MAIN"
+    },
+    {
+        strain: "Do-Si-Dos",
+        strainSlug: "do-si-dos",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/do-si-dos/xx-floral-main.jpg",
+        labelId: "XXF-DO-SI-DOS-MAIN"
+    },
+    {
+        strain: "Durban Poison",
+        strainSlug: "durban-poison",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/durban-poison/xx-floral-main.jpg",
+        labelId: "XXF-DURBAN-POISON-MAIN"
+    },
+    {
+        strain: "Dutch Treat",
+        strainSlug: "dutch-treat",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/dutch-treat/xx-floral-main.jpg",
+        labelId: "XXF-DUTCH-TREAT-MAIN"
+    },
+    {
+        strain: "Forbidden Fruit",
+        strainSlug: "forbidden-fruit",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/forbidden-fruit/xx-floral-main.jpg",
+        labelId: "XXF-FORBIDDEN-FRUIT-MAIN"
+    },
+    {
+        strain: "Gary Payton",
+        strainSlug: "gary-payton",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/gary-payton/xx-floral-main.jpg",
+        labelId: "XXF-GARY-PAYTON-MAIN"
+    },
+    {
+        strain: "Gelato",
+        strainSlug: "gelato",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/gelato/xx-floral-main.jpg",
+        labelId: "XXF-GELATO-MAIN"
+    },
+    {
+        strain: "Girl Scout Cookies",
+        strainSlug: "girl-scout-cookies",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/girl-scout-cookies/xx-floral-main.jpg",
+        labelId: "XXF-GIRL-SCOUT-COOKIES-MAIN"
+    },
+    {
+        strain: "GMO Cookies",
+        strainSlug: "gmo-cookies",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/gmo-cookies/xx-floral-main.jpg",
+        labelId: "XXF-GMO-COOKIES-MAIN"
+    },
+    {
+        strain: "Godfather OG",
+        strainSlug: "godfather-og",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/godfather-og/xx-floral-main.jpg",
+        labelId: "XXF-GODFATHER-OG-MAIN"
+    },
+    {
+        strain: "Golden Goat",
+        strainSlug: "golden-goat",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/golden-goat/xx-floral-main.jpg",
+        labelId: "XXF-GOLDEN-GOAT-MAIN"
+    },
+    {
+        strain: "Gorilla Glue",
+        strainSlug: "gorilla-glue",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/gorilla-glue/xx-floral-main.jpg",
+        labelId: "XXF-GORILLA-GLUE-MAIN"
+    },
+    {
+        strain: "Granddaddy Purple",
+        strainSlug: "granddaddy-purple",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/granddaddy-purple/xx-floral-main.jpg",
+        labelId: "XXF-GRANDDADDY-PURPLE-MAIN"
+    },
+    {
+        strain: "Grape Ape",
+        strainSlug: "grape-ape",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/grape-ape/xx-floral-main.jpg",
+        labelId: "XXF-GRAPE-APE-MAIN"
+    },
+    {
+        strain: "Green Crack",
+        strainSlug: "green-crack",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/green-crack/xx-floral-main.jpg",
+        labelId: "XXF-GREEN-CRACK-MAIN"
+    },
+    {
+        strain: "Harlequin",
+        strainSlug: "harlequin",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/harlequin/xx-floral-main.jpg",
+        labelId: "XXF-HARLEQUIN-MAIN"
+    },
+    {
+        strain: "Headband",
+        strainSlug: "headband",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/headband/xx-floral-main.jpg",
+        labelId: "XXF-HEADBAND-MAIN"
+    },
+    {
+        strain: "Hindu Kush",
+        strainSlug: "hindu-kush",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/hindu-kush/xx-floral-main.jpg",
+        labelId: "XXF-HINDU-KUSH-MAIN"
+    },
+    {
+        strain: "Ice Cream Cake",
+        strainSlug: "ice-cream-cake",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/ice-cream-cake/xx-floral-main.jpg",
+        labelId: "XXF-ICE-CREAM-CAKE-MAIN"
+    },
+    {
+        strain: "Jack Herer",
+        strainSlug: "jack-herer",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/jack-herer/xx-floral-main.jpg",
+        labelId: "XXF-JACK-HERER-MAIN"
+    },
+    {
+        strain: "Jack the Ripper",
+        strainSlug: "jack-the-ripper",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/jack-the-ripper/xx-floral-main.jpg",
+        labelId: "XXF-JACK-THE-RIPPER-MAIN"
+    },
+    {
+        strain: "Jealousy",
+        strainSlug: "jealousy",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/jealousy/xx-floral-main.jpg",
+        labelId: "XXF-JEALOUSY-MAIN"
+    },
+    {
+        strain: "Jillybean",
+        strainSlug: "jillybean",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/jillybean/xx-floral-main.jpg",
+        labelId: "XXF-JILLYBEAN-MAIN"
+    },
+    {
+        strain: "King Louis XIII",
+        strainSlug: "king-louis-xiii",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/king-louis-xiii/xx-floral-main.jpg",
+        labelId: "XXF-KING-LOUIS-XIII-MAIN"
+    },
+    {
+        strain: "Kona Gold",
+        strainSlug: "kona-gold",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/kona-gold/xx-floral-main.jpg",
+        labelId: "XXF-KONA-GOLD-MAIN"
+    },
+    {
+        strain: "Kosher Kush",
+        strainSlug: "kosher-kush",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/kosher-kush/xx-floral-main.jpg",
+        labelId: "XXF-KOSHER-KUSH-MAIN"
+    },
+    {
+        strain: "Kush Mints",
+        strainSlug: "kush-mints",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/kush-mints/xx-floral-main.jpg",
+        labelId: "XXF-KUSH-MINTS-MAIN"
+    },
+    {
+        strain: "LA Confidential",
+        strainSlug: "la-confidential",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/la-confidential/xx-floral-main.jpg",
+        labelId: "XXF-LA-CONFIDENTIAL-MAIN"
+    },
+    {
+        strain: "Larry OG",
+        strainSlug: "larry-og",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/larry-og/xx-floral-main.jpg",
+        labelId: "XXF-LARRY-OG-MAIN"
+    },
+    {
+        strain: "Lavender",
+        strainSlug: "lavender",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/lavender/xx-floral-main.jpg",
+        labelId: "XXF-LAVENDER-MAIN"
+    },
+    {
+        strain: "Lemon Cherry Gelato",
+        strainSlug: "lemon-cherry-gelato",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/lemon-cherry-gelato/xx-floral-main.jpg",
+        labelId: "XXF-LEMON-CHERRY-GELATO-MAIN"
+    },
+    {
+        strain: "Lemon Haze",
+        strainSlug: "lemon-haze",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/lemon-haze/xx-floral-main.jpg",
+        labelId: "XXF-LEMON-HAZE-MAIN"
+    },
+    {
+        strain: "Lemon Skunk",
+        strainSlug: "lemon-skunk",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/lemon-skunk/xx-floral-main.jpg",
+        labelId: "XXF-LEMON-SKUNK-MAIN"
+    },
+    {
+        strain: "London Pound Cake",
+        strainSlug: "london-pound-cake",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/london-pound-cake/xx-floral-main.jpg",
+        labelId: "XXF-LONDON-POUND-CAKE-MAIN"
+    },
+    {
+        strain: "MAC",
+        strainSlug: "mac",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/mac/xx-floral-main.jpg",
+        labelId: "XXF-MAC-MAIN"
+    },
+    {
+        strain: "Master Kush",
+        strainSlug: "master-kush",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/master-kush/xx-floral-main.jpg",
+        labelId: "XXF-MASTER-KUSH-MAIN"
+    },
+    {
+        strain: "Maui Wowie",
+        strainSlug: "maui-wowie",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/maui-wowie/xx-floral-main.jpg",
+        labelId: "XXF-MAUI-WOWIE-MAIN"
+    },
+    {
+        strain: "Mimosa",
+        strainSlug: "mimosa",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/mimosa/xx-floral-main.jpg",
+        labelId: "XXF-MIMOSA-MAIN"
+    },
+    {
+        strain: "MK Ultra",
+        strainSlug: "mk-ultra",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/mk-ultra/xx-floral-main.jpg",
+        labelId: "XXF-MK-ULTRA-MAIN"
+    },
+    {
+        strain: "Mochi",
+        strainSlug: "mochi",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/mochi/xx-floral-main.jpg",
+        labelId: "XXF-MOCHI-MAIN"
+    },
+    {
+        strain: "Motorbreath",
+        strainSlug: "motorbreath",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/motorbreath/xx-floral-main.jpg",
+        labelId: "XXF-MOTORBREATH-MAIN"
+    },
+    {
+        strain: "Northern Lights",
+        strainSlug: "northern-lights",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/northern-lights/xx-floral-main.jpg",
+        labelId: "XXF-NORTHERN-LIGHTS-MAIN"
+    },
+    {
+        strain: "NYC Diesel",
+        strainSlug: "nyc-diesel",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/nyc-diesel/xx-floral-main.jpg",
+        labelId: "XXF-NYC-DIESEL-MAIN"
+    },
+    {
+        strain: "Oaxacan Gold",
+        strainSlug: "oaxacan-gold",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/oaxacan-gold/xx-floral-main.jpg",
+        labelId: "XXF-OAXACAN-GOLD-MAIN"
+    },
+    {
+        strain: "OG Kush",
+        strainSlug: "og-kush",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/og-kush/xx-floral-main.jpg",
+        labelId: "XXF-OG-KUSH-MAIN"
+    },
+    {
+        strain: "Oreoz",
+        strainSlug: "oreoz",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/oreoz/xx-floral-main.jpg",
+        labelId: "XXF-OREOZ-MAIN"
+    },
+    {
+        strain: "Panama Red",
+        strainSlug: "panama-red",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/panama-red/xx-floral-main.jpg",
+        labelId: "XXF-PANAMA-RED-MAIN"
+    },
+    {
+        strain: "Papaya",
+        strainSlug: "papaya",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/papaya/xx-floral-main.jpg",
+        labelId: "XXF-PAPAYA-MAIN"
+    },
+    {
+        strain: "Peanut Butter Breath",
+        strainSlug: "peanut-butter-breath",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/peanut-butter-breath/xx-floral-main.jpg",
+        labelId: "XXF-PEANUT-BUTTER-BREATH-MAIN"
+    },
+    {
+        strain: "Permanent Marker",
+        strainSlug: "permanent-marker",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/permanent-marker/xx-floral-main.jpg",
+        labelId: "XXF-PERMANENT-MARKER-MAIN"
+    },
+    {
+        strain: "Pineapple Express",
+        strainSlug: "pineapple-express",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/pineapple-express/xx-floral-main.jpg",
+        labelId: "XXF-PINEAPPLE-EXPRESS-MAIN"
+    },
+    {
+        strain: "Platinum OG",
+        strainSlug: "platinum-og",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/platinum-og/xx-floral-main.jpg",
+        labelId: "XXF-PLATINUM-OG-MAIN"
+    },
+    {
+        strain: "Purple Haze",
+        strainSlug: "purple-haze",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/purple-haze/xx-floral-main.jpg",
+        labelId: "XXF-PURPLE-HAZE-MAIN"
+    },
+    {
+        strain: "Purple Punch",
+        strainSlug: "purple-punch",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/purple-punch/xx-floral-main.jpg",
+        labelId: "XXF-PURPLE-PUNCH-MAIN"
+    },
+    {
+        strain: "Purple Urkle",
+        strainSlug: "purple-urkle",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/purple-urkle/xx-floral-main.jpg",
+        labelId: "XXF-PURPLE-URKLE-MAIN"
+    },
+    {
+        strain: "Romulan",
+        strainSlug: "romulan",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/romulan/xx-floral-main.jpg",
+        labelId: "XXF-ROMULAN-MAIN"
+    },
+    {
+        strain: "Runtz",
+        strainSlug: "runtz",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/runtz/xx-floral-main.jpg",
+        labelId: "XXF-RUNTZ-MAIN"
+    },
+    {
+        strain: "SAGE",
+        strainSlug: "sage",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/sage/xx-floral-main.jpg",
+        labelId: "XXF-SAGE-MAIN"
+    },
+    {
+        strain: "SFV OG",
+        strainSlug: "sfv-og",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/sfv-og/xx-floral-main.jpg",
+        labelId: "XXF-SFV-OG-MAIN"
+    },
+    {
+        strain: "Sherbert",
+        strainSlug: "sherbert",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/sherbert/xx-floral-main.jpg",
+        labelId: "XXF-SHERBERT-MAIN"
+    },
+    {
+        strain: "Skunk #1",
+        strainSlug: "skunk-1",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/skunk-1/xx-floral-main.jpg",
+        labelId: "XXF-SKUNK-1-MAIN"
+    },
+    {
+        strain: "Slurricane",
+        strainSlug: "slurricane",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/slurricane/xx-floral-main.jpg",
+        labelId: "XXF-SLURRICANE-MAIN"
+    },
+    {
+        strain: "Sour Diesel",
+        strainSlug: "sour-diesel",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/sour-diesel/xx-floral-main.jpg",
+        labelId: "XXF-SOUR-DIESEL-MAIN"
+    },
+    {
+        strain: "Sour OG",
+        strainSlug: "sour-og",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/sour-og/xx-floral-main.jpg",
+        labelId: "XXF-SOUR-OG-MAIN"
+    },
+    {
+        strain: "Sour Tangie",
+        strainSlug: "sour-tangie",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/sour-tangie/xx-floral-main.jpg",
+        labelId: "XXF-SOUR-TANGIE-MAIN"
+    },
+    {
+        strain: "Strawberry Banana",
+        strainSlug: "strawberry-banana",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/strawberry-banana/xx-floral-main.jpg",
+        labelId: "XXF-STRAWBERRY-BANANA-MAIN"
+    },
+    {
+        strain: "Strawberry Cough",
+        strainSlug: "strawberry-cough",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/strawberry-cough/xx-floral-main.jpg",
+        labelId: "XXF-STRAWBERRY-COUGH-MAIN"
+    },
+    {
+        strain: "Sunset Sherbet",
+        strainSlug: "sunset-sherbet",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/sunset-sherbet/xx-floral-main.jpg",
+        labelId: "XXF-SUNSET-SHERBET-MAIN"
+    },
+    {
+        strain: "Super Boof",
+        strainSlug: "super-boof",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/super-boof/xx-floral-main.jpg",
+        labelId: "XXF-SUPER-BOOF-MAIN"
+    },
+    {
+        strain: "Super Lemon Haze",
+        strainSlug: "super-lemon-haze",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/super-lemon-haze/xx-floral-main.jpg",
+        labelId: "XXF-SUPER-LEMON-HAZE-MAIN"
+    },
+    {
+        strain: "Super Silver Haze",
+        strainSlug: "super-silver-haze",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/super-silver-haze/xx-floral-main.jpg",
+        labelId: "XXF-SUPER-SILVER-HAZE-MAIN"
+    },
+    {
+        strain: "Super Sour Diesel",
+        strainSlug: "super-sour-diesel",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/super-sour-diesel/xx-floral-main.jpg",
+        labelId: "XXF-SUPER-SOUR-DIESEL-MAIN"
+    },
+    {
+        strain: "Tahoe OG",
+        strainSlug: "tahoe-og",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/tahoe-og/xx-floral-main.jpg",
+        labelId: "XXF-TAHOE-OG-MAIN"
+    },
+    {
+        strain: "Tangie",
+        strainSlug: "tangie",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/tangie/xx-floral-main.jpg",
+        labelId: "XXF-TANGIE-MAIN"
+    },
+    {
+        strain: "Thai Stick",
+        strainSlug: "thai-stick",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/thai-stick/xx-floral-main.jpg",
+        labelId: "XXF-THAI-STICK-MAIN"
+    },
+    {
+        strain: "Trainwreck",
+        strainSlug: "trainwreck",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/trainwreck/xx-floral-main.jpg",
+        labelId: "XXF-TRAINWRECK-MAIN"
+    },
+    {
+        strain: "Tropicana Cherry",
+        strainSlug: "tropicana-cherry",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/tropicana-cherry/xx-floral-main.jpg",
+        labelId: "XXF-TROPICANA-CHERRY-MAIN"
+    },
+    {
+        strain: "Tropicana Cookies",
+        strainSlug: "tropicana-cookies",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/tropicana-cookies/xx-floral-main.jpg",
+        labelId: "XXF-TROPICANA-COOKIES-MAIN"
+    },
+    {
+        strain: "Vanilla Frosting",
+        strainSlug: "vanilla-frosting",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/vanilla-frosting/xx-floral-main.jpg",
+        labelId: "XXF-VANILLA-FROSTING-MAIN"
+    },
+    {
+        strain: "Wedding Cake",
+        strainSlug: "wedding-cake",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/wedding-cake/xx-floral-main.jpg",
+        labelId: "XXF-WEDDING-CAKE-MAIN"
+    },
+    {
+        strain: "White Rhino",
+        strainSlug: "white-rhino",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/white-rhino/xx-floral-main.jpg",
+        labelId: "XXF-WHITE-RHINO-MAIN"
+    },
+    {
+        strain: "White Widow",
+        strainSlug: "white-widow",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/white-widow/xx-floral-main.jpg",
+        labelId: "XXF-WHITE-WIDOW-MAIN"
+    },
+    {
+        strain: "XJ-13",
+        strainSlug: "xj-13",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/xj-13/xx-floral-main.jpg",
+        labelId: "XXF-XJ-13-MAIN"
+    },
+    {
+        strain: "Zkittlez",
+        strainSlug: "zkittlez",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/zkittlez/xx-floral-main.jpg",
+        labelId: "XXF-ZKITTLEZ-MAIN"
+    },
+    {
+        strain: "Zookies",
+        strainSlug: "zookies",
+        series: "XX Floral",
+        seriesSlug: "xx-floral",
+        image: "public/labels/zookies/xx-floral-main.jpg",
+        labelId: "XXF-ZOOKIES-MAIN"
     },
 
     // Plain Series (90)

@@ -75,7 +75,7 @@ Naming convention:
   one file per variant (`main`, `alt1`, `alt2`, …)
 
 Current series: **Cigarette, Pin-Up, Early Cartoon, Sidewalk Sinners,
-Plain** (Pin-Up replaced the old Calendar series). To add a brand-new
+Plain, XX Floral, XX Lace, XX Gold** (Pin-Up replaced the old Calendar series). To add a brand-new
 series, register it in the `SERIES` table of `tools/build_catalog.py`.
 
 ### Adding new labels (future workflow)
@@ -83,6 +83,9 @@ series, register it in the `SERIES` table of `tools/build_catalog.py`.
 1. Put the new label PNGs in an incoming folder (anywhere, e.g. the desktop).
 2. Name each file `strain-series-variant.png`
    (e.g. `sour-diesel-cigarette-main.png`, `gelato-sinners-alt1.png`).
+   XX artwork may use `blue-dream-xx-floral.png`,
+   `blue-dream-xx-lace.png`, or `blue-dream-xx-gold.png`; a missing variant
+   defaults to `main`. Original intake files remain untouched.
 3. **Dry-run first** (changes nothing, just reports):
    `python tools/build_catalog.py --ingest-folder "C:\path\to\folder" --dry-run`
 4. Fix any warnings it prints (missing series, typos, accidental new strains).
@@ -93,9 +96,11 @@ series, register it in the `SERIES` table of `tools/build_catalog.py`.
 The dry-run lists what *would* import, what would be skipped, and warnings —
 without touching the repo. The real ingest copies the art into place and
 regenerates `labelCatalog.js`. A label only enters the catalog when its
-artwork exists on disk. Note: `--ingest-folder` only imports into strain
-folders that already exist; a genuinely new strain is flagged and set aside
-(create `public/labels/<new-strain>/` first, then re-run).
+artwork exists on disk. `--ingest-folder` accepts strains in the Plain roster,
+`tools/manifests/xx-strains.json`, or existing artwork folders. A genuinely
+new strain is flagged and set aside; register its slug and display name in
+`xx-strains.json` before re-running. Pound Cake intake is mapped to London
+Pound Cake, which also holds its existing cartoon artwork.
 
 ## Development TODOs
 

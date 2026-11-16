@@ -59,10 +59,13 @@ SERIES = {
     "pinup": ("Pin-Up Series", "PIN"),       # replaced the retired Calendar series
     "cartoon": ("Early Cartoon Series", "CART"),
     "sinners": ("Sidewalk Sinners Series", "SIN"),
+    "xx-floral": ("XX Floral", "XXF"),
+    "xx-lace": ("XX Lace", "XXL"),
+    "xx-gold": ("XX Gold", "XXG"),
     "plain": ("Plain Series", "PLAIN"),
 }
 # Series whose art is real and variant-capable (one entry per file on disk).
-VARIANT_SERIES = ["cigarette", "pinup", "cartoon", "sinners"]
+VARIANT_SERIES = [s for s in SERIES if s != "plain"]
 
 # Filename slug typos -> the real catalog strain slug.
 SLUG_FIX = {
@@ -70,6 +73,7 @@ SLUG_FIX = {
     "candy-land": "candyland",
     "cereal-mil": "cereal-milk",
     "gmo": "gmo-cookies",
+    "pound-cake": "london-pound-cake",
 }
 
 # Common series-name typos -> the real series slug.
@@ -121,7 +125,11 @@ def slugify(name):
 def strain_names():
     """slug -> display name, from the Plain roster."""
     df = pd.read_excel(MANIFESTS / "plain.xlsx")
-    return {slugify(r.strain): r.strain for r in df.itertuples()}
+    names = {slugify(r.strain): r.strain for r in df.itertuples()}
+    extra = MANIFESTS / "xx-strains.json"
+    if extra.exists():
+        names.update(json.loads(extra.read_text(encoding="utf-8")))
+    return names
 
 
 def top100_slugs():
@@ -212,9 +220,12 @@ def analyze_drop(src):
         toks = stem.split("-")
         variant = toks[-1].lower() if VAR.match(toks[-1].lower()) else None
         rest = toks[:-1] if variant else toks
-        cand = rest[-1].lower() if rest else ""
+        # Match the longest registered suffix, including multiword XX series.
+        body = "-".join(rest).lower()
+        cand = next((s for s in sorted(series_words, key=len, reverse=True)
+                     if body.endswith("-" + s)), rest[-1].lower() if rest else "")
         series = cand if cand in SERIES else SERIES_FIX.get(cand)
-        strain = "-".join(rest[:-1]).lower() if series else "-".join(rest).lower()
+        strain = body[:-(len(cand) + 1)] if series else body
 
         if not series:
             if cand in RETIRED_SERIES:
