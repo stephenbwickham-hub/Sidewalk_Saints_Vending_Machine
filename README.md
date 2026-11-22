@@ -75,7 +75,7 @@ Naming convention:
   one file per variant (`main`, `alt1`, `alt2`, …)
 
 Current series: **Cigarette, Pin-Up, Early Cartoon, Sidewalk Sinners,
-Plain, XX Floral, XX Lace, XX Gold** (Pin-Up replaced the old Calendar series). To add a brand-new
+Plain, XX Floral, XX Lace, XX Gold, Pharm** (Pin-Up replaced the old Calendar series). To add a brand-new
 series, register it in the `SERIES` table of `tools/build_catalog.py`.
 
 ### Adding new labels (future workflow)

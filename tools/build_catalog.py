@@ -62,6 +62,7 @@ SERIES = {
     "xx-floral": ("XX Floral", "XXF"),
     "xx-lace": ("XX Lace", "XXL"),
     "xx-gold": ("XX Gold", "XXG"),
+    "pharm": ("Pharm", "PHARM"),
     "plain": ("Plain Series", "PLAIN"),
 }
 # Series whose art is real and variant-capable (one entry per file on disk).

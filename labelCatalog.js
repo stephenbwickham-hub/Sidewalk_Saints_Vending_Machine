@@ -4260,6 +4260,968 @@ const LABEL_CATALOG = [
         labelId: "XXG-ZOOKIES-MAIN"
     },
 
+    // Pharm (120)
+    {
+        strain: "9 Pound Hammer",
+        strainSlug: "9-pound-hammer",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/9-pound-hammer/pharm-main.png",
+        labelId: "PHARM-9-POUND-HAMMER-MAIN"
+    },
+    {
+        strain: "Acapulco Gold",
+        strainSlug: "acapulco-gold",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/acapulco-gold/pharm-main.png",
+        labelId: "PHARM-ACAPULCO-GOLD-MAIN"
+    },
+    {
+        strain: "Afghani Kush",
+        strainSlug: "afghani-kush",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/afghani-kush/pharm-main.png",
+        labelId: "PHARM-AFGHANI-KUSH-MAIN"
+    },
+    {
+        strain: "Agent Orange",
+        strainSlug: "agent-orange",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/agent-orange/pharm-main.png",
+        labelId: "PHARM-AGENT-ORANGE-MAIN"
+    },
+    {
+        strain: "AK-47",
+        strainSlug: "ak-47",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/ak-47/pharm-main.png",
+        labelId: "PHARM-AK-47-MAIN"
+    },
+    {
+        strain: "Alaskan Thunder Fuck",
+        strainSlug: "alaskan-thunder-fuck",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/alaskan-thunder-fuck/pharm-main.png",
+        labelId: "PHARM-ALASKAN-THUNDER-FUCK-MAIN"
+    },
+    {
+        strain: "Alien OG",
+        strainSlug: "alien-og",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/alien-og/pharm-main.png",
+        labelId: "PHARM-ALIEN-OG-MAIN"
+    },
+    {
+        strain: "Amnesia Haze",
+        strainSlug: "amnesia-haze",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/amnesia-haze/pharm-main.png",
+        labelId: "PHARM-AMNESIA-HAZE-MAIN"
+    },
+    {
+        strain: "Animal Face",
+        strainSlug: "animal-face",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/animal-face/pharm-main.png",
+        labelId: "PHARM-ANIMAL-FACE-MAIN"
+    },
+    {
+        strain: "Apple Fritter",
+        strainSlug: "apple-fritter",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/apple-fritter/pharm-main.png",
+        labelId: "PHARM-APPLE-FRITTER-MAIN"
+    },
+    {
+        strain: "Banana Cream",
+        strainSlug: "banana-cream",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/banana-cream/pharm-main.png",
+        labelId: "PHARM-BANANA-CREAM-MAIN"
+    },
+    {
+        strain: "Banana Kush",
+        strainSlug: "banana-kush",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/banana-kush/pharm-main.png",
+        labelId: "PHARM-BANANA-KUSH-MAIN"
+    },
+    {
+        strain: "Big Sur Holy Weed",
+        strainSlug: "big-sur-holy-weed",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/big-sur-holy-weed/pharm-main.png",
+        labelId: "PHARM-BIG-SUR-HOLY-WEED-MAIN"
+    },
+    {
+        strain: "Biscotti",
+        strainSlug: "biscotti",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/biscotti/pharm-main.png",
+        labelId: "PHARM-BISCOTTI-MAIN"
+    },
+    {
+        strain: "Black Cherry Gelato",
+        strainSlug: "black-cherry-gelato",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/black-cherry-gelato/pharm-main.png",
+        labelId: "PHARM-BLACK-CHERRY-GELATO-MAIN"
+    },
+    {
+        strain: "Black Garlic",
+        strainSlug: "black-garlic",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/black-garlic/pharm-main.png",
+        labelId: "PHARM-BLACK-GARLIC-MAIN"
+    },
+    {
+        strain: "Blackberry Kush",
+        strainSlug: "blackberry-kush",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/blackberry-kush/pharm-main.png",
+        labelId: "PHARM-BLACKBERRY-KUSH-MAIN"
+    },
+    {
+        strain: "Blue Cheese",
+        strainSlug: "blue-cheese",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/blue-cheese/pharm-main.png",
+        labelId: "PHARM-BLUE-CHEESE-MAIN"
+    },
+    {
+        strain: "Blue Cookies",
+        strainSlug: "blue-cookies",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/blue-cookies/pharm-main.png",
+        labelId: "PHARM-BLUE-COOKIES-MAIN"
+    },
+    {
+        strain: "Blueberry",
+        strainSlug: "blueberry",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/blueberry/pharm-main.png",
+        labelId: "PHARM-BLUEBERRY-MAIN"
+    },
+    {
+        strain: "Blueberry Muffin",
+        strainSlug: "blueberry-muffin",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/blueberry-muffin/pharm-main.png",
+        labelId: "PHARM-BLUEBERRY-MUFFIN-MAIN"
+    },
+    {
+        strain: "Bruce Banner",
+        strainSlug: "bruce-banner",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/bruce-banner/pharm-main.png",
+        labelId: "PHARM-BRUCE-BANNER-MAIN"
+    },
+    {
+        strain: "Bubba Kush",
+        strainSlug: "bubba-kush",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/bubba-kush/pharm-main.png",
+        labelId: "PHARM-BUBBA-KUSH-MAIN"
+    },
+    {
+        strain: "Bubblegum Gushers",
+        strainSlug: "bubblegum-gushers",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/bubblegum-gushers/pharm-main.png",
+        labelId: "PHARM-BUBBLEGUM-GUSHERS-MAIN"
+    },
+    {
+        strain: "California Orange",
+        strainSlug: "california-orange",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/california-orange/pharm-main.png",
+        labelId: "PHARM-CALIFORNIA-ORANGE-MAIN"
+    },
+    {
+        strain: "Candyland",
+        strainSlug: "candyland",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/candyland/pharm-main.png",
+        labelId: "PHARM-CANDYLAND-MAIN"
+    },
+    {
+        strain: "Cap Junky",
+        strainSlug: "cap-junky",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/cap-junky/pharm-main.png",
+        labelId: "PHARM-CAP-JUNKY-MAIN"
+    },
+    {
+        strain: "Cereal Milk",
+        strainSlug: "cereal-milk",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/cereal-milk/pharm-main.png",
+        labelId: "PHARM-CEREAL-MILK-MAIN"
+    },
+    {
+        strain: "Chemdawg",
+        strainSlug: "chemdawg",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/chemdawg/pharm-main.png",
+        labelId: "PHARM-CHEMDAWG-MAIN"
+    },
+    {
+        strain: "Cherry Haze",
+        strainSlug: "cherry-haze",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/cherry-haze/pharm-main.png",
+        labelId: "PHARM-CHERRY-HAZE-MAIN"
+    },
+    {
+        strain: "Cherry Pie",
+        strainSlug: "cherry-pie",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/cherry-pie/pharm-main.png",
+        labelId: "PHARM-CHERRY-PIE-MAIN"
+    },
+    {
+        strain: "Chocolope",
+        strainSlug: "chocolope",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/chocolope/pharm-main.png",
+        labelId: "PHARM-CHOCOLOPE-MAIN"
+    },
+    {
+        strain: "Cinderella 99",
+        strainSlug: "cinderella-99",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/cinderella-99/pharm-main.png",
+        labelId: "PHARM-CINDERELLA-99-MAIN"
+    },
+    {
+        strain: "Colombian Gold",
+        strainSlug: "colombian-gold",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/colombian-gold/pharm-main.png",
+        labelId: "PHARM-COLOMBIAN-GOLD-MAIN"
+    },
+    {
+        strain: "Cookies and Cream",
+        strainSlug: "cookies-and-cream",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/cookies-and-cream/pharm-main.png",
+        labelId: "PHARM-COOKIES-AND-CREAM-MAIN"
+    },
+    {
+        strain: "Critical Mass",
+        strainSlug: "critical-mass",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/critical-mass/pharm-main.png",
+        labelId: "PHARM-CRITICAL-MASS-MAIN"
+    },
+    {
+        strain: "Do-Si-Dos",
+        strainSlug: "do-si-dos",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/do-si-dos/pharm-main.png",
+        labelId: "PHARM-DO-SI-DOS-MAIN"
+    },
+    {
+        strain: "Durban Poison",
+        strainSlug: "durban-poison",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/durban-poison/pharm-main.png",
+        labelId: "PHARM-DURBAN-POISON-MAIN"
+    },
+    {
+        strain: "Dutch Treat",
+        strainSlug: "dutch-treat",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/dutch-treat/pharm-main.png",
+        labelId: "PHARM-DUTCH-TREAT-MAIN"
+    },
+    {
+        strain: "Forbidden Fruit",
+        strainSlug: "forbidden-fruit",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/forbidden-fruit/pharm-main.png",
+        labelId: "PHARM-FORBIDDEN-FRUIT-MAIN"
+    },
+    {
+        strain: "Gary Payton",
+        strainSlug: "gary-payton",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/gary-payton/pharm-main.png",
+        labelId: "PHARM-GARY-PAYTON-MAIN"
+    },
+    {
+        strain: "Gelato",
+        strainSlug: "gelato",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/gelato/pharm-main.png",
+        labelId: "PHARM-GELATO-MAIN"
+    },
+    {
+        strain: "Girl Scout Cookies",
+        strainSlug: "girl-scout-cookies",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/girl-scout-cookies/pharm-main.png",
+        labelId: "PHARM-GIRL-SCOUT-COOKIES-MAIN"
+    },
+    {
+        strain: "GMO Cookies",
+        strainSlug: "gmo-cookies",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/gmo-cookies/pharm-main.png",
+        labelId: "PHARM-GMO-COOKIES-MAIN"
+    },
+    {
+        strain: "Godfather OG",
+        strainSlug: "godfather-og",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/godfather-og/pharm-main.png",
+        labelId: "PHARM-GODFATHER-OG-MAIN"
+    },
+    {
+        strain: "Golden Goat",
+        strainSlug: "golden-goat",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/golden-goat/pharm-main.png",
+        labelId: "PHARM-GOLDEN-GOAT-MAIN"
+    },
+    {
+        strain: "Gorilla Glue",
+        strainSlug: "gorilla-glue",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/gorilla-glue/pharm-main.png",
+        labelId: "PHARM-GORILLA-GLUE-MAIN"
+    },
+    {
+        strain: "Granddaddy Purple",
+        strainSlug: "granddaddy-purple",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/granddaddy-purple/pharm-main.png",
+        labelId: "PHARM-GRANDDADDY-PURPLE-MAIN"
+    },
+    {
+        strain: "Grape Ape",
+        strainSlug: "grape-ape",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/grape-ape/pharm-main.png",
+        labelId: "PHARM-GRAPE-APE-MAIN"
+    },
+    {
+        strain: "Green Crack",
+        strainSlug: "green-crack",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/green-crack/pharm-main.png",
+        labelId: "PHARM-GREEN-CRACK-MAIN"
+    },
+    {
+        strain: "Harlequin",
+        strainSlug: "harlequin",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/harlequin/pharm-main.png",
+        labelId: "PHARM-HARLEQUIN-MAIN"
+    },
+    {
+        strain: "Headband",
+        strainSlug: "headband",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/headband/pharm-main.png",
+        labelId: "PHARM-HEADBAND-MAIN"
+    },
+    {
+        strain: "Hindu Kush",
+        strainSlug: "hindu-kush",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/hindu-kush/pharm-main.png",
+        labelId: "PHARM-HINDU-KUSH-MAIN"
+    },
+    {
+        strain: "Ice Cream Cake",
+        strainSlug: "ice-cream-cake",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/ice-cream-cake/pharm-main.png",
+        labelId: "PHARM-ICE-CREAM-CAKE-MAIN"
+    },
+    {
+        strain: "Jack Herer",
+        strainSlug: "jack-herer",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/jack-herer/pharm-main.png",
+        labelId: "PHARM-JACK-HERER-MAIN"
+    },
+    {
+        strain: "Jack the Ripper",
+        strainSlug: "jack-the-ripper",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/jack-the-ripper/pharm-main.png",
+        labelId: "PHARM-JACK-THE-RIPPER-MAIN"
+    },
+    {
+        strain: "Jealousy",
+        strainSlug: "jealousy",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/jealousy/pharm-main.png",
+        labelId: "PHARM-JEALOUSY-MAIN"
+    },
+    {
+        strain: "Jillybean",
+        strainSlug: "jillybean",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/jillybean/pharm-main.png",
+        labelId: "PHARM-JILLYBEAN-MAIN"
+    },
+    {
+        strain: "King Louis XIII",
+        strainSlug: "king-louis-xiii",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/king-louis-xiii/pharm-main.png",
+        labelId: "PHARM-KING-LOUIS-XIII-MAIN"
+    },
+    {
+        strain: "Kona Gold",
+        strainSlug: "kona-gold",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/kona-gold/pharm-main.png",
+        labelId: "PHARM-KONA-GOLD-MAIN"
+    },
+    {
+        strain: "Kosher Kush",
+        strainSlug: "kosher-kush",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/kosher-kush/pharm-main.png",
+        labelId: "PHARM-KOSHER-KUSH-MAIN"
+    },
+    {
+        strain: "Kush Mints",
+        strainSlug: "kush-mints",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/kush-mints/pharm-main.png",
+        labelId: "PHARM-KUSH-MINTS-MAIN"
+    },
+    {
+        strain: "LA Confidential",
+        strainSlug: "la-confidential",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/la-confidential/pharm-main.png",
+        labelId: "PHARM-LA-CONFIDENTIAL-MAIN"
+    },
+    {
+        strain: "Larry OG",
+        strainSlug: "larry-og",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/larry-og/pharm-main.png",
+        labelId: "PHARM-LARRY-OG-MAIN"
+    },
+    {
+        strain: "Lavender",
+        strainSlug: "lavender",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/lavender/pharm-main.png",
+        labelId: "PHARM-LAVENDER-MAIN"
+    },
+    {
+        strain: "Lemon Cherry Gelato",
+        strainSlug: "lemon-cherry-gelato",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/lemon-cherry-gelato/pharm-main.png",
+        labelId: "PHARM-LEMON-CHERRY-GELATO-MAIN"
+    },
+    {
+        strain: "Lemon Haze",
+        strainSlug: "lemon-haze",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/lemon-haze/pharm-main.png",
+        labelId: "PHARM-LEMON-HAZE-MAIN"
+    },
+    {
+        strain: "Lemon Skunk",
+        strainSlug: "lemon-skunk",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/lemon-skunk/pharm-main.png",
+        labelId: "PHARM-LEMON-SKUNK-MAIN"
+    },
+    {
+        strain: "London Pound Cake",
+        strainSlug: "london-pound-cake",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/london-pound-cake/pharm-main.png",
+        labelId: "PHARM-LONDON-POUND-CAKE-MAIN"
+    },
+    {
+        strain: "MAC",
+        strainSlug: "mac",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/mac/pharm-main.png",
+        labelId: "PHARM-MAC-MAIN"
+    },
+    {
+        strain: "Master Kush",
+        strainSlug: "master-kush",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/master-kush/pharm-main.png",
+        labelId: "PHARM-MASTER-KUSH-MAIN"
+    },
+    {
+        strain: "Maui Wowie",
+        strainSlug: "maui-wowie",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/maui-wowie/pharm-main.png",
+        labelId: "PHARM-MAUI-WOWIE-MAIN"
+    },
+    {
+        strain: "Mimosa",
+        strainSlug: "mimosa",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/mimosa/pharm-main.png",
+        labelId: "PHARM-MIMOSA-MAIN"
+    },
+    {
+        strain: "MK Ultra",
+        strainSlug: "mk-ultra",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/mk-ultra/pharm-main.png",
+        labelId: "PHARM-MK-ULTRA-MAIN"
+    },
+    {
+        strain: "Mochi",
+        strainSlug: "mochi",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/mochi/pharm-main.png",
+        labelId: "PHARM-MOCHI-MAIN"
+    },
+    {
+        strain: "Motorbreath",
+        strainSlug: "motorbreath",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/motorbreath/pharm-main.png",
+        labelId: "PHARM-MOTORBREATH-MAIN"
+    },
+    {
+        strain: "Northern Lights",
+        strainSlug: "northern-lights",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/northern-lights/pharm-main.png",
+        labelId: "PHARM-NORTHERN-LIGHTS-MAIN"
+    },
+    {
+        strain: "NYC Diesel",
+        strainSlug: "nyc-diesel",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/nyc-diesel/pharm-main.png",
+        labelId: "PHARM-NYC-DIESEL-MAIN"
+    },
+    {
+        strain: "Oaxacan Gold",
+        strainSlug: "oaxacan-gold",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/oaxacan-gold/pharm-main.png",
+        labelId: "PHARM-OAXACAN-GOLD-MAIN"
+    },
+    {
+        strain: "OG Kush",
+        strainSlug: "og-kush",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/og-kush/pharm-main.png",
+        labelId: "PHARM-OG-KUSH-MAIN"
+    },
+    {
+        strain: "Oreoz",
+        strainSlug: "oreoz",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/oreoz/pharm-main.png",
+        labelId: "PHARM-OREOZ-MAIN"
+    },
+    {
+        strain: "Panama Red",
+        strainSlug: "panama-red",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/panama-red/pharm-main.png",
+        labelId: "PHARM-PANAMA-RED-MAIN"
+    },
+    {
+        strain: "Papaya",
+        strainSlug: "papaya",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/papaya/pharm-main.png",
+        labelId: "PHARM-PAPAYA-MAIN"
+    },
+    {
+        strain: "Peanut Butter Breath",
+        strainSlug: "peanut-butter-breath",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/peanut-butter-breath/pharm-main.png",
+        labelId: "PHARM-PEANUT-BUTTER-BREATH-MAIN"
+    },
+    {
+        strain: "Permanent Marker",
+        strainSlug: "permanent-marker",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/permanent-marker/pharm-main.png",
+        labelId: "PHARM-PERMANENT-MARKER-MAIN"
+    },
+    {
+        strain: "Pineapple Express",
+        strainSlug: "pineapple-express",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/pineapple-express/pharm-main.png",
+        labelId: "PHARM-PINEAPPLE-EXPRESS-MAIN"
+    },
+    {
+        strain: "Platinum OG",
+        strainSlug: "platinum-og",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/platinum-og/pharm-main.png",
+        labelId: "PHARM-PLATINUM-OG-MAIN"
+    },
+    {
+        strain: "Purple Haze",
+        strainSlug: "purple-haze",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/purple-haze/pharm-main.png",
+        labelId: "PHARM-PURPLE-HAZE-MAIN"
+    },
+    {
+        strain: "Purple Punch",
+        strainSlug: "purple-punch",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/purple-punch/pharm-main.png",
+        labelId: "PHARM-PURPLE-PUNCH-MAIN"
+    },
+    {
+        strain: "Purple Urkle",
+        strainSlug: "purple-urkle",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/purple-urkle/pharm-main.png",
+        labelId: "PHARM-PURPLE-URKLE-MAIN"
+    },
+    {
+        strain: "Romulan",
+        strainSlug: "romulan",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/romulan/pharm-main.png",
+        labelId: "PHARM-ROMULAN-MAIN"
+    },
+    {
+        strain: "Runtz",
+        strainSlug: "runtz",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/runtz/pharm-main.png",
+        labelId: "PHARM-RUNTZ-MAIN"
+    },
+    {
+        strain: "SAGE",
+        strainSlug: "sage",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/sage/pharm-main.png",
+        labelId: "PHARM-SAGE-MAIN"
+    },
+    {
+        strain: "SFV OG",
+        strainSlug: "sfv-og",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/sfv-og/pharm-main.png",
+        labelId: "PHARM-SFV-OG-MAIN"
+    },
+    {
+        strain: "Sherbert",
+        strainSlug: "sherbert",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/sherbert/pharm-main.png",
+        labelId: "PHARM-SHERBERT-MAIN"
+    },
+    {
+        strain: "Skunk #1",
+        strainSlug: "skunk-1",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/skunk-1/pharm-main.png",
+        labelId: "PHARM-SKUNK-1-MAIN"
+    },
+    {
+        strain: "Slurricane",
+        strainSlug: "slurricane",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/slurricane/pharm-main.png",
+        labelId: "PHARM-SLURRICANE-MAIN"
+    },
+    {
+        strain: "Sour Diesel",
+        strainSlug: "sour-diesel",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/sour-diesel/pharm-main.png",
+        labelId: "PHARM-SOUR-DIESEL-MAIN"
+    },
+    {
+        strain: "Sour OG",
+        strainSlug: "sour-og",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/sour-og/pharm-main.png",
+        labelId: "PHARM-SOUR-OG-MAIN"
+    },
+    {
+        strain: "Sour Tangie",
+        strainSlug: "sour-tangie",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/sour-tangie/pharm-main.png",
+        labelId: "PHARM-SOUR-TANGIE-MAIN"
+    },
+    {
+        strain: "Strawberry Banana",
+        strainSlug: "strawberry-banana",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/strawberry-banana/pharm-main.png",
+        labelId: "PHARM-STRAWBERRY-BANANA-MAIN"
+    },
+    {
+        strain: "Strawberry Cough",
+        strainSlug: "strawberry-cough",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/strawberry-cough/pharm-main.png",
+        labelId: "PHARM-STRAWBERRY-COUGH-MAIN"
+    },
+    {
+        strain: "Sunset Sherbet",
+        strainSlug: "sunset-sherbet",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/sunset-sherbet/pharm-main.png",
+        labelId: "PHARM-SUNSET-SHERBET-MAIN"
+    },
+    {
+        strain: "Super Boof",
+        strainSlug: "super-boof",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/super-boof/pharm-main.png",
+        labelId: "PHARM-SUPER-BOOF-MAIN"
+    },
+    {
+        strain: "Super Lemon Haze",
+        strainSlug: "super-lemon-haze",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/super-lemon-haze/pharm-main.png",
+        labelId: "PHARM-SUPER-LEMON-HAZE-MAIN"
+    },
+    {
+        strain: "Super Silver Haze",
+        strainSlug: "super-silver-haze",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/super-silver-haze/pharm-main.png",
+        labelId: "PHARM-SUPER-SILVER-HAZE-MAIN"
+    },
+    {
+        strain: "Super Sour Diesel",
+        strainSlug: "super-sour-diesel",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/super-sour-diesel/pharm-main.png",
+        labelId: "PHARM-SUPER-SOUR-DIESEL-MAIN"
+    },
+    {
+        strain: "Tahoe OG",
+        strainSlug: "tahoe-og",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/tahoe-og/pharm-main.png",
+        labelId: "PHARM-TAHOE-OG-MAIN"
+    },
+    {
+        strain: "Tangie",
+        strainSlug: "tangie",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/tangie/pharm-main.png",
+        labelId: "PHARM-TANGIE-MAIN"
+    },
+    {
+        strain: "Thai Stick",
+        strainSlug: "thai-stick",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/thai-stick/pharm-main.png",
+        labelId: "PHARM-THAI-STICK-MAIN"
+    },
+    {
+        strain: "Trainwreck",
+        strainSlug: "trainwreck",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/trainwreck/pharm-main.png",
+        labelId: "PHARM-TRAINWRECK-MAIN"
+    },
+    {
+        strain: "Tropicana Cherry",
+        strainSlug: "tropicana-cherry",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/tropicana-cherry/pharm-main.png",
+        labelId: "PHARM-TROPICANA-CHERRY-MAIN"
+    },
+    {
+        strain: "Tropicana Cookies",
+        strainSlug: "tropicana-cookies",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/tropicana-cookies/pharm-main.png",
+        labelId: "PHARM-TROPICANA-COOKIES-MAIN"
+    },
+    {
+        strain: "Vanilla Frosting",
+        strainSlug: "vanilla-frosting",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/vanilla-frosting/pharm-main.png",
+        labelId: "PHARM-VANILLA-FROSTING-MAIN"
+    },
+    {
+        strain: "Wedding Cake",
+        strainSlug: "wedding-cake",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/wedding-cake/pharm-main.png",
+        labelId: "PHARM-WEDDING-CAKE-MAIN"
+    },
+    {
+        strain: "White Rhino",
+        strainSlug: "white-rhino",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/white-rhino/pharm-main.png",
+        labelId: "PHARM-WHITE-RHINO-MAIN"
+    },
+    {
+        strain: "White Widow",
+        strainSlug: "white-widow",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/white-widow/pharm-main.png",
+        labelId: "PHARM-WHITE-WIDOW-MAIN"
+    },
+    {
+        strain: "XJ-13",
+        strainSlug: "xj-13",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/xj-13/pharm-main.png",
+        labelId: "PHARM-XJ-13-MAIN"
+    },
+    {
+        strain: "Zkittlez",
+        strainSlug: "zkittlez",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/zkittlez/pharm-main.png",
+        labelId: "PHARM-ZKITTLEZ-MAIN"
+    },
+    {
+        strain: "Zookies",
+        strainSlug: "zookies",
+        series: "Pharm",
+        seriesSlug: "pharm",
+        image: "public/labels/zookies/pharm-main.png",
+        labelId: "PHARM-ZOOKIES-MAIN"
+    },
+
     // Plain Series (90)
     {
         strain: "Blue Dream",
