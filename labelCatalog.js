@@ -5222,6 +5222,976 @@ const LABEL_CATALOG = [
         labelId: "PHARM-ZOOKIES-MAIN"
     },
 
+    // Element (121)
+    {
+        strain: "9 Pound Hammer",
+        strainSlug: "9-pound-hammer",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/9-pound-hammer/element-main.png",
+        labelId: "ELEMENT-9-POUND-HAMMER-MAIN"
+    },
+    {
+        strain: "Acapulco Gold",
+        strainSlug: "acapulco-gold",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/acapulco-gold/element-main.png",
+        labelId: "ELEMENT-ACAPULCO-GOLD-MAIN"
+    },
+    {
+        strain: "Afghani Kush",
+        strainSlug: "afghani-kush",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/afghani-kush/element-main.png",
+        labelId: "ELEMENT-AFGHANI-KUSH-MAIN"
+    },
+    {
+        strain: "Agent Orange",
+        strainSlug: "agent-orange",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/agent-orange/element-main.png",
+        labelId: "ELEMENT-AGENT-ORANGE-MAIN"
+    },
+    {
+        strain: "AK-47",
+        strainSlug: "ak-47",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/ak-47/element-main.png",
+        labelId: "ELEMENT-AK-47-MAIN"
+    },
+    {
+        strain: "Alaskan Thunder Fuck",
+        strainSlug: "alaskan-thunder-fuck",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/alaskan-thunder-fuck/element-main.png",
+        labelId: "ELEMENT-ALASKAN-THUNDER-FUCK-MAIN"
+    },
+    {
+        strain: "Alien OG",
+        strainSlug: "alien-og",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/alien-og/element-main.png",
+        labelId: "ELEMENT-ALIEN-OG-MAIN"
+    },
+    {
+        strain: "Amnesia Haze",
+        strainSlug: "amnesia-haze",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/amnesia-haze/element-main.png",
+        labelId: "ELEMENT-AMNESIA-HAZE-MAIN"
+    },
+    {
+        strain: "Animal Face",
+        strainSlug: "animal-face",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/animal-face/element-main.png",
+        labelId: "ELEMENT-ANIMAL-FACE-MAIN"
+    },
+    {
+        strain: "Apple Fritter",
+        strainSlug: "apple-fritter",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/apple-fritter/element-main.png",
+        labelId: "ELEMENT-APPLE-FRITTER-MAIN"
+    },
+    {
+        strain: "Banana Cream",
+        strainSlug: "banana-cream",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/banana-cream/element-main.png",
+        labelId: "ELEMENT-BANANA-CREAM-MAIN"
+    },
+    {
+        strain: "Banana Kush",
+        strainSlug: "banana-kush",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/banana-kush/element-main.png",
+        labelId: "ELEMENT-BANANA-KUSH-MAIN"
+    },
+    {
+        strain: "Big Sur Holy Weed",
+        strainSlug: "big-sur-holy-weed",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/big-sur-holy-weed/element-main.png",
+        labelId: "ELEMENT-BIG-SUR-HOLY-WEED-MAIN"
+    },
+    {
+        strain: "Biscotti",
+        strainSlug: "biscotti",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/biscotti/element-main.png",
+        labelId: "ELEMENT-BISCOTTI-MAIN"
+    },
+    {
+        strain: "Black Cherry Gelato",
+        strainSlug: "black-cherry-gelato",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/black-cherry-gelato/element-main.png",
+        labelId: "ELEMENT-BLACK-CHERRY-GELATO-MAIN"
+    },
+    {
+        strain: "Black Garlic",
+        strainSlug: "black-garlic",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/black-garlic/element-main.png",
+        labelId: "ELEMENT-BLACK-GARLIC-MAIN"
+    },
+    {
+        strain: "Blackberry Kush",
+        strainSlug: "blackberry-kush",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/blackberry-kush/element-main.png",
+        labelId: "ELEMENT-BLACKBERRY-KUSH-MAIN"
+    },
+    {
+        strain: "Blue Cheese",
+        strainSlug: "blue-cheese",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/blue-cheese/element-main.png",
+        labelId: "ELEMENT-BLUE-CHEESE-MAIN"
+    },
+    {
+        strain: "Blue Cookies",
+        strainSlug: "blue-cookies",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/blue-cookies/element-main.png",
+        labelId: "ELEMENT-BLUE-COOKIES-MAIN"
+    },
+    {
+        strain: "Blue Dream",
+        strainSlug: "blue-dream",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/blue-dream/element-main.png",
+        labelId: "ELEMENT-BLUE-DREAM-MAIN"
+    },
+    {
+        strain: "Blueberry",
+        strainSlug: "blueberry",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/blueberry/element-main.png",
+        labelId: "ELEMENT-BLUEBERRY-MAIN"
+    },
+    {
+        strain: "Blueberry Muffin",
+        strainSlug: "blueberry-muffin",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/blueberry-muffin/element-main.png",
+        labelId: "ELEMENT-BLUEBERRY-MUFFIN-MAIN"
+    },
+    {
+        strain: "Bruce Banner",
+        strainSlug: "bruce-banner",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/bruce-banner/element-main.png",
+        labelId: "ELEMENT-BRUCE-BANNER-MAIN"
+    },
+    {
+        strain: "Bubba Kush",
+        strainSlug: "bubba-kush",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/bubba-kush/element-main.png",
+        labelId: "ELEMENT-BUBBA-KUSH-MAIN"
+    },
+    {
+        strain: "Bubblegum Gushers",
+        strainSlug: "bubblegum-gushers",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/bubblegum-gushers/element-main.png",
+        labelId: "ELEMENT-BUBBLEGUM-GUSHERS-MAIN"
+    },
+    {
+        strain: "California Orange",
+        strainSlug: "california-orange",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/california-orange/element-main.png",
+        labelId: "ELEMENT-CALIFORNIA-ORANGE-MAIN"
+    },
+    {
+        strain: "Candyland",
+        strainSlug: "candyland",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/candyland/element-main.png",
+        labelId: "ELEMENT-CANDYLAND-MAIN"
+    },
+    {
+        strain: "Cap Junky",
+        strainSlug: "cap-junky",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/cap-junky/element-main.png",
+        labelId: "ELEMENT-CAP-JUNKY-MAIN"
+    },
+    {
+        strain: "Cereal Milk",
+        strainSlug: "cereal-milk",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/cereal-milk/element-main.png",
+        labelId: "ELEMENT-CEREAL-MILK-MAIN"
+    },
+    {
+        strain: "Chemdawg",
+        strainSlug: "chemdawg",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/chemdawg/element-main.png",
+        labelId: "ELEMENT-CHEMDAWG-MAIN"
+    },
+    {
+        strain: "Cherry Haze",
+        strainSlug: "cherry-haze",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/cherry-haze/element-main.png",
+        labelId: "ELEMENT-CHERRY-HAZE-MAIN"
+    },
+    {
+        strain: "Cherry Pie",
+        strainSlug: "cherry-pie",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/cherry-pie/element-main.png",
+        labelId: "ELEMENT-CHERRY-PIE-MAIN"
+    },
+    {
+        strain: "Chocolope",
+        strainSlug: "chocolope",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/chocolope/element-main.png",
+        labelId: "ELEMENT-CHOCOLOPE-MAIN"
+    },
+    {
+        strain: "Cinderella 99",
+        strainSlug: "cinderella-99",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/cinderella-99/element-main.png",
+        labelId: "ELEMENT-CINDERELLA-99-MAIN"
+    },
+    {
+        strain: "Colombian Gold",
+        strainSlug: "colombian-gold",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/colombian-gold/element-main.png",
+        labelId: "ELEMENT-COLOMBIAN-GOLD-MAIN"
+    },
+    {
+        strain: "Cookies and Cream",
+        strainSlug: "cookies-and-cream",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/cookies-and-cream/element-main.png",
+        labelId: "ELEMENT-COOKIES-AND-CREAM-MAIN"
+    },
+    {
+        strain: "Critical Mass",
+        strainSlug: "critical-mass",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/critical-mass/element-main.png",
+        labelId: "ELEMENT-CRITICAL-MASS-MAIN"
+    },
+    {
+        strain: "Do-Si-Dos",
+        strainSlug: "do-si-dos",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/do-si-dos/element-main.png",
+        labelId: "ELEMENT-DO-SI-DOS-MAIN"
+    },
+    {
+        strain: "Durban Poison",
+        strainSlug: "durban-poison",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/durban-poison/element-main.png",
+        labelId: "ELEMENT-DURBAN-POISON-MAIN"
+    },
+    {
+        strain: "Dutch Treat",
+        strainSlug: "dutch-treat",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/dutch-treat/element-main.png",
+        labelId: "ELEMENT-DUTCH-TREAT-MAIN"
+    },
+    {
+        strain: "Forbidden Fruit",
+        strainSlug: "forbidden-fruit",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/forbidden-fruit/element-main.png",
+        labelId: "ELEMENT-FORBIDDEN-FRUIT-MAIN"
+    },
+    {
+        strain: "Gary Payton",
+        strainSlug: "gary-payton",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/gary-payton/element-main.png",
+        labelId: "ELEMENT-GARY-PAYTON-MAIN"
+    },
+    {
+        strain: "Gelato",
+        strainSlug: "gelato",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/gelato/element-main.png",
+        labelId: "ELEMENT-GELATO-MAIN"
+    },
+    {
+        strain: "Girl Scout Cookies",
+        strainSlug: "girl-scout-cookies",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/girl-scout-cookies/element-main.png",
+        labelId: "ELEMENT-GIRL-SCOUT-COOKIES-MAIN"
+    },
+    {
+        strain: "GMO Cookies",
+        strainSlug: "gmo-cookies",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/gmo-cookies/element-main.png",
+        labelId: "ELEMENT-GMO-COOKIES-MAIN"
+    },
+    {
+        strain: "Godfather OG",
+        strainSlug: "godfather-og",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/godfather-og/element-main.png",
+        labelId: "ELEMENT-GODFATHER-OG-MAIN"
+    },
+    {
+        strain: "Golden Goat",
+        strainSlug: "golden-goat",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/golden-goat/element-main.png",
+        labelId: "ELEMENT-GOLDEN-GOAT-MAIN"
+    },
+    {
+        strain: "Gorilla Glue",
+        strainSlug: "gorilla-glue",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/gorilla-glue/element-main.png",
+        labelId: "ELEMENT-GORILLA-GLUE-MAIN"
+    },
+    {
+        strain: "Granddaddy Purple",
+        strainSlug: "granddaddy-purple",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/granddaddy-purple/element-main.png",
+        labelId: "ELEMENT-GRANDDADDY-PURPLE-MAIN"
+    },
+    {
+        strain: "Grape Ape",
+        strainSlug: "grape-ape",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/grape-ape/element-main.png",
+        labelId: "ELEMENT-GRAPE-APE-MAIN"
+    },
+    {
+        strain: "Green Crack",
+        strainSlug: "green-crack",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/green-crack/element-main.png",
+        labelId: "ELEMENT-GREEN-CRACK-MAIN"
+    },
+    {
+        strain: "Harlequin",
+        strainSlug: "harlequin",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/harlequin/element-main.png",
+        labelId: "ELEMENT-HARLEQUIN-MAIN"
+    },
+    {
+        strain: "Headband",
+        strainSlug: "headband",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/headband/element-main.png",
+        labelId: "ELEMENT-HEADBAND-MAIN"
+    },
+    {
+        strain: "Hindu Kush",
+        strainSlug: "hindu-kush",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/hindu-kush/element-main.png",
+        labelId: "ELEMENT-HINDU-KUSH-MAIN"
+    },
+    {
+        strain: "Ice Cream Cake",
+        strainSlug: "ice-cream-cake",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/ice-cream-cake/element-main.png",
+        labelId: "ELEMENT-ICE-CREAM-CAKE-MAIN"
+    },
+    {
+        strain: "Jack Herer",
+        strainSlug: "jack-herer",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/jack-herer/element-main.png",
+        labelId: "ELEMENT-JACK-HERER-MAIN"
+    },
+    {
+        strain: "Jack the Ripper",
+        strainSlug: "jack-the-ripper",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/jack-the-ripper/element-main.png",
+        labelId: "ELEMENT-JACK-THE-RIPPER-MAIN"
+    },
+    {
+        strain: "Jealousy",
+        strainSlug: "jealousy",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/jealousy/element-main.png",
+        labelId: "ELEMENT-JEALOUSY-MAIN"
+    },
+    {
+        strain: "Jillybean",
+        strainSlug: "jillybean",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/jillybean/element-main.png",
+        labelId: "ELEMENT-JILLYBEAN-MAIN"
+    },
+    {
+        strain: "King Louis XIII",
+        strainSlug: "king-louis-xiii",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/king-louis-xiii/element-main.png",
+        labelId: "ELEMENT-KING-LOUIS-XIII-MAIN"
+    },
+    {
+        strain: "Kona Gold",
+        strainSlug: "kona-gold",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/kona-gold/element-main.png",
+        labelId: "ELEMENT-KONA-GOLD-MAIN"
+    },
+    {
+        strain: "Kosher Kush",
+        strainSlug: "kosher-kush",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/kosher-kush/element-main.png",
+        labelId: "ELEMENT-KOSHER-KUSH-MAIN"
+    },
+    {
+        strain: "Kush Mints",
+        strainSlug: "kush-mints",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/kush-mints/element-main.png",
+        labelId: "ELEMENT-KUSH-MINTS-MAIN"
+    },
+    {
+        strain: "LA Confidential",
+        strainSlug: "la-confidential",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/la-confidential/element-main.png",
+        labelId: "ELEMENT-LA-CONFIDENTIAL-MAIN"
+    },
+    {
+        strain: "Larry OG",
+        strainSlug: "larry-og",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/larry-og/element-main.png",
+        labelId: "ELEMENT-LARRY-OG-MAIN"
+    },
+    {
+        strain: "Lavender",
+        strainSlug: "lavender",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/lavender/element-main.png",
+        labelId: "ELEMENT-LAVENDER-MAIN"
+    },
+    {
+        strain: "Lemon Cherry Gelato",
+        strainSlug: "lemon-cherry-gelato",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/lemon-cherry-gelato/element-main.png",
+        labelId: "ELEMENT-LEMON-CHERRY-GELATO-MAIN"
+    },
+    {
+        strain: "Lemon Haze",
+        strainSlug: "lemon-haze",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/lemon-haze/element-main.png",
+        labelId: "ELEMENT-LEMON-HAZE-MAIN"
+    },
+    {
+        strain: "Lemon Skunk",
+        strainSlug: "lemon-skunk",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/lemon-skunk/element-main.png",
+        labelId: "ELEMENT-LEMON-SKUNK-MAIN"
+    },
+    {
+        strain: "London Pound Cake",
+        strainSlug: "london-pound-cake",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/london-pound-cake/element-main.png",
+        labelId: "ELEMENT-LONDON-POUND-CAKE-MAIN"
+    },
+    {
+        strain: "MAC",
+        strainSlug: "mac",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/mac/element-main.png",
+        labelId: "ELEMENT-MAC-MAIN"
+    },
+    {
+        strain: "Master Kush",
+        strainSlug: "master-kush",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/master-kush/element-main.png",
+        labelId: "ELEMENT-MASTER-KUSH-MAIN"
+    },
+    {
+        strain: "Maui Wowie",
+        strainSlug: "maui-wowie",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/maui-wowie/element-main.png",
+        labelId: "ELEMENT-MAUI-WOWIE-MAIN"
+    },
+    {
+        strain: "Mimosa",
+        strainSlug: "mimosa",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/mimosa/element-main.png",
+        labelId: "ELEMENT-MIMOSA-MAIN"
+    },
+    {
+        strain: "MK Ultra",
+        strainSlug: "mk-ultra",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/mk-ultra/element-main.png",
+        labelId: "ELEMENT-MK-ULTRA-MAIN"
+    },
+    {
+        strain: "Mochi",
+        strainSlug: "mochi",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/mochi/element-main.png",
+        labelId: "ELEMENT-MOCHI-MAIN"
+    },
+    {
+        strain: "Motorbreath",
+        strainSlug: "motorbreath",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/motorbreath/element-main.png",
+        labelId: "ELEMENT-MOTORBREATH-MAIN"
+    },
+    {
+        strain: "Northern Lights",
+        strainSlug: "northern-lights",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/northern-lights/element-main.png",
+        labelId: "ELEMENT-NORTHERN-LIGHTS-MAIN"
+    },
+    {
+        strain: "NYC Diesel",
+        strainSlug: "nyc-diesel",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/nyc-diesel/element-main.png",
+        labelId: "ELEMENT-NYC-DIESEL-MAIN"
+    },
+    {
+        strain: "Oaxacan Gold",
+        strainSlug: "oaxacan-gold",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/oaxacan-gold/element-main.png",
+        labelId: "ELEMENT-OAXACAN-GOLD-MAIN"
+    },
+    {
+        strain: "OG Kush",
+        strainSlug: "og-kush",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/og-kush/element-main.png",
+        labelId: "ELEMENT-OG-KUSH-MAIN"
+    },
+    {
+        strain: "Oreoz",
+        strainSlug: "oreoz",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/oreoz/element-main.png",
+        labelId: "ELEMENT-OREOZ-MAIN"
+    },
+    {
+        strain: "Panama Red",
+        strainSlug: "panama-red",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/panama-red/element-main.png",
+        labelId: "ELEMENT-PANAMA-RED-MAIN"
+    },
+    {
+        strain: "Papaya",
+        strainSlug: "papaya",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/papaya/element-main.png",
+        labelId: "ELEMENT-PAPAYA-MAIN"
+    },
+    {
+        strain: "Peanut Butter Breath",
+        strainSlug: "peanut-butter-breath",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/peanut-butter-breath/element-main.png",
+        labelId: "ELEMENT-PEANUT-BUTTER-BREATH-MAIN"
+    },
+    {
+        strain: "Permanent Marker",
+        strainSlug: "permanent-marker",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/permanent-marker/element-main.png",
+        labelId: "ELEMENT-PERMANENT-MARKER-MAIN"
+    },
+    {
+        strain: "Pineapple Express",
+        strainSlug: "pineapple-express",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/pineapple-express/element-main.png",
+        labelId: "ELEMENT-PINEAPPLE-EXPRESS-MAIN"
+    },
+    {
+        strain: "Platinum OG",
+        strainSlug: "platinum-og",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/platinum-og/element-main.png",
+        labelId: "ELEMENT-PLATINUM-OG-MAIN"
+    },
+    {
+        strain: "Purple Haze",
+        strainSlug: "purple-haze",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/purple-haze/element-main.png",
+        labelId: "ELEMENT-PURPLE-HAZE-MAIN"
+    },
+    {
+        strain: "Purple Punch",
+        strainSlug: "purple-punch",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/purple-punch/element-main.png",
+        labelId: "ELEMENT-PURPLE-PUNCH-MAIN"
+    },
+    {
+        strain: "Purple Urkle",
+        strainSlug: "purple-urkle",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/purple-urkle/element-main.png",
+        labelId: "ELEMENT-PURPLE-URKLE-MAIN"
+    },
+    {
+        strain: "Romulan",
+        strainSlug: "romulan",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/romulan/element-main.png",
+        labelId: "ELEMENT-ROMULAN-MAIN"
+    },
+    {
+        strain: "Runtz",
+        strainSlug: "runtz",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/runtz/element-main.png",
+        labelId: "ELEMENT-RUNTZ-MAIN"
+    },
+    {
+        strain: "SAGE",
+        strainSlug: "sage",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/sage/element-main.png",
+        labelId: "ELEMENT-SAGE-MAIN"
+    },
+    {
+        strain: "SFV OG",
+        strainSlug: "sfv-og",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/sfv-og/element-main.png",
+        labelId: "ELEMENT-SFV-OG-MAIN"
+    },
+    {
+        strain: "Sherbert",
+        strainSlug: "sherbert",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/sherbert/element-main.png",
+        labelId: "ELEMENT-SHERBERT-MAIN"
+    },
+    {
+        strain: "Skunk #1",
+        strainSlug: "skunk-1",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/skunk-1/element-main.png",
+        labelId: "ELEMENT-SKUNK-1-MAIN"
+    },
+    {
+        strain: "Slurricane",
+        strainSlug: "slurricane",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/slurricane/element-main.png",
+        labelId: "ELEMENT-SLURRICANE-MAIN"
+    },
+    {
+        strain: "Sour Diesel",
+        strainSlug: "sour-diesel",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/sour-diesel/element-main.png",
+        labelId: "ELEMENT-SOUR-DIESEL-MAIN"
+    },
+    {
+        strain: "Sour OG",
+        strainSlug: "sour-og",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/sour-og/element-main.png",
+        labelId: "ELEMENT-SOUR-OG-MAIN"
+    },
+    {
+        strain: "Sour Tangie",
+        strainSlug: "sour-tangie",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/sour-tangie/element-main.png",
+        labelId: "ELEMENT-SOUR-TANGIE-MAIN"
+    },
+    {
+        strain: "Strawberry Banana",
+        strainSlug: "strawberry-banana",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/strawberry-banana/element-main.png",
+        labelId: "ELEMENT-STRAWBERRY-BANANA-MAIN"
+    },
+    {
+        strain: "Strawberry Cough",
+        strainSlug: "strawberry-cough",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/strawberry-cough/element-main.png",
+        labelId: "ELEMENT-STRAWBERRY-COUGH-MAIN"
+    },
+    {
+        strain: "Sunset Sherbet",
+        strainSlug: "sunset-sherbet",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/sunset-sherbet/element-main.png",
+        labelId: "ELEMENT-SUNSET-SHERBET-MAIN"
+    },
+    {
+        strain: "Super Boof",
+        strainSlug: "super-boof",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/super-boof/element-main.png",
+        labelId: "ELEMENT-SUPER-BOOF-MAIN"
+    },
+    {
+        strain: "Super Lemon Haze",
+        strainSlug: "super-lemon-haze",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/super-lemon-haze/element-main.png",
+        labelId: "ELEMENT-SUPER-LEMON-HAZE-MAIN"
+    },
+    {
+        strain: "Super Silver Haze",
+        strainSlug: "super-silver-haze",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/super-silver-haze/element-main.png",
+        labelId: "ELEMENT-SUPER-SILVER-HAZE-MAIN"
+    },
+    {
+        strain: "Super Sour Diesel",
+        strainSlug: "super-sour-diesel",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/super-sour-diesel/element-main.png",
+        labelId: "ELEMENT-SUPER-SOUR-DIESEL-MAIN"
+    },
+    {
+        strain: "Tahoe OG",
+        strainSlug: "tahoe-og",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/tahoe-og/element-main.png",
+        labelId: "ELEMENT-TAHOE-OG-MAIN"
+    },
+    {
+        strain: "Tangie",
+        strainSlug: "tangie",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/tangie/element-main.png",
+        labelId: "ELEMENT-TANGIE-MAIN"
+    },
+    {
+        strain: "Thai Stick",
+        strainSlug: "thai-stick",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/thai-stick/element-main.png",
+        labelId: "ELEMENT-THAI-STICK-MAIN"
+    },
+    {
+        strain: "Trainwreck",
+        strainSlug: "trainwreck",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/trainwreck/element-main.png",
+        labelId: "ELEMENT-TRAINWRECK-MAIN"
+    },
+    {
+        strain: "Tropicana Cherry",
+        strainSlug: "tropicana-cherry",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/tropicana-cherry/element-main.png",
+        labelId: "ELEMENT-TROPICANA-CHERRY-MAIN"
+    },
+    {
+        strain: "Tropicana Cookies",
+        strainSlug: "tropicana-cookies",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/tropicana-cookies/element-main.png",
+        labelId: "ELEMENT-TROPICANA-COOKIES-MAIN"
+    },
+    {
+        strain: "Vanilla Frosting",
+        strainSlug: "vanilla-frosting",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/vanilla-frosting/element-main.png",
+        labelId: "ELEMENT-VANILLA-FROSTING-MAIN"
+    },
+    {
+        strain: "Wedding Cake",
+        strainSlug: "wedding-cake",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/wedding-cake/element-main.png",
+        labelId: "ELEMENT-WEDDING-CAKE-MAIN"
+    },
+    {
+        strain: "White Rhino",
+        strainSlug: "white-rhino",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/white-rhino/element-main.png",
+        labelId: "ELEMENT-WHITE-RHINO-MAIN"
+    },
+    {
+        strain: "White Widow",
+        strainSlug: "white-widow",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/white-widow/element-main.png",
+        labelId: "ELEMENT-WHITE-WIDOW-MAIN"
+    },
+    {
+        strain: "XJ-13",
+        strainSlug: "xj-13",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/xj-13/element-main.png",
+        labelId: "ELEMENT-XJ-13-MAIN"
+    },
+    {
+        strain: "Zkittlez",
+        strainSlug: "zkittlez",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/zkittlez/element-main.png",
+        labelId: "ELEMENT-ZKITTLEZ-MAIN"
+    },
+    {
+        strain: "Zookies",
+        strainSlug: "zookies",
+        series: "Element",
+        seriesSlug: "element",
+        image: "public/labels/zookies/element-main.png",
+        labelId: "ELEMENT-ZOOKIES-MAIN"
+    },
+
     // Plain Series (90)
     {
         strain: "Blue Dream",
